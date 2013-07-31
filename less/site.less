@@ -1,0 +1,98 @@
+@footerHeight: 190px;
+@footerPaddingTop: 48px;
+@footerBackground: #1c1816;
+
+html,
+body {
+    min-width: 1100px;
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -@footerHeight;
+}
+
+#push {
+    height: @footerHeight;
+}
+
+footer {
+    height: @footerHeight;
+    padding-top: @footerPaddingTop;
+    background-color: @footerBackground;
+    color: #959494;
+    
+    h4 {
+        color: #959494;
+    }
+}
+
+.container {
+    .main {
+        padding: 0 50px;
+    }
+    
+    &.content-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Home */
+.share-bar {
+    background: #201b19;
+    height: 50px;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: solid 1px #2c2522;
+}
+
+.home-featured-in {
+    text-align: center;
+    background: #2e2724;
+    padding: 20px 0;
+    height: 130px;
+    color: #959494;
+    font-weight: bold;
+    
+    .home-press {
+        margin: 15px auto;
+        
+        li {
+            padding: 0 25px;
+        }
+    }
+}
+
+.box {
+    background: #302925;
+    border-radius: @border-radius-base;
+    text-align: center;
+    padding: 35px 20px;
+    margin-bottom: 50px;
+    
+    h1, h2, h3 {
+        margin-top: 0;
+    }
+    
+    &.last {
+        margin-bottom: 0;
+    }
+    
+    .btn {
+        min-width: 125px;
+    }
+}
