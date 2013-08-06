@@ -1,0 +1,32 @@
+---
+layout: post
+title: Iron Foundry, Mixing .NET MVC with Node.js
+categories:
+- Release
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '5'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _yoast_wpseo_linkdex: '0'
+---
+While working with an application written in ASP.NET MVC a question came up, "If I'm using .NET MVC then why do I even need to worry about Node.js?" Generally, the answer would be that you don't have to. However, if you need a light weight, fast, easy to setup web service then a PaaS enabled Node.js Application would be perfect.
+
+ASP.NET MVC is great for building out extensive applications, especially if there is complexity and you want to maintain good code integrity through practices like TDD (Test Driven Development) or BDD (Behavior Driven Development). However, sometimes you may want to spin up just a few services, that connect to a Mongo DB, Redis, or some other data source. Node.js is perfect for this for a number of reasons, a few of them include;
+<ul>
+	<li>Node.js is about 1/5th the amount of overhead.</li>
+	<li>Node.js already speaks native JSON, so working with Mongo DB, Couch DB, or Redis is drastically simpler and more direct than using a traditional stack framework that requires extra libraries (like .NET).</li>
+	<li>Node.js is plenty fast. Nuff' said.</li>
+</ul>
+&nbsp;

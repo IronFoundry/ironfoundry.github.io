@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Iron Foundry Adds Microsoft Service Bus as a New Application Service - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header>
+        <div class="backsplash">
+            <img class="blur" src="/img/hero_01.jpg" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+            </svg>
+        </div>
+        <div class="container menu">
+            <div class="row">
+    <div class="col-lg-2">
+        <a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a>
+    </div>
+    <div class="col-lg-10">
+        <ul class="list-unstyled list-inline pull-right">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li><a href="/signup.html">Sign Up</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/help.html">Help</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-9">
+        <div class="row">
+            <div class="col-lg-2">
+            	<div class="author-info">
+                    <div class="author-name"></div>
+                    
+            	</div>
+            </div>
+            <div class="col-lg-10">
+                <h2>Iron Foundry Adds Microsoft Service Bus as a New Application Service</h2>
+                <span></span>
+                Microsoft recently released a beta version of their <a href="http://msdn.microsoft.com/en-us/library/windowsazure/jj193027(v=azure.10).aspx" target="_blank">Service Bus for Windows</a> messaging technology, and the Iron Foundry team has now added this as an available service in Iron Foundry. The Service Bus for Windows is a scaled down version of the <a href="https://www.windowsazure.com/en-us/home/features/messaging/" target="_blank">Service Bus</a> product included in their Windows Azure cloud offering. The Service Bus for Windows, which supports brokered message through both traditional <a href="https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/" target="_blank">Queues</a> and multi-subscriber <a href="https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-topics/" target="_blank">Topics</a>, provides Iron Foundry developers yet another option when building distributed applications.
+
+Our awesome dev team followed the standard steps for adding new application services to a Cloud Foundry / Iron Foundry environment and also used a <a href="http://seroter.wordpress.com/2012/07/17/installing-and-testing-the-new-service-bus-for-windows/" target="_blank">previous write-up of mine</a> to guide the software installation. We’ve already updated the <a href="https://github.com/IronFoundry/vcap-services" target="_blank">vcap-services source code into Github</a> and you can clone the <a href="https://github.com/IronFoundry/vcap-services/tree/ironfoundry/mssb" target="_blank">mssb</a> (Microsoft Service Bus) directory today. There were also changes to the <a href="https://github.com/IronFoundry/ironfoundry/tree/master/src/IronFoundry.Dea" target="_blank">.NET DEA</a> to account for this new service and handing credentials back to the user. The Service Bus for Windows uses Microsoft SQL Server for its persistence tier, so we’ve tied the service to the instance of SQL Server that runs in Iron Foundry. <strong>Our hosted ironFoundry.me environment is running this today,</strong> and we’ve provisioned a shared Service Bus farm and host that holds each consumer’s individual namespace. Let’s see a demonstration of this in action!
+
+To make life easier, we’ve built a sample web application that interacts with Service Bus Queues. We’ll start by looking at that application, and then deploy the application to Iron Foundry. The application contains a few ASP.NET Web Forms and a helper class. The helper class (<strong>QueueManager.cs</strong>)  contains a singleton that upon startup, parses Iron Foundry-provided URLs and credentials encoded as JSON in the application’s web.config file and uses those parameters to instantiate the core objects in the <a href="http://nuget.org/packages/ServiceBus.v1_0" target="_blank">Windows Service Bus SDK</a>.
+
+<script src="https://gist.github.com/3429427.js"> </script>
+
+Then we have some static operations for both sending to and receiving from the Service Bus Queue.
+
+<script src="https://gist.github.com/3429452.js"> </script>
+
+These operations are used in the pair of core ASP.NET pages to send and receive messages. Let’s now deploy this application to Iron Foundry and see how it works. Using vmc, I targeted the api.ironfoundry.me environment.
+
+<img class="alignnone size-full wp-image-106" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb02.png" alt="" width="450" height="236" />
+
+I can confirm that the Service Bus for Windows is an available service by issuing a <strong>vmc services</strong> command.
+
+<img class="alignnone size-full wp-image-107" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb03.png" alt="" width="450" height="229" />
+
+Great. Now let’s push this web application and provision an instance of this new service type. After publishing the ASP.NET web application to a file directory, I issued the <strong>vmc push</strong> command to start the deployment process.
+
+<img class="alignnone size-full wp-image-108" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb04.png" alt="" width="450" height="146" />
+
+At this stage, I’m asked if I want to create a new service instance to bind to, or if I had already provisioned one, which instance I’d like to associate with. In this case, I have no existing services, so I’ll choose to create a new service.
+
+<img class="alignnone size-full wp-image-109" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb05.png" alt="" width="450" height="463" />
+
+Within a matter of moments, my application is deployed and a new service instance is provisioned in the shared environment. This environment is not currently part of a Windows domain, so during service provisioning, a new local user is created and assigned to the developer’s own Service Bus namespace. All the URLs and credentials for the application are injected into the application’s web.config file. We can see this through vmc by viewing the file with the<strong> vmc files &lt;application name&gt; app/web.config</strong> command.
+
+<img class="alignnone size-full wp-image-110" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb06.png" alt="" width="450" height="451" />
+
+These JSON-encoded values are then read by our application and used when authenticating the caller during Queue operations. Upon visiting the URL of the Iron Foundry application, we can see the option to send a message to a Queue.
+
+<img class="alignnone size-full wp-image-111" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb07.png" alt="" width="500" height="273" />
+
+When we submit the message, it is added to a Queue, which means that it is persisted in a database. I then switch over to the “Receive” web form and choose to pull all of the messages from the Queue.
+
+<img class="alignnone size-full wp-image-105" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/ironFoundryMssb08.png" alt="" width="500" height="253" />
+
+The Service Bus for Windows is still in Beta, but we thought it would be fun to add this as an Iron Foundry service. You can <a href="http://blog.ironfoundry.org/wp-content/uploads/2012/08/IronFoundry.ServiceBusMessaging.WebUI_.zip" target="_blank">download the source code for this sample application from here</a>. Messaging is a core part of many modern web applications and the Service Bus for Windows gives Iron Foundry developers another way to link systems together.
+
+<a rev="vote-for" href="http://dotnetshoutout.com/Iron-Foundry-Adds-Microsoft-Service-Bus-Support"><img alt="Shout it" src="http://dotnetshoutout.com/image.axd?url=http%3A%2F%2Fblog.ironfoundry.org%2F2012%2F08%2Firon-foundry-adds-microsoft-service-bus-as-a-new-application-service%2F" style="border:0px"/></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        TAGS
+    </div>
+</div>
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p>Cloud Foundry and Micro Cloud Foundry are trademarks of Pivotal Labs in the United States and/or other jurisdictions.</p>
+    </div>
+</footer>
+
+<script src="/javascripts/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+
+</body>
+</html>

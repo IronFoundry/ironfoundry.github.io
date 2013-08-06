@@ -1,0 +1,48 @@
+---
+layout: post
+title: New Iron Foundry Test Environment .ME
+categories:
+- Community
+- Release
+- Test Environment
+tags:
+- caldecott
+- environment
+- mysql
+- node.js
+- php
+- postgres
+- python
+- ruby
+- test
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '3'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _yoast_wpseo_linkdex: '0'
+---
+Today we have released a major update to the Iron Foundry test environment. Currently this environment is supporting over 350 developers constantly deploying/hosting applications using .NET and the Iron Foundry developer tool set. Here are some of the major changes and highlights:
+<ul>
+	<li>Multi-Runtime Support: We have extended the offering to support polyglot applications with the support of Java, Ruby, PHP, Python, Node.js, and .NET.</li>
+	<li>Rabbit MQ Support: Rabbit MQ is now added as a service offering to use in the environment. For more information about Rabbit MQ visit our <a href="http://help.ironfoundry.org/entries/21238376-getting-up-and-running-with-rabbit-mq">quick start guide</a>.</li>
+	<li>Extended Database Support: Adding support for MySQL and Postgres to extend the other databases currently offered (MS SQL, Redis, and MongoDB).</li>
+	<li>Caldecott Support: We have enabled <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> support for the entire environment so that you can tunnel to backend services. Learn more about it at the <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Cloud Foundry Blog</a>.</li>
+	<li>No more trial expiration: We have removed the 90 day trial limitation so that you can test your application longer if needed. This is a testing environment and we do not give support for it beyond what a standard test environment needs so please <em><strong>do not run production applications on it</strong></em>. The limitation is now based on resources being provisioned to 3 application instances and 2 database instances. If you need more <a href="http://help.ironfoundry.org">contact us</a> so that we can help.</li>
+	<li>New Friendly Url: The new friendly url is ironfoundry.me and will enable your applications with [appname].ironfoundry.me. The API to access the new environment is api.ironfoundry.me.</li>
+</ul>
+<strong>For the developers who already have signed up you will not have to sign up again as we have ported your user names and passwords over to the ironfoundry.me environment.</strong>
+
+As this is a new environment with many features, we decided to keep the gofoundry.net environment running so users have time to migrate their applications to the new environment. All new accounts will have access to the new environment and you can <a href="http://www.ironfoundry.org/signup">sign up</a> here for free.
+
+<a href="http://www.ironfoundry.org/signup">Go here to get started!</a>

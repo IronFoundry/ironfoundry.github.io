@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Iron Foundry</title>
+    {% include header_meta.html %}
+</head>
+
+<body>
+
+<div id="wrap">
+    <header>
+        <div class="backsplash">
+            <img class="blur" src="/img/hero_01.jpg" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+            </svg>
+        </div>
+        <div class="container menu">
+            {% include menu.html %}
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">IRON FOUNDRY</h1>
+                <div class="hero-tagline">Drop Iron Foundry components into a running Cloud Foundry environment and immediately start deploying and managing .NET applications.</div>
+                <button type="button" class="btn btn-default download">DOWNLOAD IRON FOUNDRY</button>
+                <p><a href="http://www.github.com/ironfoundry/ironfoundry">Github Project</a></p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="row share-bar">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-8 col-offset-2 text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></li>
+                        <li><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></li>
+                        <li>
+                            <a href="https://twitter.com/ironfoundryorg" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @ironfoundryorg</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="en">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="container content-container">
+        {{ content }}
+    </div>
+    
+    <div class="container-fluid home-featured-in">
+        <div class="row">
+            featured in
+            <ul class="list-unstyled list-inline home-press">
+                <li><a href="#"><img src="/img/press/press_wired.png" alt="Wired" /></a></li>
+                <li><a href="#"><img src="/img/press/press_info_world.png" alt="InfoWorld" /></a></li>
+                <li><a href="#"><img src="/img/press/press_zdnet.png" alt="ZDNet" /></a></li>
+                <li><a href="#"><img src="/img/press/press_network_world.png" alt="Network World" /></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+{% include footer.html %}
+
+</body>
+</html>

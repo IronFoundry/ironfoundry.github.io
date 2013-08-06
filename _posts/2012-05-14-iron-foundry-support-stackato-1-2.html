@@ -1,0 +1,62 @@
+---
+layout: post
+title: Iron Foundry Support for Stackato 1.2 Released
+categories:
+- Release
+tags:
+- iron foundry
+- stackato
+status: publish
+type: post
+published: true
+meta:
+  _wp_old_slug: stackato-1-2-iron-foundry-support-released
+  _edit_last: '5'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _yoast_wpseo_linkdex: '0'
+---
+With the latest changes from the Cloud Foundry team (re: <a href="http://blog.cloudfoundry.com/post/13481011539/a-year-of-cloud-foundry" target="_blank">anniversary of Cloud Foundry</a>) comes a new and improved Stackato &amp; Iron Foundry Micro VM combo. We've checked and tweaked things to run even better in your Stackato + Iron Foundry environment with the latest downloads. So check out the latest available <a href="http://www.activestate.com/stackato/download_vm" target="_blank">micro image downloads</a> for Stackato. The ActiveState Stackato team provides images available in:
+<ul>
+	<li><a href="http://www.activestate.com/stackato/download_vm/thank-you?dl=http://downloads.activestate.com/stackato/vm/v1.2.5/stackato-vm-vbox-v1.2.5.zip" target="_blank">Virtual Box VM</a></li>
+	<li><a href="http://www.activestate.com/stackato/download_vm/thank-you?dl=http://downloads.activestate.com/stackato/vm/v1.2.5/stackato-vm-vmware-v1.2.5.zip" target="_blank">VMware VMDK</a></li>
+	<li><a href="http://www.activestate.com/stackato/download_vm/thank-you?dl=http://downloads.activestate.com/stackato/vm/v1.2.5/stackato-vm-vsphere-v1.2.5.zip" target="_blank">vSphere OVF</a></li>
+	<li><a href="http://www.activestate.com/stackato/download_vm/thank-you?dl=http://downloads.activestate.com/stackato/vm/v1.2.5/stackato-img-kvm-v1.2.5.zip" target="_blank">KVM</a></li>
+</ul>
+Some of the <a href="http://community.activestate.com/node/8626" target="_blank">changes and additions</a> include...
+<ul>
+	<li>Introduction of group management to Stackato managed applications
+<ul>
+	<li>Support for separate per-user and per-group limits</li>
+	<li>Users can be in zero or many groups</li>
+</ul>
+</li>
+	<li>Heroku buildpack framework support, with built-in buildpacks for
+Clojure, Go, Java, JRuby, Play! and Python</li>
+	<li>Updated Stackato App Store
+<ul>
+	<li>Multiple App Store sources supported</li>
+	<li>Stackato admins can control App Store sources from the console</li>
+</ul>
+</li>
+</ul>
+For Iron Foundry one of the key changes is the way DEA droplets spec handles things. So get the latest to be sure you have the best compatibility between these two Cloud Foundry Micro Environments. Find out about even more of the Stackato features here: <a href="http://community.activestate.com/node/8626">http://community.activestate.com/node/8626</a>
+
+We've been testing this release and have added to the <a href="http://ironfoundry.org/" target="_blank">Iron Foundry VMs</a> to include the following formats:
+<ul>
+	<li><a href="http://www.ironfoundry.org/download" target="_blank">VMware VMX</a></li>
+	<li><a href="http://www.ironfoundry.org/download" target="_blank">OVF Format</a></li>
+</ul>
+We've posted release notes on our latest VM images here:  <a href="http://help.ironfoundry.org/entries/20950078-micro-cloud-release-notes">http://help.ironfoundry.org/entries/20950078-micro-cloud-release-notes</a>
+
+For information on setting up these images follow the previously posted instructions "<a href="http://blog.ironfoundry.org/2012/03/ironfoundry-and-stackato/">Iron Foundry, Stackato, a New Micro Image Pair</a>".
+
+More news is coming here at the Iron Foundry Project so stay tuned. We'll be back with more soon.

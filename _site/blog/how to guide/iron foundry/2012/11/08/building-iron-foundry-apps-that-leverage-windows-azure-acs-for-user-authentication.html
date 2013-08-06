@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Building Iron Foundry Apps that Leverage Windows Azure ACS for User Authentication - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header>
+        <div class="backsplash">
+            <img class="blur" src="/img/hero_01.jpg" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+            </svg>
+        </div>
+        <div class="container menu">
+            <div class="row">
+    <div class="col-lg-2">
+        <a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a>
+    </div>
+    <div class="col-lg-10">
+        <ul class="list-unstyled list-inline pull-right">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li><a href="/signup.html">Sign Up</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/help.html">Help</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-9">
+        <div class="row">
+            <div class="col-lg-2">
+            	<div class="author-info">
+                    <div class="author-name"></div>
+                    
+            	</div>
+            </div>
+            <div class="col-lg-10">
+                <h2>Building Iron Foundry Apps that Leverage Windows Azure ACS for User Authentication</h2>
+                <span></span>
+                Iron Foundry and other PaaS frameworks are built to deliver a set of services to developers for building applications. While we think Iron Foundry has a great set of web, data and messaging services available, it by no means includes everything that a developer can use to craft a cool web app. Ideally, a developer can mix and match services from multiple PaaS providers in order to get everything that’s needed to solve a particular problem. For instance, what if an Iron Foundry developer wants to build a .NET application that lets users log in with credentials from a trusted provider? In this blog post, <strong>I’ll show you how to do user authentication/authorization in an Iron Foundry ASP.NET app by using the Windows Azure Access Control Service (ACS)</strong>.
+<h3>What is Windows Azure ACS?</h3>
+<a href="http://msdn.microsoft.com/library/gg429786.aspx" target="_blank">Windows Azure ACS</a> is essential a claims transformation engine that connects to trusted web identity providers (e.g. Facebook, Google, Windows Live, Yahoo) and custom identity providers (e.g. through Active Directory Federation Services), and authenticates the user before passing along a set of claims to your web application. It provides developers a way to outsource the identity management part of their application. ACS itself doesn’t store credentials or act as an identity provider, but rather, it acts as a middleman that can take a series of input claims (e.g. “Google username”, “Windows logon ID”) and transform them into a single claim (“user ID”) used by your app. It’s a cool way to get your application out of the business of handling unique identity providers or storing credentials.
+
+Let’s walk through the steps to building a simple, secure web app that we can deploy to Iron Foundry.
+<h3>Step 1 - Create new ASP.NET MVC 4 (internet) application</h3>
+To get started, I built a new ASP.NET MVC application in Visual Studio 2012.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp01" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp01.png" alt="2012-11-07-compapp01" width="600" height="543" border="0" />
+
+Once the project was created from the MVC4 template, I simply built it and ran it. You can see the default website and notice that I can register for an account. At this point, what this does is store my credentials in the default membership provider (which is a local database). I don’t want that as my long term solution. I want to let users log in with their web identity provider of choice.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp02" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp02.png" alt="2012-11-07-compapp02" width="500" height="281" border="0" />
+
+&nbsp;
+<h3>2. Configure Access Control Service to Recognize Our Iron Foundry Application</h3>
+Virtually every Windows Azure service has migrated from the clunky Silverlight portal to the new, clean HTML portal. Unfortunately, Windows Azure ACS still lives in the old portal. Once I regretfully logged into it, I saw the options to add/configure identity providers, set up the relying party applications (like the one I created), and define the claims transformation rules.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp08" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp08.png" alt="2012-11-07-compapp08" width="500" height="403" border="0" />
+
+If I wanted to add ADFS as a valid identity provider, I could do that here. Instead, since I used existing web identity providers, I could jump right to the “relying party applications” section. On the first part of this form, I set the friendly name of the application, and the URL that will receive the claims. Initially (until I deployed to Iron Foundry) this was a local address on my machine.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp09" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp09.png" alt="2012-11-07-compapp09" width="450" height="437" border="0" />
+
+Further down this form, I was asked which (configured) identity providers I wished to use, whether or not to create a new set of claims transformation rules, and what certificate to use for signing the tokens.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp10" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp10.png" alt="2012-11-07-compapp10" width="300" height="323" border="0" />
+
+After saving my relying party entry, I jumped to the “Rule Groups” section of this portal to configure the transformation rules. I chose the option to “generate rules” for all the available identity providers, and was left with a series of “passthrough” rules that take whatever claim value was issued by the identity provider and ships it, as is, to my application.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp11" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp11.png" alt="2012-11-07-compapp11" width="350" height="440" border="0" />
+
+An individual one of these rules, such as the “Google name” one, has an input claim type and value, and an output claim type and value. While the one below has the same type and passthrough value, you can imagine how you might have three different providers with different input claim types/values all map to a single, internally-defined claim type and/or value.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp12" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp12.png" alt="2012-11-07-compapp12" width="450" height="490" border="0" />
+
+&nbsp;
+<h3>3. Configure ASP.NET App to use ACS for Identity Management</h3>
+With my ACS configuration complete (for now), I returned to Visual Studio 2012 to make it “ACS aware.” Now there is a great new tool for Visual Studio 2012 and the latest Windows Identification Foundation bits (which you can see by grabbing the <a href="http://visualstudiogallery.msdn.microsoft.com/e21bf653-dfe1-4d81-b3d3-795cb104066e" target="_blank">Identity and Access Tools</a>), but since Iron Foundry doesn’t yet support .NET 4.5, I wasn’t able to use the wizard tooling. The latest WIF only applies to .NET 4.5, so I jumped back to using WIF 3.5. To easily grab this version, simply add the NuGet package for <strong>Windows Identification Foundation</strong>  to a project.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp22" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp22.png" alt="2012-11-07-compapp22" width="450" height="257" border="0" />
+
+With all the proper assemblies in place, I then manually updated my web.config file to reflect my use of WIF and ACS. You can find my complete web.config file below. To learn more about the significance of each section, I’d recommend the blog post <a href="http://blogs.msdn.com/b/alikl/archive/2010/10/06/windows-identity-foundation-wif-configuration-sections-in-asp-net-web-config.aspx" target="_blank">Windows Identity Foundation (WIF) Configuration Sections in ASP.NET Web.Config</a>.
+<script src="https://gist.github.com/4040128.js"> </script>
+
+That’s about it. Clearly if I wanted to customize the handling of these claims (e.g. show the value of a claim besides “name” on the home page), there’s additional work I’d want to do in my code. When I ran this application, I was quickly prompted for credentials and the ACS site served up a page for me to select which identity provider to use.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp14" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp14.png" alt="2012-11-07-compapp14" width="450" height="340" border="0" />
+
+When I chose the Google provider, I was redirected to the Google accounts page and asked to log in.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp15" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp15.png" alt="2012-11-07-compapp15" width="450" height="262" border="0" />
+
+&nbsp;
+
+Once I logged into my account, I was returned to my custom web app which recognized that I was now authenticated!
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp16" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp16.png" alt="2012-11-07-compapp16" width="450" height="396" border="0" />
+
+To prove that this is an account that wasn’t managed by my application itself, I clicked on my name to “manage” my user. I was presented a message indicating that there’s no local password for this user, as the identity provider was NOT my local membership provider.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp17" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp17.png" alt="2012-11-07-compapp17" width="450" height="219" border="0" />
+
+&nbsp;
+<h3>4. Update and Deploy the App to Iron Foundry Environment</h3>
+The final task was to update the ASP.NET application and ACS configurations before deploying the application to Iron Foundry. First, I returned to the Windows Azure ACS portal to change the “realm” of the relying party entry that I created for my custom application. I planned on deploying this application to the <a href="http://ironfoundry.org/signup" target="_blank">free IronFoundry.me</a> environment, so I entered the expected destination of the application.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp18" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp18.png" alt="2012-11-07-compapp18" width="450" height="350" border="0" />
+
+After saving this change, I returned to my Visual Studio project and entered that same IronFoundry.me URL into the web.config file where the “localhost” value had been before. After publishing the website to the file system and executing a Cloud Foundry <strong>vmc push</strong> command from my Command console, my app was quickly deployed.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp20" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp20.png" alt="2012-11-07-compapp20" width="500" height="253" border="0" />
+
+Did it work? I browsed my newly published app on Iron Foundry, and just as with the local site, I was prompted for which identity provider to use. After selecting Google and plugging in my credentials, I saw my logged in user on the website.
+
+<img style="background-image: none; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-width: 0px;" title="2012-11-07-compapp21" src="http://blog.ironfoundry.org/wp-content/uploads/2012/11/2012-11-07-compapp21.png" alt="2012-11-07-compapp21" width="500" height="489" border="0" />
+
+Cool! This is a fun case of being able to use the public/private Iron Foundry PaaS but still take advantage of other useful services offered by other PaaS solutions.
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        TAGS
+    </div>
+</div>
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p>Cloud Foundry and Micro Cloud Foundry are trademarks of Pivotal Labs in the United States and/or other jurisdictions.</p>
+    </div>
+</footer>
+
+<script src="/javascripts/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+
+</body>
+</html>

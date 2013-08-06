@@ -1,0 +1,105 @@
+---
+layout: post
+title: Managing PostgreSQL and MySQL Application Instances in Iron Foundry
+categories:
+- How To Guide
+- Iron Foundry
+- Release
+- VMC
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _yoast_wpseo_linkdex: '0'
+  _edit_last: '6'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: Managing PostgreSQL and MySQL Application Instances in Iron
+    Foundry - Iron Foundry
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _thumbnail_id: '164'
+---
+One reasonable concern with PaaS platforms is whether or not developers can easily access and administer backend application services. Iron Foundry database services such as PostgreSQL and MySQL have very strong management tools that you don't want to abandon when working with a PaaS instance. In this post, we'll look at how to wire up existing database management tools to PostgreSQL and MySQL.
+<h2>PostgreSQL</h2>
+PostgreSQL (discussed in this <a href="http://blog.ironfoundry.org/2012/08/choosing-the-right-database-option-for-your-iron-foundry-applications/" target="_blank">previous Iron Foundry blog post</a>), is a very popular open source database. Developers or database administrators typically use the <a href="http://www.pgadmin.org/" target="_blank">pgAdmin tool</a> to author and debug <a href="http://www.pgadmin.org/docs/1.16/query.html" target="_blank">queries</a>, perform database <a href="http://www.pgadmin.org/docs/1.16/backup.html" target="_blank">backups</a>/<a href="http://www.pgadmin.org/docs/1.16/restore.html" target="_blank">restorations</a>, <a href="http://www.pgadmin.org/docs/1.16/maintenance.html" target="_blank">reindex and cleanup (VACUUM) data</a>,  manage <a href="http://www.pgadmin.org/docs/1.16/pgagent-jobs.html" target="_blank">server jobs</a>, and much more.
+
+You can download the pgAdmin tool <a href="http://www.pgadmin.org/download/" target="_blank">directly</a>, or find it included in the <a href="http://www.enterprisedb.com/products-services-training/pgdownload" target="_blank">PostgreSQL package</a> itself. For this demonstration, I installed PostgreSQL locally and got the pgAdmin tool along with it. After installing the database software, I opened a command prompt on my Windows machine and targeted my Iron Foundry environment.
+
+<img class="alignnone size-full wp-image-152" title="dbadmin01" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin01.png" alt="" width="450" height="289" />
+
+After authenticating myself, I issued a vmc command ("<strong>vmc services</strong>") to see which application services were available, and which services I had already provisioned.
+
+<img class="alignnone size-full wp-image-153" title="dbadmin02" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin02.png" alt="" width="450" height="242" />
+
+So far, no application services were provisioned. Let's change that. I created a new PostgreSQL instance by issuing the vmc command <strong>vmc create-service postgresql</strong>. Note that I didn't need to bind it to an application and can simply create a standalone instance that could be used by many Iron Foundry web applications.
+
+<img class="alignnone size-full wp-image-154" title="dbadmin03" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin03.png" alt="" width="450" height="303" />
+
+Now there was a running instance of PostgreSQL in my environment. At this stage, there was no way for the pgAdmin tool to access this instance. However, thanks to the Cloud Foundry <a href="http://blog.ironfoundry.org/2012/04/caldecott-with-ms-sql-server/" target="_blank">Caldecott</a> technology, I could create a secure tunnel for pgAdmin. The <strong>vmc tunnel &lt;instance name&gt;</strong> command opens up a port that pgAdmin can use to administer that database server.
+
+<img class="alignnone size-full wp-image-155" title="dbadmin04" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin04.png" alt="" width="450" height="284" />
+
+I could have chosen to use the psql client which would have let me issue commands right here in the command prompt, but since I wanted to use the full-featured pgAdmin tool, I selected the "none" client. Notice that I got four key pieces of information back: username, password, name and port. Together, these data points will get us logged into our environment.
+
+I opened the pgAdmin tool and could see that the only server currently recognized was the one on my local machine.
+
+<img class="alignnone size-full wp-image-156" title="dbadmin05" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin05.png" alt="" width="450" height="330" />
+
+I clicked the "Add a connection to a server" and was shown the "New Server Registration" prompt. For the "Name" value, I used the "name" that came back from the tunnel command; for "Host" value I set it to "localhost"; for the "Port" I used "10000"; and for the Username and Password, I used the corresponding values returned by the tunnel command.
+
+<img class="alignnone size-full wp-image-157" title="dbadmin06" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin06.png" alt="" width="450" height="470" />
+
+Once connected, I could navigate all the database artifacts and browse the standard options for backing up data, querying tables, and creating new tables.
+
+<img class="alignnone size-full wp-image-158" title="dbadmin07" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin07.png" alt="" width="450" height="330" />
+
+The pgAdmin tool is a very handy and useful way to manage your database artifacts and Iron Foundry makes it easy to use this tool against your application services.
+<h2>MySQL</h2>
+MySQL is also a very popular open source database and we want to make sure that database developers and administrators can use familiar tooling even if their application instance sits in a PaaS like Iron Foundry.
+
+The MySQL team has made significant investments in their Workbench tool, and here we'll see exactly how you hook the Workbench up to an Iron Foundry instance. First, I downloaded the<a href="http://dev.mysql.com/downloads/workbench/5.2.html" target="_blank"> standalone Workbench tool</a>.
+
+Then, I added a new MySQL instance to my Iron Foundry environment by using the <strong>vmc create-service mysql</strong> command.
+
+<img class="alignnone size-full wp-image-159" title="dbadmin08" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin08.png" alt="" width="450" height="312" />
+
+Like the PostgreSQL example prior, I created a tunnel so that the MySQL Workbench tool could "see" our Iron Foundry instance. As before, I also chose the "none" client so that I could connect the GUI tool instead of issuing command statements only.
+
+<img class="alignnone size-full wp-image-162" title="dbadmin09" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin091.png" alt="" width="450" height="300" />
+
+Notice that I got back database credentials ("username"/"password"), a schema instance name ("name"), and a port number.
+
+I was now ready to connect the MySQL Workbench to my database instance. The Workbench has three core functions: <a href="http://dev.mysql.com/doc/workbench/en/wb-sql-development.html" target="_blank">SQL development</a>, <a href="http://dev.mysql.com/doc/workbench/en/wb-data-modeling.html" target="_blank">data modeling</a>, and <a href="http://dev.mysql.com/doc/workbench/en/wb-server-administration.html" target="_blank">server administration</a>.
+
+<img class="alignnone size-full wp-image-161" title="dbadmin10" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin10.png" alt="" width="450" height="328" />
+
+In this example, I created a new pair of tables, and deployed them to the database instance in Iron Foundry. In the Workbench, I clicked the "Create New EER Model" in order to generate a data model. The first thing that I did was right-click the schema name and choose "Edit Schema." On the subsequent window, I changed the default "mydb" name to the the "name" value returned by the vmc tunnel command.
+
+<img class="alignnone size-full wp-image-163" title="dbadmin11" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin11.png" alt="" width="450" height="328" />
+
+I then chose to add a new diagram to the model and proceeded to create a pair of new tables, "customer" and "order", and defined a relationship between them.
+
+<img class="alignnone size-full wp-image-164" title="dbadmin12" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin12.png" alt="" width="450" height="494" />
+
+With the model complete, I chose the "Forward Engineer" option so that this model could be used to generate the actual tables.
+
+<img class="alignnone size-full wp-image-165" title="dbadmin13" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin13.png" alt="" width="450" height="267" />
+
+I was then prompted to create an actual connection to the target database, and this is where the tunnel-provided values came into play. I plugged in the username and password, and set the Hostname value to "localhost" and the Default Schema to the tunnel-provided "name" value.
+
+<img class="alignnone size-full wp-image-166" title="dbadmin14" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin14.png" alt="" width="450" height="183" />
+
+I then kept the remaining default options, including the selection of the two tables to forward engineer, and reviewed the pending SQL Script to be executed. After successfully completing the wizard, I could open an instance of the SQL Editor and browse my schema.
+
+<img class="alignnone size-full wp-image-167" title="dbadmin15" src="http://blog.ironfoundry.org/wp-content/uploads/2012/09/dbadmin15.png" alt="" width="328" height="568" />
+
+Sure enough my two tables, relationship included, were there.
+<h2>Summary</h2>
+While one of the key benefits of a PaaS is managed services, it's important to have the option to administer these application services using the powerful,  familiar management tools currently available to users. Both PostgreSQL and MySQL have solid management interfaces and we saw here how you can tunnel into these Iron Foundry database instances  and perform standard operations against your service.

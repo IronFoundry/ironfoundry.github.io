@@ -1,0 +1,38 @@
+---
+layout: post
+title: Deploying Iron Foundry Manually
+categories:
+- How To Guide
+- VCAP
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '5'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _yoast_wpseo_linkdex: '0'
+---
+There is the documentation in the README.md file of the Iron Foundry Project, but today I'm kicking off a series on how to manually setup an Iron Foundry Environment. Over the course of this series I'll dive into setting up independent cloud controllers, DEA (Droplet Execution Agents) and more. For this entry we'll dive straight in and get the cloud controller setup. This will give us a basis in which to launch the other elements of the environment.
+
+First, get an instance of <a href="http://www.ubuntu.com/download/server" target="_blank">Ubuntu Server</a>(we use the LTS version). Once you've downloaded that get it installed, I'll leave that exercise to you. I've setup an instance within my Tier 3 Account.
+
+[caption id="attachment_101" align="aligncenter" width="702"]<a href="http://blog.ironfoundry.org/?attachment_id=101" rel="attachment wp-att-101"><img class="size-full wp-image-101" title="Iron Foundry Cloud Controller Tier 3 Server Instance" src="http://blog.ironfoundry.org/wp-content/uploads/2012/08/Iron-Foundry-01.jpg" alt="Iron Foundry Cloud Controller Tier 3 Server Instance" width="702" height="734" /></a> Iron Foundry Cloud Controller Tier 3 Server Instance[/caption]
+
+Once that is all setup connect to the instance via SSH.  root@10.81.53.14 would do the trick.  (In my case I'm also behind a VPN, firewall and a whole list of security instruments, so that isn't accessible so don't get any fancy ideas)
+
+<script type="mce-text/javascript" src="https://gist.github.com/3367426.js?file=Connecting to Ubuntu"></script>
+
+Generally at this point it is usually a good idea to complete and update and upgrade via apt-get.
+
+<script type="mce-text/javascript" src="https://gist.github.com/3367426.js?file=apt-get update and upgrade"></script>
+

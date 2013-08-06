@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Iron Foundry, Stackato, a New Micro Image Pair - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header>
+        <div class="backsplash">
+            <img class="blur" src="/img/hero_01.jpg" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+            </svg>
+        </div>
+        <div class="container menu">
+            <div class="row">
+    <div class="col-lg-2">
+        <a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a>
+    </div>
+    <div class="col-lg-10">
+        <ul class="list-unstyled list-inline pull-right">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li><a href="/signup.html">Sign Up</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/help.html">Help</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-9">
+        <div class="row">
+            <div class="col-lg-2">
+            	<div class="author-info">
+                    <div class="author-name"></div>
+                    
+            	</div>
+            </div>
+            <div class="col-lg-10">
+                <h2>Iron Foundry, Stackato, a New Micro Image Pair</h2>
+                <span></span>
+                <p class="p1">Today we’re releasing a new update for the Iron Foundry Micro Instance. The biggest changes are two fold. One is our full support of the Stackato from ActiveState powered micro instance. We’ve taken the great work that the ActiveState Team has done with Cloud Foundry and rolled that into our Iron Foundry enabled Micro Instance! The second big addition is full support for the Cloud Foundry <a href="http://blog.cloudfoundry.com/post/13481010689/micro-cloud-foundry-streamlines-offline-support-and-adds-java-debugging" target="_blank">Micro Cloud Foundry 1.2</a> release.</p>
+<p class="p1">For those of you that have dived heavily into the overall framework, some of the specifics include changes that enhance the reliability of the controller and self-healing nature of the system.</p>
+<p class="p1">How to get it up and running? Easy…</p>
+<p class="p1"><strong>First download and get the Stackato Micro Cloud Running.</strong></p>
+
+<ol class="ol1">
+	<li class="li3"><span class="s2">Download the Stackato Micro Cloud here: <a href="http://www.activestate.com/stackato/download_vm">http://www.activestate.com/stackato/download_vm</a></span></li>
+	<li class="li1">Unzip the image to the location you want the image to execute from.</li>
+	<li class="li1">Set the network on the staccato image to bridged.</li>
+	<li class="li1">Startup the Stackato Image.</li>
+	<li class="li1">When it boots up get the IP and Hostname Address. Note both the host name and IP address.</li>
+	<li class="li1">The Hostname will need to be added to your hosts file, either /etc/hosts in OS-X or Linux and c:WindowsSystem32Drivershosts. Add the IP &amp; host to the file like ‘192.168.NNN.YYYY <a href="http://stackato-XXXX.local/"><span class="s1">stackato-XXXX.local</span></a>’ and  ’<a href="http://api.stackato-XXXX.local/"><span class="s1">api.stackato-XXXX.local</span></a> <a href="http://testwebapp.stackato-XXXX.local/"><span class="s1">testwebapp.stackato-XXXX.local</span></a>‘ (add additional entries at the end for other web apps you intend to push)</li>
+	<li class="li1">Navigate to <a href="http://stackato-XXXX.local">http://stackato-XXXX.local</a> and it will redirect to the initial setup page where you enter an email address and password. These credentials are added to the Stackato Instance, so be sure to remember them.</li>
+</ol>
+<p class="p1"><strong>Next step get the Micro Iron Foundry VM Running &amp; Communicating w/ The Stackato Micro Cloud.</strong></p>
+
+<ol class="ol1">
+<ol class="ol1">
+	<li class="li1">Download the Micro Iron Foundry VM here: <a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a> (Use 7-zip to unzip, or on the Mac use a tool like the “Unarchiver”(<a href="http://wakaba.c3.cx/s/apps/unarchiver.html">http://wakaba.c3.cx/s/apps/unarchiver.html</a> or get it from the App Store)).</li>
+	<li class="li1">If VMWare asks if you have moved or copied the VM, choose “I copied it”.</li>
+	<li class="li1">It will show “Setup is starting services” as this is a Windows VM. After it goes through the inital setup it will continue and require your input</li>
+	<li class="li1">Set the timezone. Click Next</li>
+	<li class="li1">Accept the licensing terms. Click Next</li>
+	<li class="li1">It will now say that the users password must be changed before logging on the first time. Click OK and set the password (make sure to remember the password!)</li>
+	<li class="li1">After setting the password you will now be logged into the core terminal prompt. You can now enable Iron Foundry on your Cloud Foundry Micro Cloud. (Make sure your Cloud Foundry Micro Cloud is running at the same time)</li>
+	<li class="li1">Boot up the Micro Iron Foundry instance. It will prompt you for a password for the Administrator user.</li>
+	<li class="li1">At the command prompt (C:UsersAdministrator) execute these commands:</li>
+	<li class="li1">C:UsersAdministrator&gt;cd C:IronFoundrySetup</li>
+	<li class="li1">C:IronFoundrySetup&gt;RunSetup.cmd</li>
+	<li class="li1">At the prompt enter your domain stackato-XXXX.local, IP address and password.</li>
+	<li class="li1">It will then connect via ssh, patch the system, restart the cloud controller, and setup the local SQL provisioning services in the Iron Foundry VM.</li>
+</ol>
+</ol>
+<img src="http://help.ironfoundry.org/attachments/token/y4khhx10yupemos/?name=image03.png" alt="command line results" />
+<p class="p1">Once the setup process is done you can use Cloud Foundry Explorer (<a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a>) to push an <a href="http://ASP.NET/"><span class="s1">ASP.NET</span></a> application. I’ve attached a sample <a href="http://ASP.NET/"><span class="s1">ASP.NET</span></a> application. Click the gear icon to add a cloud, click the green + button to add a New Server. Rename server to something and add an api url of <a href="http://api.stackato-XXXX.local/"><span class="s1">api.stackato-XXXX.local</span></a>, email and password. Clicking ”Validate Account” should succeed. Once the cloud is added, you can use push and choose that cloud to publish to it. You should use “testwebapp” as the name since you added it to the hosts file above. Once pushed, you can visit <a href="http://testwebapp.stackato-XXXX.local">http://testwebapp.stackato-XXXX.local</a> to browse to your application, and <a href="http://testwebapp.stackato-XXXX.local/env">http://testwebapp.stackato-XXXX.local/env</a> to see more detailed info.</p>
+<p class="p1">To get involved with Iron Foundry check out the project at <a href="http://www.ironfoundry.org">http://www.ironfoundry.org</a> and Cloud Foundry at <a href="http://www.cloudfoundry.org/">http://www.cloudfoundry.org/</a>. With the code available on github at <a href="https://github.com/IronFoundry">https://github.com/IronFoundry</a> or <a href="https://github.com/cloudfoundry">https://github.com/cloudfoundry</a>.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        TAGS
+    </div>
+</div>
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p>Cloud Foundry and Micro Cloud Foundry are trademarks of Pivotal Labs in the United States and/or other jurisdictions.</p>
+    </div>
+</footer>
+
+<script src="/javascripts/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+
+</body>
+</html>

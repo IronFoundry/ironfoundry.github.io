@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IronFoundry.ME Environment Now Running Latest Iron Foundry Bits - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header>
+        <div class="backsplash">
+            <img class="blur" src="/img/hero_01.jpg" />
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <filter id="blur">
+                    <feGaussianBlur stdDeviation="5" />
+                </filter>
+            </svg>
+        </div>
+        <div class="container menu">
+            <div class="row">
+    <div class="col-lg-2">
+        <a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a>
+    </div>
+    <div class="col-lg-10">
+        <ul class="list-unstyled list-inline pull-right">
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li><a href="/signup.html">Sign Up</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/help.html">Help</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-9">
+        <div class="row">
+            <div class="col-lg-2">
+            	<div class="author-info">
+                    <div class="author-name"></div>
+                    
+            	</div>
+            </div>
+            <div class="col-lg-10">
+                <h2>IronFoundry.ME Environment Now Running Latest Iron Foundry Bits</h2>
+                <span></span>
+                Last weekend, we <a href="http://blog.ironfoundry.org/2012/10/weekend-iron-foundry-work-downtime-window/" target="_blank">did a refresh</a> of the sandbox <a href="http://api.ironfoundry.me/" target="_blank">IronFoundry.ME</a> environment to make sure that it was running the latest Iron Foundry bits. As part of that update, we've enabled and upgraded a few interesting things.
+
+First of all, we added some new services. You can confirm this by using vmc (and don't forget to upgrade your <a href="http://rubygems.org/gems/vmc-IronFoundry" target="_blank">vmc-IronFoundry</a> gem!) and executing a <strong>vmc services</strong> command.
+
+<img class="alignnone size-full wp-image-182" title="upgrade01" src="http://blog.ironfoundry.org/wp-content/uploads/2012/10/upgrade01.png" alt="" width="500" height="266" />
+
+You should notice a few things here. First, MongoDB has been upgraded from version 1.8 to 2.0. Also, we're now running PostgreSQL 9.0. You'll also find the new Cloud Foundry blob service available here.
+
+As far as application runtimes go, we upgraded a couple of those too. You can see this by executing <strong>vmc runtimes</strong> against the IronFoundry.ME environment.
+
+<img class="alignnone size-full wp-image-183" title="upgrade02" src="http://blog.ironfoundry.org/wp-content/uploads/2012/10/upgrade02.png" alt="" width="500" height="316" />
+
+See that we are running both Java 6 and 7 now. Also, we've upgraded our versions of Node and included support for Node 0.8.2.
+
+Besides upgrading services and runtimes, we also <a href="http://uaa.ironfoundry.me/login" target="_blank">added support</a> for the Cloud Foundry User Account and Authorization Service (UAA). The Cloud Foundry blog has articles that <a href="http://blog.cloudfoundry.org/2012/07/23/uaa-intro/" target="_blank">Introduce the UAA</a>, review the<a href="http://blog.cloudfoundry.org/2012/07/24/high-level-features-of-the-uaa/" target="_blank"> high level features of the UAA</a>,  and <a href="http://blog.cloudfoundry.org/2012/10/09/oauth-rest/" target="_blank">secure REST web services with the UAA</a>. You'll also find docs on Github that outline the <a href="https://github.com/cloudfoundry/uaa/blob/master/docs/UAA-Security.md" target="_blank">features and configurations</a>, as well as <a href="https://github.com/cloudfoundry/uaa/blob/master/docs/UAA-APIs.rst" target="_blank">how to use the UAA APIs</a>. Keep an eye out for an upcoming blog post that shows an example of how you use the UAA service within Iron Foundry.
+
+We hope that you can immediately take advantage of the new capabilities in this free IronFoundry.ME environment.
+
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        TAGS
+    </div>
+</div>
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p>Cloud Foundry and Micro Cloud Foundry are trademarks of Pivotal Labs in the United States and/or other jurisdictions.</p>
+    </div>
+</footer>
+
+<script src="/javascripts/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+
+</body>
+</html>
