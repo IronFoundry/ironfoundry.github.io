@@ -1,3 +1,7 @@
+---
+title: Start Contributing
+---
+
 # Start Contributing
 
 It is always great to start contributing to an open source project. The Iron Foundry project is built upon the time, effort, and resources from developers and companies. 
