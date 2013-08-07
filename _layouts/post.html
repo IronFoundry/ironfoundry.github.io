@@ -7,7 +7,13 @@ layout: blog
         <div class="row">
             <div class="col-lg-2">
             	<div class="author-info">
-                    <div class="author-name">{{ page.author }}</div>
+                    <div class="author-name">
+                        {% if page.author %}
+                            {{ page.author }}
+                        {% else %}
+                            Tier 3
+                        {% endif %}
+                    </div>
                     {% if page.twitter %}
                         <div class="author-url"><a href="http://www.twitter.com/{{ post.twitter }}">@{{ page.twitter }}</a></div>
                     {% endif %}

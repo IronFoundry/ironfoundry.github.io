@@ -9,7 +9,13 @@ title: Blog
             <div class="row post-index">
                 <div class="col-lg-2">
                     <div class="author-info">
-                        <div class="author-name">{{ post.author }}</div>
+                        <div class="author-name">
+                            {% if page.author %}
+                                {{ page.author }}
+                            {% else %}
+                                Tier 3
+                            {% endif %}
+                        </div>
                         {% if post.twitter %}
                             <div class="author-url"><a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a></div>
                         {% endif %}
