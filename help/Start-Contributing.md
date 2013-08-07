@@ -1,5 +1,8 @@
 ---
+layout: help
 title: Start Contributing
+tagline: General \ Announcements
+caption: Start Contributing
 ---
 
 # Start Contributing
