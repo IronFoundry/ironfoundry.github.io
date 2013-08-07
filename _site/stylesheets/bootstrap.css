@@ -4333,7 +4333,7 @@ header .backsplash {
 header .backsplash img {
   width: 100%;
   height: auto;
-  margin-top: -10%;
+  margin-top: -20%;
 }
 header .backsplash img.blur {
   -webkit-filter: blur(5px);
@@ -4436,6 +4436,9 @@ footer {
 }
 footer h4 {
   color: #959494;
+}
+footer a {
+  color: #fff;
 }
 .container .main {
   padding: 0 50px;
