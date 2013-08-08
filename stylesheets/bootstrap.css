@@ -4342,6 +4342,7 @@ header .backsplash img {
   width: 100%;
   height: auto;
   margin-top: 0%;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 header .home {
@@ -4355,6 +4356,8 @@ header .signup {
 }
 header .blog {
   background-image: url("/img/blog.jpg");
+=======
+>>>>>>> e5745d68b1961dcdfd5f631084a00eefdd9ae9ad
 }
 header .help {
   background-image: url("/img/help.jpg");
@@ -4374,7 +4377,10 @@ header .backsplash img.blur {
   -moz-transition: 2s -moz-filter linear;
   -o-transition: 2s -o-filter linear;
   transition: 2s filter linear;
+<<<<<<< HEAD
 >>>>>>> 80558d9050ddf1293f701218f079472e7bcb10e2
+=======
+>>>>>>> e5745d68b1961dcdfd5f631084a00eefdd9ae9ad
 }
 header .menu {
   font-weight: bold;
@@ -4422,8 +4428,11 @@ header .hero h1 {
   font-size: 90px;
   line-height: 90px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   letter-spacing: .3em;
 =======
+=======
+>>>>>>> e5745d68b1961dcdfd5f631084a00eefdd9ae9ad
   letter-spacing: .1em;
 >>>>>>> 80558d9050ddf1293f701218f079472e7bcb10e2
   text-align: center;
