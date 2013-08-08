@@ -4,3 +4,14 @@ pygments: true
 markdown:  rdiscount
 paginate: 10
 paginate_path: "/blog/page:num"
+navigation:
+- text: Downloads
+  url: http://app.ironfoundry.org/downloads
+- text: Sign Up
+  url: http://app.ironfoundry.org/signup
+- text: Blog
+  url: /blog/index.html
+- text: Help
+  url: /help.html
+- text: About
+  url: /about.html

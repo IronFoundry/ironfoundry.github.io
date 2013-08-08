@@ -4,11 +4,16 @@
     </div>
     <div class="col-lg-10">
         <ul class="list-unstyled list-inline pull-right">
-            <li><a href="http://app.ironfoundry.org/downloads">Downloads</a></li>
-            <li><a href="http://app.ironfoundry.org/signup">Sign Up</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/help.html">Help</a></li>
-            <li><a href="/about.html">About</a></li>
+            {% for link in site.navigation %}
+              {% assign current = nil %}
+              {% if page.url == link.url or page.layout == link.layout %}
+                {% assign current = 'active' %}
+              {% endif %}
+
+              <li class="{{ current }}">
+                <a href="{{ link.url }}">{{ link.text }}</a>
+              </li>
+            {% endfor %}
             <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
         </ul>
     </div>
