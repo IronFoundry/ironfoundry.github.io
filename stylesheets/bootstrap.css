@@ -257,7 +257,7 @@ html {
 }
 body {
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.428571429;
   color: #7c6a60;
   background-color: #28221f;
@@ -299,23 +299,23 @@ img {
   border-radius: 500px;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border: 0;
   border-top: 1px solid #3e3936;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 12.5px;
 }
 .lead {
-  margin-bottom: 20px;
-  font-size: 16.099999999999998px;
+  margin-bottom: 25px;
+  font-size: 20.7px;
   font-weight: 200;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 27px;
   }
 }
 small {
@@ -387,19 +387,19 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 12.5px;
 }
 h4,
 h5,
 h6 {
   line-height: 2;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 h1,
 .h1 {
-  font-size: 28px;
+  font-size: 30px;
 }
 h2,
 .h2 {
@@ -407,11 +407,11 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 h4,
 .h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h5,
 .h5 {
@@ -419,21 +419,21 @@ h5,
 }
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 12;
 }
 h1 small,
 .h1 small {
-  font-size: 24px;
+  font-size: 31px;
 }
 h2 small,
 .h2 small {
-  font-size: 18px;
+  font-size: 23px;
 }
 h3 small,
 .h3 small,
 h4 small,
 .h4 small {
-  font-size: 14px;
+  font-size: 18px;
 }
 .header-title {
   letter-spacing: .3em;
@@ -442,14 +442,14 @@ h4 small,
   letter-spacing: .2em;
 }
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 11.5px;
+  margin: 50px 0 25px;
   border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12.5px;
 }
 ul ul,
 ol ul,
@@ -471,7 +471,7 @@ ol ol {
   padding-right: 5px;
 }
 dl {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 dt,
 dd {
@@ -529,12 +529,12 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p {
-  font-size: 17.5px;
+  font-size: 22.5px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -574,7 +574,7 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -592,9 +592,9 @@ code {
 }
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 12px;
+  margin: 0 0 12.5px;
+  font-size: 17px;
   line-height: 1.428571429;
   word-break: break-all;
   word-wrap: break-word;
@@ -604,7 +604,7 @@ pre {
   border-radius: 4px;
 }
 pre.prettyprint {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 pre code {
   padding: 0;
@@ -993,7 +993,7 @@ th {
 }
 .table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .table thead > tr > th,
 .table tbody > tr > th,
@@ -1145,8 +1145,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
+  margin-bottom: 25px;
+  font-size: 27px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -1208,9 +1208,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-control {
   display: block;
   width: 100%;
-  height: 38px;
+  height: 43px;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
@@ -1243,7 +1243,7 @@ textarea.form-control {
 .radio,
 .checkbox {
   display: block;
-  min-height: 20px;
+  min-height: 25px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -1282,24 +1282,24 @@ textarea.form-control {
   margin-left: 10px;
 }
 .form-control.input-large {
-  height: 56px;
+  height: 63px;
   padding: 14px 16px;
-  font-size: 18px;
+  font-size: 23px;
   border-radius: 6px;
 }
 .form-control.input-small {
-  height: 30px;
+  height: 35px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 3px;
 }
 select.input-large {
-  height: 56px;
-  line-height: 56px;
+  height: 63px;
+  line-height: 63px;
 }
 select.input-small {
-  height: 30px;
-  line-height: 30px;
+  height: 35px;
+  line-height: 35px;
 }
 .has-warning .help-block,
 .has-warning .control-label {
@@ -1371,7 +1371,7 @@ select.input-small {
   display: inline-block;
   padding: 8px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1.428571429;
   text-align: center;
@@ -1627,12 +1627,12 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-large {
   padding: 14px 16px;
-  font-size: 18px;
+  font-size: 23px;
   border-radius: 6px;
 }
 .btn-small {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -1705,7 +1705,7 @@ input[type="button"].btn-block {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -1715,12 +1715,12 @@ input[type="button"].btn-block {
 }
 .input-group-addon.input-small {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 16px;
   border-radius: 3px;
 }
 .input-group-addon.input-large {
   padding: 14px 16px;
-  font-size: 18px;
+  font-size: 23px;
   border-radius: 6px;
 }
 .input-group-addon input[type="radio"],
@@ -1851,7 +1851,7 @@ input[type="button"].btn-block {
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 9px 0;
+  margin: 11.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -1912,7 +1912,7 @@ input[type="button"].btn-block {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.428571429;
   color: #999999;
 }
@@ -2016,7 +2016,7 @@ a.list-group-item.active .list-group-item-text {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 17.5px;
+  font-size: 22.5px;
   font-weight: 500;
 }
 .panel-footer {
@@ -2104,7 +2104,7 @@ a.list-group-item.active .list-group-item-text {
 }
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 27px;
   font-weight: bold;
   line-height: 1;
   color: #000000;
@@ -2198,7 +2198,7 @@ button.close {
 }
 .nav .nav-divider {
   height: 1px;
-  margin: 9px 0;
+  margin: 11.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -2372,8 +2372,8 @@ button.close {
   margin-bottom: 15px;
 }
 .navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
   color: #777777;
   line-height: 20px;
   border-radius: 4px;
@@ -2421,10 +2421,10 @@ button.close {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 15px 15px;
-  font-size: 18px;
+  padding: 12.5px 15px;
+  font-size: 23px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 25px;
   color: #777777;
   text-align: center;
 }
@@ -2460,8 +2460,8 @@ button.close {
   margin-top: 4px;
 }
 .navbar-form {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 3.5px;
+  margin-bottom: 3.5px;
 }
 .navbar-form .form-control,
 .navbar-form .radio,
@@ -2606,11 +2606,11 @@ button.close {
   }
 }
 .navbar-btn {
-  margin-top: 6px;
+  margin-top: 3.5px;
 }
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 .navbar-link {
   color: #777777;
@@ -2773,7 +2773,7 @@ button.close {
 }
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
@@ -2792,7 +2792,7 @@ button.close {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 20px 0;
+  margin: 25px 0;
   border-radius: 4px;
 }
 .pagination > li {
@@ -2841,7 +2841,7 @@ button.close {
 .pagination-large > li > a,
 .pagination-large > li > span {
   padding: 14px 16px;
-  font-size: 18px;
+  font-size: 23px;
 }
 .pagination-large > li:first-child > a,
 .pagination-large > li:first-child > span {
@@ -2856,7 +2856,7 @@ button.close {
 .pagination-small > li > a,
 .pagination-small > li > span {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .pagination-small > li:first-child > a,
 .pagination-small > li:first-child > span {
@@ -2870,7 +2870,7 @@ button.close {
 }
 .pager {
   padding-left: 0;
-  margin: 20px 0;
+  margin: 25px 0;
   list-style: none;
   text-align: center;
 }
@@ -3067,7 +3067,7 @@ button.close {
   z-index: 1030;
   display: block;
   visibility: visible;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -3195,7 +3195,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 18px;
   background-color: #f7f7f7;
@@ -3283,7 +3283,7 @@ button.close {
 }
 .alert {
   padding: 10px 35px 10px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #c09853;
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
@@ -3461,7 +3461,7 @@ a.thumbnail:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   line-height: 1;
@@ -3534,8 +3534,8 @@ a.list-group-item.active > .badge,
 }
 .progress {
   overflow: hidden;
-  height: 20px;
-  margin-bottom: 20px;
+  height: 25px;
+  margin-bottom: 25px;
   background-color: #f5f5f5;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3545,7 +3545,7 @@ a.list-group-item.active > .badge,
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 12px;
+  font-size: 16px;
   color: #ffffff;
   text-align: center;
   background-color: #b76133;
@@ -3610,7 +3610,7 @@ a.list-group-item.active > .badge,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .accordion {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .accordion-group {
   margin-bottom: 2px;
@@ -3806,7 +3806,7 @@ a.list-group-item.active > .badge,
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
-  font-size: 21px;
+  font-size: 27px;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
@@ -3825,7 +3825,7 @@ a.list-group-item.active > .badge,
     border-radius: 6px;
   }
   .jumbotron h1 {
-    font-size: 63px;
+    font-size: 81px;
   }
 }
 @font-face {
