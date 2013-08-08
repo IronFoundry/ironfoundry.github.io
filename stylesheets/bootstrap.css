@@ -3933,6 +3933,16 @@ header .backsplash {
   top: 0;
   z-index: 20;
   overflow: hidden;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+
+  -o-animation: fadein 2s;
+  /* Opera */
+
   background-position-y: -200px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4015,6 +4025,17 @@ header .hero h1 {
   line-height: 90px;
   letter-spacing: .3em;
   text-align: center;
+  animation-delay: 2s;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+
+  -o-animation: fadein 2s;
+  /* Opera */
+
 }
 header .hero h1.about-headline {
   font-size: 50px;
@@ -4030,6 +4051,17 @@ header .hero .hero-tagline {
   letter-spacing: 1px;
   width: 75%;
   font-weight: bold;
+  animation-delay: 2.5s;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+
+  -o-animation: fadein 2s;
+  /* Opera */
+
 }
 header .hero .download {
   font-size: 20px;
@@ -4040,6 +4072,41 @@ header .hero .download {
 header .hero .github {
   color: #fff;
   font-size: 15px;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 html,
 body {
