@@ -9,9 +9,9 @@ tag_page_layout: tag_page
 permalink: /:year/:month/:day/:title/
 navigation:
 - text: Downloads
-  url: http://app.ironfoundry.org/downloads
+  url: http://app.ironfoundry.me/download
 - text: Sign Up
-  url: http://app.ironfoundry.org/signup
+  url: http://app.ironfoundry.me/signup
 - text: Blog
   url: /blog/index.html
 - text: Help
