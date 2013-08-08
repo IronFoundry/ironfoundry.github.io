@@ -4040,6 +4040,9 @@ header .hero h1 {
 header .hero h1.about-headline {
   font-size: 50px;
 }
+header .hero h1.about-headline img {
+  margin: -7px 15px 0 0;
+}
 header .hero .hero-tagline {
   margin: 10px auto 30px;
   text-align: center;
