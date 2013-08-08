@@ -4333,7 +4333,7 @@ header .backsplash {
 header .backsplash img {
   width: 100%;
   height: auto;
-  margin-top: -20%;
+  margin-top: 0%;
 }
 header .backsplash img.blur {
   -webkit-filter: blur(5px);
@@ -4391,10 +4391,11 @@ header .hero {
   color: #fff;
 }
 header .hero h1 {
-  font-size: 90pt;
-  line-height: 90pt;
+  font-size: 90px;
+  line-height: 90px;
   letter-spacing: .1em;
   text-align: center;
+  text-transform: uppercase;
 }
 header .hero .hero-tagline {
   margin: 0 auto;
