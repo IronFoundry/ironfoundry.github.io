@@ -1,5 +1,5 @@
 @footerHeight: 190px;
-@footerPaddingTop: 48px;
+@footerPaddingTop: 26px;
 @footerBackground: #1c1816;
 
 html,
@@ -23,14 +23,21 @@ footer {
     height: @footerHeight;
     padding-top: @footerPaddingTop;
     background-color: @footerBackground;
-    color: #959494;
+    color: #685b53;
+    font-size: 15px;
     
     h4 {
-        color: #959494;
+    	font-size: 20px;
+    	font-weight: normal;
+        color: #685b53;
     }
 
-    a {
+    a, a:hover, a:visited {
         color: #fff;
+    }
+    
+    .trademark {
+	    font-size: 12px;
     }
 }
 
@@ -38,7 +45,11 @@ footer {
 	color: #7c6a60;
 }
 
-.subheadline {
+.tan {
+	color: #d2c4bd;
+}
+
+.bottom-ruled {
 	padding-bottom: 50px;
 	margin-bottom: 50px;
 	border-bottom: 1px solid #3e3936;

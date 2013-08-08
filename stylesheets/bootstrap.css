@@ -4396,7 +4396,7 @@ header .menu ul > li:hover {
   border-bottom: solid 3px #fff;
 }
 header .hero {
-  margin-top: 75px;
+  margin-top: 55px;
   height: 348px;
   z-index: 60;
   position: relative;
@@ -4426,6 +4426,10 @@ header .hero .download {
   padding: 8px 15px 8px 20px;
   margin-bottom: 30px;
 }
+header .hero .github {
+  color: #fff;
+  font-size: 15px;
+}
 html,
 body {
   min-width: 1100px;
@@ -4442,20 +4446,31 @@ body {
 }
 footer {
   height: 190px;
-  padding-top: 48px;
+  padding-top: 26px;
   background-color: #1c1816;
-  color: #959494;
+  color: #685b53;
+  font-size: 15px;
 }
 footer h4 {
-  color: #959494;
+  font-size: 20px;
+  font-weight: normal;
+  color: #685b53;
 }
-footer a {
+footer a,
+footer a:hover,
+footer a:visited {
   color: #fff;
+}
+footer .trademark {
+  font-size: 12px;
 }
 .brown {
   color: #7c6a60;
 }
-.subheadline {
+.tan {
+  color: #d2c4bd;
+}
+.bottom-ruled {
   padding-bottom: 50px;
   margin-bottom: 50px;
   border-bottom: 1px solid #3e3936;
