@@ -4026,7 +4026,8 @@ header .hero .hero-tagline {
   color: #fff;
   font-style: italic;
   line-height: 30px;
-  width: 70%;
+  letter-spacing: 1px;
+  width: 75%;
   font-weight: bold;
 }
 header .hero .download {
