@@ -2033,7 +2033,7 @@ a.list-group-item.active .list-group-item-text {
 .panel.toolkit {
   height: 350px;
 }
-.panel h5 {
+.panel.toolkit h5 {
   line-height: 22px;
 }
 .panel-heading {
