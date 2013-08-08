@@ -2030,6 +2030,9 @@ a.list-group-item.active .list-group-item-text {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
+.panel.toolkit {
+  height: 350px;
+}
 .panel-heading {
   margin: -15px -15px 15px;
   padding: 10px 15px;
@@ -4070,9 +4073,6 @@ footer .trademark {
 }
 .tan {
   color: #d2c4bd;
-}
-.toolkit {
-  height: 350px;
 }
 .left-nav {
   font-size: 15px;
