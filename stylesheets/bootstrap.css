@@ -457,6 +457,10 @@ ul ol,
 ol ol {
   margin-bottom: 0;
 }
+ul > li,
+ol > li {
+  padding-bottom: 15px;
+}
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -469,6 +473,8 @@ ol ol {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 dl {
   margin-bottom: 27px;
@@ -4562,8 +4568,8 @@ footer .trademark {
 }
 .author-info {
   margin-top: 22px;
-  width: 119px;
-  height: 119px;
+  width: 140px;
+  height: 140px;
   background: #302925;
   -moz-border-radius: 70px;
   -webkit-border-radius: 70px;
@@ -4571,15 +4577,19 @@ footer .trademark {
   text-align: center;
   padding: 40px 20px;
 }
-.author-info .author-name {
+.author-info.blog {
+  width: 119px;
+  height: 119px;
+}
+.author-name {
   margin: 0 auto;
   font-size: 20px;
   color: #b76133;
   line-height: 20px;
 }
-.author-info .author-url {
+.author-url a {
   font-size: 15px;
-  color: #6a5a52;
+  color: #d2c4bd;
 }
 .clearfix:before,
 .clearfix:after {
