@@ -4560,6 +4560,11 @@ footer .trademark {
   color: #765d43;
   font-size: 13px;
 }
+.about-intro {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
 .author-info {
   margin-top: 22px;
   width: 119px;
