@@ -1642,6 +1642,13 @@ fieldset[disabled] .btn-link:focus {
   line-height: 1.5;
   border-radius: 3px;
 }
+.btn-download {
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 3px;
+  width: 125px;
+}
 .btn-block {
   display: block;
   width: 100%;
