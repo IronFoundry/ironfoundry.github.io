@@ -463,6 +463,8 @@ ol > li {
 }
 .list-download-notes {
   font-size: 13px;
+}
+.list-download-notes > li {
   padding-bottom: 0;
 }
 .list-download-notes a {
