@@ -3895,6 +3895,7 @@ a.list-group-item.active > .badge,
   min-height: 400px;
 }
 header {
+  height: 600px;
   padding-top: 25px;
   position: relative;
   overflow: hidden;
@@ -3968,7 +3969,7 @@ header .menu ul > li:hover {
   border-bottom: solid 3px #fff;
 }
 header .hero {
-  margin-top: 50px;
+  margin-top: 20px;
   height: 348px;
   z-index: 60;
   position: relative;
