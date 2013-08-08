@@ -34,22 +34,7 @@ title: Blog
         {% endfor %}
     </div>
     <div class="col-lg-3">
-<!--
-        <h5>CATEGORIES</h5> 
-        <ul>
-
-        {% for tag in site.categories %}
-            <li><a href="#">{{tag[0]}}</a></li>            
-        {% endfor %}
-        </ul>
-
-        <h5>TAGS</h5> 
-        <ul>
-        {% for tag in site.tags %}
-            <li><a href="#">{{tag[0]}}</a></li>
-        {% endfor %}
-        </ul>
--->
+        {% include tags.html %}
     </div>
 </div>
 

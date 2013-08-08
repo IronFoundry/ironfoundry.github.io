@@ -4,6 +4,9 @@ pygments: true
 markdown:  rdiscount
 paginate: 10
 paginate_path: "/blog/page:num"
+tag_page_dir: tag
+tag_page_layout: tag_page
+permalink: /:year/:month/:day/:title/
 navigation:
 - text: Downloads
   url: http://app.ironfoundry.org/downloads
