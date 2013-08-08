@@ -3933,6 +3933,7 @@ header .backsplash {
   top: 0;
   z-index: 20;
   overflow: hidden;
+  background-position-y: -200px;
   background-size: cover;
   background-repeat: no-repeat;
 }
