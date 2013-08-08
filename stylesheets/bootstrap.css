@@ -258,7 +258,7 @@ html {
 body {
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   color: #7c6a60;
   background-color: #28221f;
 }
@@ -299,16 +299,16 @@ img {
   border-radius: 500px;
 }
 hr {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 27px;
+  margin-bottom: 27px;
   border: 0;
   border-top: 1px solid #3e3936;
 }
 p {
-  margin: 0 0 12.5px;
+  margin: 0 0 13.5px;
 }
 .lead {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   font-size: 20.7px;
   font-weight: 200;
   line-height: 1.4;
@@ -387,15 +387,15 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 25px;
-  margin-bottom: 12.5px;
+  margin-top: 27px;
+  margin-bottom: 13.5px;
 }
 h4,
 h5,
 h6 {
   line-height: 2;
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 13.5px;
+  margin-bottom: 13.5px;
 }
 h1,
 .h1 {
@@ -442,14 +442,14 @@ h4 small,
   letter-spacing: .2em;
 }
 .page-header {
-  padding-bottom: 11.5px;
-  margin: 50px 0 25px;
+  padding-bottom: 12.5px;
+  margin: 54px 0 27px;
   border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 12.5px;
+  margin-bottom: 13.5px;
 }
 ul ul,
 ol ul,
@@ -471,11 +471,11 @@ ol ol {
   padding-right: 5px;
 }
 dl {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 dt,
 dd {
-  line-height: 1.428571429;
+  line-height: 1.5;
 }
 dt {
   font-weight: bold;
@@ -529,8 +529,8 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 12.5px 25px;
-  margin: 0 0 25px;
+  padding: 13.5px 27px;
+  margin: 0 0 27px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p {
@@ -543,7 +543,7 @@ blockquote p:last-child {
 }
 blockquote small {
   display: block;
-  line-height: 1.428571429;
+  line-height: 1.5;
   color: #999999;
 }
 blockquote small:before {
@@ -574,9 +574,9 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   font-style: normal;
-  line-height: 1.428571429;
+  line-height: 1.5;
 }
 code,
 pre {
@@ -592,10 +592,10 @@ code {
 }
 pre {
   display: block;
-  padding: 12px;
-  margin: 0 0 12.5px;
+  padding: 13px;
+  margin: 0 0 13.5px;
   font-size: 17px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -604,7 +604,7 @@ pre {
   border-radius: 4px;
 }
 pre.prettyprint {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 pre code {
   padding: 0;
@@ -993,7 +993,7 @@ th {
 }
 .table {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 .table thead > tr > th,
 .table tbody > tr > th,
@@ -1002,7 +1002,7 @@ th {
 .table tbody > tr > td,
 .table tfoot > tr > td {
   padding: 8px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -1145,7 +1145,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   font-size: 27px;
   line-height: inherit;
   color: #333333;
@@ -1208,10 +1208,10 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-control {
   display: block;
   width: 100%;
-  height: 43px;
+  height: 45px;
   padding: 8px 12px;
   font-size: 18px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   color: #555555;
   vertical-align: middle;
   background-color: #ffffff;
@@ -1243,7 +1243,7 @@ textarea.form-control {
 .radio,
 .checkbox {
   display: block;
-  min-height: 25px;
+  min-height: 27px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -1282,24 +1282,24 @@ textarea.form-control {
   margin-left: 10px;
 }
 .form-control.input-large {
-  height: 63px;
+  height: 65px;
   padding: 14px 16px;
   font-size: 23px;
   border-radius: 6px;
 }
 .form-control.input-small {
-  height: 35px;
+  height: 36px;
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 3px;
 }
 select.input-large {
-  height: 63px;
-  line-height: 63px;
+  height: 65px;
+  line-height: 65px;
 }
 select.input-small {
-  height: 35px;
-  line-height: 35px;
+  height: 36px;
+  line-height: 36px;
 }
 .has-warning .help-block,
 .has-warning .control-label {
@@ -1373,7 +1373,7 @@ select.input-small {
   margin-bottom: 0;
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.428571429;
+  line-height: 1.5;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -1707,7 +1707,7 @@ input[type="button"].btn-block {
   padding: 8px 12px;
   font-size: 18px;
   font-weight: normal;
-  line-height: 1.428571429;
+  line-height: 1.5;
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
@@ -1851,7 +1851,7 @@ input[type="button"].btn-block {
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 11.5px 0;
+  margin: 12.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -1860,7 +1860,7 @@ input[type="button"].btn-block {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.428571429;
+  line-height: 1.5;
   color: #333333;
   white-space: nowrap;
 }
@@ -1913,7 +1913,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 3px 20px;
   font-size: 16px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   color: #999999;
 }
 .dropdown-backdrop {
@@ -2198,7 +2198,7 @@ button.close {
 }
 .nav .nav-divider {
   height: 1px;
-  margin: 11.5px 0;
+  margin: 12.5px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -2211,7 +2211,7 @@ button.close {
 }
 .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
 }
@@ -2372,8 +2372,8 @@ button.close {
   margin-bottom: 15px;
 }
 .navbar-nav > li > a {
-  padding-top: 12.5px;
-  padding-bottom: 12.5px;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
   color: #777777;
   line-height: 20px;
   border-radius: 4px;
@@ -2421,10 +2421,10 @@ button.close {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 12.5px 15px;
+  padding: 11.5px 15px;
   font-size: 23px;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 27px;
   color: #777777;
   text-align: center;
 }
@@ -2460,8 +2460,8 @@ button.close {
   margin-top: 4px;
 }
 .navbar-form {
-  margin-top: 3.5px;
-  margin-bottom: 3.5px;
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
 }
 .navbar-form .form-control,
 .navbar-form .radio,
@@ -2606,11 +2606,11 @@ button.close {
   }
 }
 .navbar-btn {
-  margin-top: 3.5px;
+  margin-top: 2.5px;
 }
 .navbar-text {
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 11.5px;
+  margin-bottom: 11.5px;
 }
 .navbar-link {
   color: #777777;
@@ -2773,7 +2773,7 @@ button.close {
 }
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px;
@@ -2792,7 +2792,7 @@ button.close {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 25px 0;
+  margin: 27px 0;
   border-radius: 4px;
 }
 .pagination > li {
@@ -2802,7 +2802,7 @@ button.close {
 .pagination > li > span {
   float: left;
   padding: 4px 12px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   text-decoration: none;
   background-color: #ffffff;
   border: 1px solid #dddddd;
@@ -2870,7 +2870,7 @@ button.close {
 }
 .pager {
   padding-left: 0;
-  margin: 25px 0;
+  margin: 27px 0;
   list-style: none;
   text-align: center;
 }
@@ -2996,14 +2996,14 @@ button.close {
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-  min-height: 16.428571429px;
+  min-height: 16.5px;
 }
 .modal-header .close {
   margin-top: -2px;
 }
 .modal-title {
   margin: 0;
-  line-height: 1.428571429;
+  line-height: 1.5;
 }
 .modal-body {
   position: relative;
@@ -3283,7 +3283,7 @@ button.close {
 }
 .alert {
   padding: 10px 35px 10px 15px;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   color: #c09853;
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
@@ -3353,7 +3353,7 @@ button.close {
 .thumbnail,
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.428571429;
+  line-height: 1.5;
   background-color: #28221f;
   border: 1px solid #dddddd;
   border-radius: 4px;
@@ -3534,8 +3534,8 @@ a.list-group-item.active > .badge,
 }
 .progress {
   overflow: hidden;
-  height: 25px;
-  margin-bottom: 25px;
+  height: 27px;
+  margin-bottom: 27px;
   background-color: #f5f5f5;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -3610,7 +3610,7 @@ a.list-group-item.active > .badge,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .accordion {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 .accordion-group {
   margin-bottom: 2px;
@@ -3808,7 +3808,7 @@ a.list-group-item.active > .badge,
   margin-bottom: 30px;
   font-size: 27px;
   font-weight: 200;
-  line-height: 2.1428571435;
+  line-height: 2.25;
   color: inherit;
   background-color: #eeeeee;
 }
@@ -4320,9 +4320,14 @@ a.list-group-item.active > .badge,
 .glyphicon-collapse-top:before {
   content: "\e160";
 }
+.header-short {
+  height: 400px;
+}
+.header-short .backsplash {
+  min-height: 400px;
+}
 header {
-  min-height: 562px;
-  padding-top: 38px;
+  padding-top: 25px;
   position: relative;
   overflow: hidden;
 }
@@ -4330,7 +4335,6 @@ header .backsplash {
   position: absolute;
   width: 100%;
   min-height: 600px;
-  height: 600px;
   left: 0;
   top: 0;
   z-index: 20;
@@ -4396,7 +4400,7 @@ header .menu ul > li:hover {
   border-bottom: solid 3px #fff;
 }
 header .hero {
-  margin-top: 55px;
+  margin-top: 50px;
   height: 348px;
   z-index: 60;
   position: relative;
@@ -4410,14 +4414,14 @@ header .hero h1 {
   text-align: center;
 }
 header .hero .hero-tagline {
-  margin: 10px auto 20px;
+  margin: 10px auto 30px;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   color: #fff;
   font-style: italic;
   line-height: 30px;
-  width: 80%;
+  width: 70%;
   font-weight: bold;
 }
 header .hero .download {
@@ -4537,8 +4541,8 @@ footer .trademark {
 }
 .author-info {
   margin-top: 22px;
-  width: 140px;
-  height: 140px;
+  width: 119px;
+  height: 119px;
   background: #302925;
   -moz-border-radius: 70px;
   -webkit-border-radius: 70px;
