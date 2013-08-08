@@ -463,6 +463,13 @@ ol > li {
 }
 .list-download-notes {
   font-size: 13px;
+  padding-bottom: 0;
+}
+.list-download-notes a {
+  color: #78665d;
+}
+.list-download-notes a:hover {
+  color: #b76133;
 }
 .list-unstyled {
   padding-left: 0;
