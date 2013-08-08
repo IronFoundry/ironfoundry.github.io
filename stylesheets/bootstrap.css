@@ -276,7 +276,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #7b4122;
+  color: #b76133;
   text-decoration: underline;
 }
 a:focus {
@@ -1614,7 +1614,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #7b4122;
+  color: #b76133;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -2326,8 +2326,8 @@ button.close {
   border-bottom-color: #b76133;
 }
 .nav a:hover .caret {
-  border-top-color: #7b4122;
-  border-bottom-color: #7b4122;
+  border-top-color: #b76133;
+  border-bottom-color: #b76133;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -4455,11 +4455,6 @@ footer h4 {
   font-size: 20px;
   font-weight: normal;
   color: #685b53;
-}
-footer a,
-footer a:hover,
-footer a:visited {
-  color: #fff;
 }
 footer .trademark {
   font-size: 12px;
