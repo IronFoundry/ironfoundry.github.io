@@ -4421,6 +4421,9 @@ header .hero h1 {
   letter-spacing: .3em;
   text-align: center;
 }
+header .hero h1.about-headline {
+  font-size: 50px;
+}
 header .hero .hero-tagline {
   margin: 10px auto 30px;
   text-align: center;

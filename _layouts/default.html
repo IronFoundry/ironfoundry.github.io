@@ -16,7 +16,11 @@
         </div>
         <div class="container">
             <div class="row hero">
+            	{% if page.title == "About" %}
+                <h1 class="text-center about-headline">{{ page.tagline }}</h1>
+                {% else %}
                 <h1 class="text-center">{{ page.tagline }}</h1>
+                {% endif %}
                 {% if page.caption %}
                     <div class="hero-tagline">{{ page.caption }}</div>
                 {% endif %}
