@@ -1,7 +1,7 @@
 ---
 layout: help
 title: Start Contributing
-tagline: General \ Announcements
+tagline: General \ Getting Started
 caption: Start Contributing
 ---
 

@@ -393,28 +393,29 @@ h3 {
 h4,
 h5,
 h6 {
+  line-height: 2;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 h1,
 .h1 {
-  font-size: 38px;
+  font-size: 28px;
 }
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 24px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 15px;
 }
 h6,
 .h6 {
@@ -433,6 +434,12 @@ h3 small,
 h4 small,
 .h4 small {
   font-size: 14px;
+}
+.header-title {
+  letter-spacing: .3em;
+}
+.spaced {
+  letter-spacing: .2em;
 }
 .page-header {
   padding-bottom: 9px;
@@ -1997,7 +2004,6 @@ a.list-group-item.active .list-group-item-text {
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  text-align: center;
 }
 .panel-heading {
   margin: -15px -15px 15px;
@@ -4329,12 +4335,33 @@ header .backsplash {
   top: 0;
   z-index: 20;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 header .backsplash img {
   width: 100%;
   height: auto;
-  margin-top: -20%;
+  margin-top: 0%;
 }
+<<<<<<< HEAD
+header .home {
+  background-image: url("/img/home.jpg");
+}
+header .downloads {
+  background-image: url("/img/downloads.jpg");
+}
+header .signup {
+  background-image: url("/img/signup.jpg");
+}
+header .blog {
+  background-image: url("/img/blog.jpg");
+}
+header .help {
+  background-image: url("/img/help.jpg");
+}
+header .about {
+  background-image: url("/img/about.jpg");
+=======
 header .backsplash img.blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -4343,10 +4370,11 @@ header .backsplash img.blur {
   filter: url(#blur);
   filter: blur(5px);
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
-  -webkit-transition: 0.9s -webkit-filter linear;
-  -moz-transition: 0.9s -moz-filter linear;
-  -o-transition: 0.9s -o-filter linear;
-  transition: .9s filter linear;
+  -webkit-transition: 2s -webkit-filter linear;
+  -moz-transition: 2s -moz-filter linear;
+  -o-transition: 2s -o-filter linear;
+  transition: 2s filter linear;
+>>>>>>> 80558d9050ddf1293f701218f079472e7bcb10e2
 }
 header .menu {
   font-weight: bold;
@@ -4391,28 +4419,32 @@ header .hero {
   color: #fff;
 }
 header .hero h1 {
-  font-size: 90pt;
-  line-height: 90pt;
+  font-size: 90px;
+  line-height: 90px;
+<<<<<<< HEAD
+  letter-spacing: .3em;
+=======
   letter-spacing: .1em;
+>>>>>>> 80558d9050ddf1293f701218f079472e7bcb10e2
   text-align: center;
+  text-transform: uppercase;
 }
 header .hero .hero-tagline {
-  margin: 0 auto;
+  margin: 10px auto 20px;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
-  padding: 15px 0;
   color: #fff;
   font-style: italic;
   line-height: 30px;
   width: 80%;
-}
-header .hero button.download {
   font-weight: bold;
-  margin: 20px;
 }
-header .hero a {
-  color: #fff;
+header .hero .download {
+  font-size: 20px;
+  letter-spacing: .3em;
+  padding: 8px 15px 8px 20px;
+  margin-bottom: 30px;
 }
 html,
 body {
@@ -4439,6 +4471,14 @@ footer h4 {
 }
 footer a {
   color: #fff;
+}
+.brown {
+  color: #7c6a60;
+}
+.subheadline {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #3e3936;
 }
 .container .main {
   padding: 0 50px;

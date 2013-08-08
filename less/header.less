@@ -14,11 +14,41 @@ header {
         z-index: 20;
         overflow: hidden;
         
+	    background-size: cover;
+	    background-repeat: no-repeat;
+        
         img {
             width: 100%;
             height: auto;
-            margin-top: -20%;
+            margin-top: 0%;
         }
+<<<<<<< HEAD
+
+    }
+    
+    .home {
+	    background-image: url("/img/home.jpg");
+    }
+    
+    .downloads {
+	    background-image: url("/img/downloads.jpg");
+    }
+    
+    .signup {
+	    background-image: url("/img/signup.jpg");
+    }
+    
+    .blog {
+	    background-image: url("/img/blog.jpg");
+    }
+    
+    .help {
+	    background-image: url("/img/help.jpg");
+    }
+    
+    .about {
+	    background-image: url("/img/about.jpg");
+=======
         
         img.blur {
             -webkit-filter: blur(5px); -moz-filter: blur(5px);
@@ -26,11 +56,12 @@ header {
             filter: url(#blur);
             filter: blur(5px);
             filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
-            -webkit-transition: .9s -webkit-filter linear;
-            -moz-transition: .9s -moz-filter linear;
-            -o-transition: .9s -o-filter linear;
-            transition: .9s filter linear;
+            -webkit-transition: 2s -webkit-filter linear;
+            -moz-transition: 2s -moz-filter linear;
+            -o-transition: 2s -o-filter linear;
+            transition: 2s filter linear;
         }
+>>>>>>> 80558d9050ddf1293f701218f079472e7bcb10e2
     }
     
     .menu {
@@ -83,31 +114,34 @@ header {
         text-align: center;
         color: #fff;
         h1 {
-            font-size: 90pt;
-            line-height: 90pt;
+            font-size: 90px;
+            line-height: 90px;
+<<<<<<< HEAD
+            letter-spacing: .3em;
+=======
             letter-spacing: .1em;
+>>>>>>> 80558d9050ddf1293f701218f079472e7bcb10e2
             text-align: center;
+            text-transform: uppercase;
         }
         
         .hero-tagline {
-            margin: 0 auto;
+            margin: 10px auto 20px;
             text-align: center;
             font-family: @font-family-serif;
             font-size: 20px;
-            padding: 15px 0;
             color: #fff;
             font-style: italic;
             line-height: 30px;
             width: 80%;
-        }
-        
-        button.download {
             font-weight: bold;
-            margin: 20px;
         }
         
-        a {
-            color: #fff;
+        .download {
+	        font-size: 20px;
+	        letter-spacing: .3em;
+	        padding: 8px 15px 8px 20px;
+	        margin-bottom: 30px;
         }
     }
 }
