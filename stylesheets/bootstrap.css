@@ -366,7 +366,7 @@ h6,
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-weight: 600;
   line-height: 1.1;
-  color: #ffffff;
+  color: #d2c4bd;
 }
 h1 small,
 h2 small,
@@ -4405,6 +4405,14 @@ header .hero {
   z-index: 60;
   position: relative;
   text-align: center;
+  color: #fff;
+}
+header .hero h1,
+header .hero h2,
+header .hero h3,
+header .hero h4,
+header .hero h5,
+header .hero h6 {
   color: #fff;
 }
 header .hero h1 {
