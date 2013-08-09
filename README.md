@@ -3,7 +3,11 @@ ironfoundry.github.io
 
 Iron Foundry pages.
 
-Luke Bakken
-Adrien Lo
-Jared Wray
-Nathan Young
+Website Contributors:
+- Luke Bakken
+- Adrien Lo
+- Jared Wray
+- Nathan Young
+
+Design:
+- Nathan Young
