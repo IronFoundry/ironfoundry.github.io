@@ -4040,7 +4040,7 @@ header .hero h1 {
 header .hero h1.about-headline {
   font-size: 50px;
 }
-header .hero h1.about-headline img {
+header .hero h1.about-headline .heart {
   margin: -7px 15px 0 0;
 }
 header .hero .hero-tagline {
