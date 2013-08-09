@@ -17,4 +17,4 @@ While Tier 3 is the lead on the project and will remain a strong active voice, w
 
 As always the simplest way is to fork the Iron Foundry code on github for simple changes and then issue a pull request to the Iron Foundry team for review. For significant contributions —  as with most open source projects — we do require to sign a Contributors License Agreement (CLA). The CLA is modeled after the Apache Foundation and Cloud Foundry CLAs, which have worked out well with both communities.
 
- You can read more about this here: [Start Contributing](/help/start-contributing.html)
+ You can read more about this here: [Start Contributing](/help/Start-Contributing.html)
