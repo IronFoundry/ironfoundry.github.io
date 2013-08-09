@@ -41,19 +41,19 @@ title: Blog
 <hr />
 
 <div class="row">
-    <div class="col-lg-6">
-    {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-            <a href="/blog" class="previous">older posts</a>
-        {% else %}
-            <a href="/blog/page{{ paginator.previous_page }}" class="previous">older posts</a>
-        {% endif %}
+    <div class="col-lg-6 text-right">
+    {% if paginator.next_page %}
+        <a href="/blog/page{{ paginator.next_page }}">older posts</a>
     {% endif %}
     </div>
     
-    <div class="col-lg-6 text-right">
-    {% if paginator.next_page %}
-        <a href="/blog/page{{ paginator.next_page }}" class="next">newer posts</a>
+    <div class="col-lg-6">
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+            <a href="/blog">newer posts</a>
+        {% else %}
+            <a href="/blog/page{{ paginator.previous_page }}">newer posts</a>
+        {% endif %}
     {% endif %}
     </div>
 </div>
