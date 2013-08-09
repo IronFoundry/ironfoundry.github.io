@@ -4,10 +4,10 @@ title: Blog
 ---
 
 <div class="row">
-    <div class="col-lg-9">
+    <div class="col-lg-10">
         {% for post in paginator.posts %}
             <div class="row post-index">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="author-info blog">
                         <div class="author-name">
                             {% if page.author %}
@@ -21,10 +21,9 @@ title: Blog
                         {% endif %}
                     </div>
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-7">
                     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                     <div class="post-date">
-                        <!-- Posted in {% for tag in post.categories %}<a href="/blog/category/{{ tag }}">{{ tag }}</a>, {% endfor %} &#183; {{ post.date | date: "%B %d, %Y" }} -->
                         Posted in {% for tag in post.categories %}{{ tag }}, {% endfor %} &#183; {{ post.date | date: "%B %d, %Y" }}
                     </div>
                     <p>{{ post.excerpt }}</p>
@@ -33,7 +32,7 @@ title: Blog
             </div>
         {% endfor %}
     </div>
-    <div class="col-lg-3">
+    <div class="col-lg-2">
         {% include tags.html %}
     </div>
 </div>
