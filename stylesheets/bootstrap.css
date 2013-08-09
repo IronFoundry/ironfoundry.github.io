@@ -4036,12 +4036,17 @@ header .hero h1 {
   -o-animation: fadein 2s;
   /* Opera */
 
+  text-transform: uppercase;
 }
-header .hero h1.about-headline {
+header .hero h1.small-headline {
   font-size: 50px;
+  line-height: 60px;
 }
-header .hero h1.about-headline .heart {
+header .hero h1.small-headline .heart {
   margin: -7px 15px 0 0;
+}
+header .hero .parent-links {
+  letter-spacing: .2em;
 }
 header .hero .hero-tagline {
   margin: 10px auto 30px;

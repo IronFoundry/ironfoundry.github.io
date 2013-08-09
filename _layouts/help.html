@@ -1,6 +1,35 @@
----
-layout: default
-heroImage: help
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Iron Foundry</title>
+    {% include header_meta.html %}
+</head>
 
-{{content}}
+<body>
+
+<div id="wrap">
+    <header class="header-short">
+        <div class="backsplash help">
+        </div>
+        <div class="container menu">
+            {% include menu.html %}
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">{{ page.title }}</h1>
+                <div class="hero-tagline">{{ page.caption }}</div>
+            </div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        {{ content }}
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+{% include footer.html %}
+
+</body>
+</html>

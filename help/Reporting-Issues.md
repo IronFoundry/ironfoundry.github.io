@@ -1,5 +1,5 @@
 ---
-layout: help
+layout: help_doc
 title: Reporting Issues
 tagline: General \ Getting Started
 caption: Reporting Issues

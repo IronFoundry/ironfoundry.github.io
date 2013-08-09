@@ -9,27 +9,27 @@
 
 <div id="wrap">
     <header class="header-short">
-        <div class="backsplash {{page.heroImage}}">
+        <div class="backsplash help">
         </div>
         <div class="container menu">
             {% include menu.html %}
         </div>
         <div class="container">
             <div class="row hero">
-            	{% if page.title == "About" %}
-                <h1 class="text-center small-headline">{{ page.tagline }}</h1>
-                {% else %}
-                <h1 class="text-center">{{ page.tagline }}</h1>
-                {% endif %}
-                {% if page.caption %}
-                    <div class="hero-tagline">{{ page.caption }}</div>
-                {% endif %}
+                <div class="parent-links"><a href="/help.html">{{ page.tagline }}</a></div>
+                <h1 class="text-center small-headline">{{ page.title }}</h1>
             </div>
         </div>
     </header>
         
     <div class="container content-container">
-        {{ content }}
+		<div class="row">
+			<div class="col-lg-2">
+			</div>
+		    <div class="col-lg-8">
+		    	{{ content }}
+		    </div>
+		</div>
     </div>
     
     <div id="push"></div>

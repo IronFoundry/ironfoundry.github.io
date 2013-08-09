@@ -1,5 +1,5 @@
 ---
-layout: help
+layout: help_doc
 title: Iron Foundry Governance and the Community
 tagline: General \ Announcements
 caption: Iron Foundry Governance and the Community
