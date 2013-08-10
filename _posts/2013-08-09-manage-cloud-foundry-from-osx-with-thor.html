@@ -1,9 +1,9 @@
 ﻿---
 layout: post
-title: Manage Cloud Foundry from OSX: Thor Client Available for Download
+title: Deploy .NET Apps to Cloud Foundry v2 with Iron Foundry
 categories:
-- Cloud Foundry
-- Thor
+- DEA.NET
+- Iron Foundry
 - Release
 tags: []
 status: publish
@@ -27,40 +27,21 @@ meta:
   _yoast_wpseo_redirect: ''
 ---
 
-We're excited to announce that a stable release of the OSS Thor client is ready to go! Thor is a OSX client tool for managing <strong>ANY</strong> Cloud Foundry v1 environment. You can <a href="https://github.com/IronFoundry/Thor" target="_blank">view (and contribute!) to the source code</a>, or download a ready-to-use, <a href="http://app.ironfoundry.me/download/get/28745936-f900-e211-9f38-00505696004e" target="_blank">compiled version</a>.
+<p>The Pivotal team recently made a significant upgrade to Cloud Foundry, changing how applications are <a href="http://docs.cloudfoundry.com/docs/running/architecture/" target="_blank">deployed, staged, isolated, and routed</a>. In order to work with this new model, Iron Foundry had to undergo some re-engineering work. <strong>Today, we’re proud to announce an initial release of a Cloud Foundry v2-compliant build of<a href="http://ironfoundry.org/download" target="_blank"> Iron Foundry</a>.</strong></p>
 
-Thor was built to support developers who deploy applications to Cloud Foundry. With Thor you can:
-
+<p>The Iron Foundry team has spent some hard-core engineering time building a quality .NET extension to Cloud Foundry. Specifically, we’ve made the following three major updates:</p>
 <ul>
-  <li><strong>Add target clouds. </strong>Point to any Cloud Foundry v1-compliant endpoint to begin managing applications. 
-
-<br /><img title="Thor2" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor2" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor2.png" width="400" height="200" /> </li>
-
-	<li><strong>View target cloud statistics, deployments. </strong>For any target cloud, you can see the number of running applications, memory consumption, and storage used. You can also see each deployed application and available services. 
-
-<br /><img title="Thor4" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor4" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor4.png" width="400" height="318" /> </li>
-
-	<li><strong>Add applications. </strong>Reference applications that reside on your machine and push them to multiple clouds. 
-
-<br /><img title="Thor5" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor5" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor5.png" width="400" height="318" /> </li>
-
-	<li><strong>Deploy and update applications. </strong>For each local application added to Thor, you can choose which cloud to publish it to. 
-
-<br /><img title="Thor7" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor7" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor7.png" width="400" height="205" /> </li>
-
-	<li><strong>Create services. </strong>Create instances of Cloud Foundry services (e.g. MySQL, Redis, RabbitMQ) to associate with your application. 
-
-<br /><img title="Thor10" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor10" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor10.png" width="400" height="252" /> </li>
-
-	<li><strong>Bind services to applications. </strong>Create a linkage between a given service and application. 
-
-<br /><img title="Thor12" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor12" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor12.png" width="400" height="252" /> </li>
-
-	<li><strong>Manage running applications. </strong>You can start, restart, or stop a given application, see its usage statistics, and change its resource application. 
-
-<br /><img title="Thor13" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="Thor13" src="https://raw.github.com/IronFoundry/ironfoundry.github.io/master/img/blog/2013_08_09-Thor13.png" width="400" height="318" /> </li>
+	<li><a href="https://github.com/IronFoundry/dea_ng" target="_blank"><strong>Updated .NET DEA</strong></a>. Unlike the previous version of Iron Foundry which included a .NET port of Ruby DEA code, we now use the base Ruby DEA code that is part of Cloud Foundry. It’s been modified slightly to run on Windows, but by reusing the Ruby code, we can more easily stay in sync with improvements introduced by the Cloud Foundry team.</li>
+	<li><a href="https://github.com/IronFoundry/cloudfoundry-buildpack-clr" target="_blank"><strong>.NET Buildpack</strong></a>. Cloud Foundry v2 <a href="http://docs.cloudfoundry.com/docs/using/deploying-apps/buildpacks.html" target="_blank">makes use of buildpacks</a> to package frameworks and runtimes, and the Iron Foundry team has created a CLR buildpack that supports ASP.NET and (soon) standalone apps.</li>
+	<li><a href="http://docs.cloudfoundry.com/docs/running/architecture/warden.html" target="_blank"><strong>.NET Warden.</strong></a> The Warden in Cloud Foundry v2 provides application isolation and resource constraints. It takes advantage of native Linux capabilities and is a key part of the Cloud Foundry framework. We’ve created a Windows-oriented Warden that delivers a secure, isolated container for each application instance. This behavior isn’t natural for a Windows environment, so we’ve been creative in our initial design and are using the IIS web server via the hostable web core vs. the “full” IIS experience. However, we’re considering additional techniques for taking advantage of IIS capabilities (such as application pool recycling) that aren’t present in the hostable web core.</li>
 </ul>
+<p>Cloud Foundry v2 introduced the <strong>cf tool</strong> that replaced the <strong>vmc tool</strong> that was used for Cloud Foundry v1 management. The <a href="http://docs.cloudfoundry.com/docs/using/managing-apps/cf/index.html" target="_blank">cf interface</a> includes an improved set of capabilities for interrogating, deploying, managing, and configuring Cloud Foundry environments and applications. Now with <a href="http://ironfoundry.org/download" target="_blank">Iron Foundry v2</a>, you can  use the cf tool against applications running in the .NET DEA! Push applications, scale up, scale down, and do all the things with .NET applications that you do with any other application running in a Cloud Foundry environment.</p>
 
-What's next? The Iron Foundry team is already hard at work on Thor v2 which will be compliant with new Cloud Foundry v2 environments. We’ll also be shipping a version of Thor v2 for Windows developers. Want to be involved? Let us know and start contributing to the fun open source ecosystem of Cloud Foundry tools.
-
-A number of folks were instrumental in planning, building, testing, and packaging this release. Props to team members <a href="https://twitter.com/nathanyoung" target="_blank">Nathan Young</a>, <a href="https://twitter.com/scottdensmore" target="_blank">Scott Densmore</a>, <a href="https://twitter.com/shanturoy" target="_blank">Shantu Roy</a>, <a href="https://twitter.com/adron" target="_blank">Adron Hall</a>, and <a href="https://twitter.com/bvanderveen" target="_blank">Benjamin van der Veen</a>!
+<p>What’s next?</p>
+<ul>
+	<li>Today we’re releasing a complete set of instructions for pulling Iron Foundry v2 from its <a href="https://github.com/IronFoundry" target="_blank">source on GitHub</a> and building a working environment. Read the <a href="https://github.com/IronFoundry/dea_ng/blob/ironfoundry/WINDOWS.md" target="_blank">DEA installation docs here</a>. We’re also providing an installer for the .NET Warden. Check out the <a href="https://github.com/IronFoundry/ironfoundry/blob/master/INSTALL.md" target="_blank">.NET Warden installation docs here</a>. Moving forward, we’re going to be creating a Micro Iron Foundry instance as well as an installer for the new .NET DEA.</li>
+	<li>We’re continuing engineering work on the .NET Warden and welcome any contribution from the community! We’re going to continue maturing the isolated, controlled Warden experience on Windows and would love your feedback.</li>
+	<li>Any issues you discover with the new DEA <a href="https://github.com/IronFoundry/dea_ng/issues" target="_blank">can be logged here in GitHub</a>. Any general Iron Foundry issues <a href="https://github.com/IronFoundry/ironfoundry/issues" target="_blank">should be logged here</a>.</li>
+	<li>The public ironfoundry.me sandbox environment is still running Cloud Foundry v1, but we’ll be offering a v2-compliant environment soon!</li>
+</ul>
+<p>We’re very excited that those running Cloud Foundry v2 environments can now use the best available .NET extension. Want to jump in and help out? Download the code, make changes, and submit a pull request in GitHub!</p>
