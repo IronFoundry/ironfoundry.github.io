@@ -4130,6 +4130,16 @@ header .hero .github {
     opacity: 1;
   }
 }
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  header .hero h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  header .hero .download {
+    font-size: 15px;
+  }
+}
 html,
 body {
   height: 100%;

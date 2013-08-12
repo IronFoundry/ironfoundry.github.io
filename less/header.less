@@ -175,6 +175,8 @@ header {
     }
 }
 
+
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -206,4 +208,22 @@ header {
     to {
         opacity: 1;
     }
+}
+
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+	header {
+		.hero {
+			h1 {
+				font-size: 50px;
+				line-height: 50px;
+			}
+			.download {
+				font-size:15px;
+			}
+		}
+	} 
+
 }
