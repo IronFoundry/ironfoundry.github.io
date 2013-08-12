@@ -3946,28 +3946,29 @@ header .backsplash {
   background-position-y: -100px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url("/img/home.jpg");
 }
 header .backsplash img {
   width: 100%;
   height: auto;
   margin-top: -20%;
 }
-header .home {
+header .backsplash.home {
   background-image: url("/img/home.jpg");
 }
-header .downloads {
+header .backsplash.downloads {
   background-image: url("/img/downloads.jpg");
 }
-header .signup {
+header .backsplash.signup {
   background-image: url("/img/signup.jpg");
 }
-header .blog {
+header .backsplash.blog {
   background-image: url("/img/blog.jpg");
 }
-header .help {
+header .backsplash.help {
   background-image: url("/img/help.jpg");
 }
-header .about {
+header .backsplash.about {
   background-image: url("/img/about.jpg");
 }
 header .menu {
