@@ -3943,7 +3943,7 @@ header .backsplash {
   -o-animation: fadein 2s;
   /* Opera */
 
-  background-position-y: -100px;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("/img/home.jpg");
