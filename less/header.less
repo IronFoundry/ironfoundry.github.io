@@ -1,7 +1,7 @@
 .header-short {
 	height: 400px;
 	
-	.backsplash {
+	&.backsplash {
 		min-height: 400px;
 	}
 }
@@ -9,16 +9,11 @@
 header {
 	height: 600px;
     padding-top: 25px;
-    position: relative;
     overflow: hidden;
     
-    .backsplash {
-        position: absolute;
+    &.backsplash {
         width: 100%;
         min-height: 600px;
-        left: 0;
-        top: 0;
-        z-index: 20;
         overflow: hidden;
         animation: fadein 2s;
 	    -moz-animation: fadein 2s; /* Firefox */
@@ -30,12 +25,6 @@ header {
 	    background-repeat: no-repeat;
         
         background-image: url("/img/home.jpg");
-
-        img {
-            width: 100%;
-            height: auto;
-            margin-top: -20%;
-        }
 
         &.home {
             background-image: url("/img/home.jpg");
@@ -66,18 +55,18 @@ header {
         font-weight: 700;
         letter-spacing: .1em;
         font-size: 18px;
-        height: 90px;
-        z-index: 40;
-        position: relative;
         
         ul > li {
-            padding: 0 0 3px;
-            margin: 0 20px;
             line-height: 20px;
-            float: left;
-                   
+            padding: 0 0 3px 0;
+            margin-left: 20px;
+            margin-right: 20px;
+
             a {
                 color: #fff;
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 0;
                 
                 &:hover {
                     text-decoration: none;
@@ -89,7 +78,7 @@ header {
                 padding: 0;
                 
                 > iframe {
-                    margin-top: -7px;
+                    margin-top: 5px;
                 }
                 &.active,
                 &:hover {

@@ -2371,7 +2371,7 @@ button.close {
   margin-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #eeeeee;
+  background-color: transparent;
   border-radius: 4px;
 }
 .navbar:before,
@@ -2405,20 +2405,20 @@ button.close {
 .navbar-nav > li > a {
   padding-top: 11.5px;
   padding-bottom: 11.5px;
-  color: #777777;
+  color: #ffffff;
   line-height: 20px;
   border-radius: 4px;
 }
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus {
-  color: #333333;
+  color: #ffffff;
   background-color: transparent;
 }
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #d5d5d5;
+  color: #ffffff;
+  background-color: transparent;
 }
 .navbar-nav > .disabled > a,
 .navbar-nav > .disabled > a:hover,
@@ -2456,12 +2456,12 @@ button.close {
   font-size: 23px;
   font-weight: 500;
   line-height: 27px;
-  color: #777777;
+  color: #ffffff;
   text-align: center;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #e6e6e6;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2515,24 +2515,24 @@ button.close {
 }
 .navbar-nav > .dropdown > a:hover .caret,
 .navbar-nav > .dropdown > a:focus .caret {
-  border-top-color: #333333;
-  border-bottom-color: #333333;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .navbar-nav > .open > a,
 .navbar-nav > .open > a:hover,
 .navbar-nav > .open > a:focus {
-  background-color: #d5d5d5;
-  color: #555555;
+  background-color: transparent;
+  color: #ffffff;
 }
 .navbar-nav > .open > a .caret,
 .navbar-nav > .open > a:hover .caret,
 .navbar-nav > .open > a:focus .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .navbar-nav > .dropdown > a .caret {
-  border-top-color: #777777;
-  border-bottom-color: #777777;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .navbar-nav.pull-right > li > .dropdown-menu,
 .navbar-nav > li > .dropdown-menu.pull-right {
@@ -2644,10 +2644,10 @@ button.close {
   margin-bottom: 11.5px;
 }
 .navbar-link {
-  color: #777777;
+  color: #ffffff;
 }
 .navbar-link:hover {
-  color: #333333;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-link {
   color: #999999;
@@ -3916,22 +3916,17 @@ a.list-group-item.active > .badge,
 .header-short {
   height: 400px;
 }
-.header-short .backsplash {
+.header-short.backsplash {
   min-height: 400px;
 }
 header {
   height: 600px;
   padding-top: 25px;
-  position: relative;
   overflow: hidden;
 }
-header .backsplash {
-  position: absolute;
+header.backsplash {
   width: 100%;
   min-height: 600px;
-  left: 0;
-  top: 0;
-  z-index: 20;
   overflow: hidden;
   animation: fadein 2s;
   -moz-animation: fadein 2s;
@@ -3948,45 +3943,40 @@ header .backsplash {
   background-repeat: no-repeat;
   background-image: url("/img/home.jpg");
 }
-header .backsplash img {
-  width: 100%;
-  height: auto;
-  margin-top: -20%;
-}
-header .backsplash.home {
+header.backsplash.home {
   background-image: url("/img/home.jpg");
 }
-header .backsplash.downloads {
+header.backsplash.downloads {
   background-image: url("/img/downloads.jpg");
 }
-header .backsplash.signup {
+header.backsplash.signup {
   background-image: url("/img/signup.jpg");
 }
-header .backsplash.blog {
+header.backsplash.blog {
   background-image: url("/img/blog.jpg");
 }
-header .backsplash.help {
+header.backsplash.help {
   background-image: url("/img/help.jpg");
 }
-header .backsplash.about {
+header.backsplash.about {
   background-image: url("/img/about.jpg");
 }
 header .menu {
   font-weight: 700;
   letter-spacing: .1em;
   font-size: 18px;
-  height: 90px;
-  z-index: 40;
-  position: relative;
 }
 header .menu ul > li {
-  padding: 0 0 3px;
-  margin: 0 20px;
   line-height: 20px;
-  float: left;
+  padding: 0 0 3px 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 header .menu ul > li a {
   color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 header .menu ul > li a:hover {
   text-decoration: none;
@@ -3996,7 +3986,7 @@ header .menu ul > li.fork {
   padding: 0;
 }
 header .menu ul > li.fork > iframe {
-  margin-top: -7px;
+  margin-top: 5px;
 }
 header .menu ul > li.fork.active,
 header .menu ul > li.fork:hover {
