@@ -80,16 +80,19 @@ footer {
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
-
 }
 
 /* Home */
 .share-bar {
     background: #201b19;
-    height: 50px;
-    padding: 15px 0;
+    min-height: 49px;
+    padding: 15px 0 7px;
     text-align: center;
     border-bottom: solid 1px #2c2522;
+    
+    ul {
+	    margin: 0;
+    }
 }
 
 .home-featured-in {
