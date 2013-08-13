@@ -1,6 +1,7 @@
 safe: true
 lsi: false
 pygments: true
+excerpt_separator: "[end_excerpt]"
 markdown:  rdiscount
 paginate: 10
 paginate_path: "/blog/page:num"
