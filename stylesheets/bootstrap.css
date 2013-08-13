@@ -1041,6 +1041,9 @@ th {
 .table .table {
   background-color: #28221f;
 }
+.table.table-fixed {
+  table-layout: fixed;
+}
 .table-condensed thead > tr > th,
 .table-condensed tbody > tr > th,
 .table-condensed tfoot > tr > th,
