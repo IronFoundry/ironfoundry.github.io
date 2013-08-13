@@ -4171,9 +4171,6 @@ footer h4 {
 footer .trademark {
   font-size: 12px;
 }
-.post img {
-  margin: 10px 0 20px;
-}
 .brown {
   color: #7c6a60;
 }
@@ -4250,6 +4247,9 @@ footer .trademark {
   min-width: 125px;
 }
 /* Blog */
+.post img {
+  margin: 10px 0 20px;
+}
 .post-index {
   margin-bottom: 75px;
 }
