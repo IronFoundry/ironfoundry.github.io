@@ -81,9 +81,7 @@ footer {
     }
 }
 
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-}
+
 
 /* Home */
 .share-bar {
@@ -178,4 +176,24 @@ footer {
 .author-url a {
     font-size: 15px;
     .tan()
+}
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+
+@media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
+	.author-info {
+		width: auto;
+		height: auto;
+		padding: 20px 20px;
+		height: 107px;
+	}
+}
+
+@media (max-width: 767px) {
+	.author-info {
+		width: auto;
+		height: auto;
+		padding: 20px 20px;
+	}
 }

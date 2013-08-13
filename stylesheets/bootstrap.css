@@ -4201,10 +4201,6 @@ footer .trademark {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-  
-}
 /* Home */
 .share-bar {
   background: #201b19;
@@ -4283,6 +4279,22 @@ footer .trademark {
 .author-url a {
   font-size: 15px;
   color: #d2c4bd;
+}
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (min-width: 768px) and (max-width: 991px) {
+  .author-info {
+    width: auto;
+    height: auto;
+    padding: 20px 20px;
+    height: 107px;
+  }
+}
+@media (max-width: 767px) {
+  .author-info {
+    width: auto;
+    height: auto;
+    padding: 20px 20px;
+  }
 }
 .clearfix:before,
 .clearfix:after {
