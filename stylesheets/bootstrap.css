@@ -4163,8 +4163,9 @@ section {
   height: 190px;
 }
 footer {
-  height: 190px;
+  min-height: 190px;
   padding-top: 26px;
+  padding-bottom: 26px;
   background-color: #1c1816;
   color: #685b53;
   font-size: 15px;
