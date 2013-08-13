@@ -4,7 +4,6 @@
 
 html,
 body {
-    min-width: 1100px;
     height: 100%;
 }
 
@@ -40,9 +39,6 @@ footer {
     }
 }
 
-.post img {
-	margin: 10px 0 20px;
-}
 
 .brown {
 	color: #7c6a60;
@@ -68,6 +64,12 @@ footer {
 	border-bottom: 1px solid #3e3936;
 }
 
+.top-ruled {
+	padding-top: 50px;
+	margin-top: 50px;
+	border-top: 1px solid #3e3936;
+}
+
 .container {
     .main {
         padding: 0 50px;
@@ -79,18 +81,19 @@ footer {
     }
 }
 
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
 
-}
 
 /* Home */
 .share-bar {
     background: #201b19;
-    height: 50px;
-    padding: 15px 0;
+    min-height: 49px;
+    padding: 15px 0 7px;
     text-align: center;
     border-bottom: solid 1px #2c2522;
+    
+    ul {
+	    margin: 0;
+    }
 }
 
 .home-featured-in {
@@ -103,7 +106,7 @@ footer {
         margin: 15px auto;
         
         li {
-            padding: 0 25px;
+            padding: 0 25px 15px;
         }
     }
 }
@@ -129,6 +132,11 @@ footer {
 }
 
 /* Blog */
+
+.post img {
+	margin: 10px 0 20px;
+}
+
 .post-index {
     margin-bottom: 75px;
 }
@@ -168,4 +176,24 @@ footer {
 .author-url a {
     font-size: 15px;
     .tan()
+}
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+
+@media (min-width: @screen-tablet) and (max-width: @screen-tablet-max) {
+	.author-info {
+		width: auto;
+		height: auto;
+		padding: 20px 20px;
+		height: 107px;
+	}
+}
+
+@media (max-width: 767px) {
+	.author-info {
+		width: auto;
+		height: auto;
+		padding: 20px 20px;
+	}
 }

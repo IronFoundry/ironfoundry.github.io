@@ -8,9 +8,7 @@
 <body>
 
 <div id="wrap">
-    <header class="header-short">
-        <div class="backsplash {{page.heroImage}}">
-        </div>
+    <header class="header-short backsplash {{ page.heroImage }}">
         <div class="container menu">
             {% include menu.html %}
         </div>
@@ -22,7 +20,7 @@
                 <h1 class="text-center">{{ page.tagline }}</h1>
                 {% endif %}
                 {% if page.caption %}
-                    <div class="hero-tagline">{{ page.caption }}</div>
+                    <div class="hero-tagline hidden-sm">{{ page.caption }}</div>
                 {% endif %}
             </div>
         </div>

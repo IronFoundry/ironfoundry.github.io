@@ -7,7 +7,7 @@ title: Blog
     <div class="col-lg-10">
         {% for post in paginator.posts %}
             <div class="row post-index">
-                <div class="col-lg-3">
+                <div class="col-lg-4 visible-lg">
                     <div class="author-info pull-right">
                         <div class="author-name">
                             {% if post.author %}
@@ -21,10 +21,18 @@ title: Blog
                         {% endif %}
                     </div>
                 </div>
-                <div class="col-lg-7 post">
+                <div class="col-lg-8 post">
                     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
                     <div class="post-date">
-                        Posted in {% for tag in post.categories %}{{ tag }}, {% endfor %} &#183; {{ post.date | date: "%B %d, %Y" }}
+                        Posted in {% for tag in post.categories %}{{ tag }}, {% endfor %} &#183; {{ post.date | date: "%B %d, %Y" }} 
+                        	<div class="hidden-lg">
+                        	{% if post.author %}
+                                 by {{ post.author }}
+                            {% endif %}
+                            {% if post.twitter %}
+	                            <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
+	                        {% endif %}
+                            </div>
                     </div>
                     <p>{{ post.excerpt }}</p>
                     <a href="{{ post.url }}">Read More</a>
