@@ -1,17 +1,56 @@
-{% if page.grouptype == 'tag' %}
-<div class="page-header">
-	<h2>Tag: '{{page.tag}}'</h2>
-</div>
-{% elsif page.grouptype == 'category' %}
-<div class="page-header">
-	<h2>Category: '{{page.category}}'</h2>
-</div>
-{% endif %}
+---
+layout: blog
+title: Blog
+---
 
-{% for post in paginator.posts %}
-	{% include post_row.html %}
-{% endfor %}
-	
+<div class="row">
+    <div class="col-lg-10">
+		{% if page.grouptype == 'tag' %}
+			<h2>Tag: '{{page.tag}}'</h2>
+		{% elsif page.grouptype == 'category' %}
+			<h2>Category: '{{page.category}}'</h2>		
+		{% endif %}
+		<hr />
+
+        {% for post in paginator.posts %}
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            {% if post.author %}
+                                {{ post.author }}
+                            {% else %}
+                                Iron Foundry
+                            {% endif %}
+                        </div>
+                        {% if post.twitter %}
+                            <div class="author-url"><a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a></div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <div class="post-date">
+                        Posted in {% for tag in post.categories %}{{ tag }}, {% endfor %} &#183; {{ post.date | date: "%B %d, %Y" }} 
+                        	<div class="hidden-lg">
+                        	{% if post.author %}
+                                 by {{ post.author }}
+                            {% endif %}
+                            {% if post.twitter %}
+	                            <a href="http://www.twitter.com/{{ post.twitter }}">@{{ post.twitter }}</a>
+	                        {% endif %}
+                            </div>
+                    </div>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}">Read More</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<hr />
+
 {% if page.grouptype == 'tag' %}
 	{% capture paging_root %}/tag/{{page.tag}}/{% endcapture %}
 {% elsif page.grouptype == 'category' %}
@@ -19,4 +58,25 @@
 {% else %}
 	{% capture paging_root %}/{% endcapture %}
 {% endif %}
-{% include paging_buttons.html %}
+
+<div class="row">    
+    <div class="col-lg-6">
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+            <a href="{{paging_root}}">newer posts</a>
+        {% else %}
+            <a href="{{paging_root}}page{{paginator.previous_page}}">newer posts</a>
+        {% endif %}
+    {% endif %}
+    </div>
+
+    <div class="col-lg-6 text-right">
+    {% if paginator.next_page %}
+        <a href="{{paging_root}}page{{paginator.next_page}}">older posts</a>
+    {% endif %}
+    </div>
+</div>
+{% assign type = nil %}
+{% assign paging_root = nil %}
+
+<hr />
