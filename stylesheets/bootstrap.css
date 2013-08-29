@@ -3938,6 +3938,33 @@ header {
   height: 600px;
   padding-top: 25px;
   overflow: hidden;
+  position: relative;
+}
+header .photo-credit .photo-author {
+  position: absolute;
+  padding-left: 10px;
+  bottom: 10px;
+  text-align: right;
+  font-style: italic;
+  color: #fff;
+  font-size: 12pt;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+}
+@media (min-width: 768px) {
+  header .photo-credit .photo-author {
+    width: 728px;
+  }
+}
+@media (min-width: 992px) {
+  header .photo-credit .photo-author {
+    width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  header .photo-credit .photo-author {
+    width: 1170px;
+  }
 }
 header.backsplash {
   width: 100%;
@@ -4013,7 +4040,6 @@ header .menu ul > li:hover {
 }
 header .hero {
   margin-top: 20px;
-  height: 348px;
   z-index: 60;
   position: relative;
   text-align: center;

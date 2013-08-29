@@ -10,6 +10,32 @@ header {
 	height: 600px;
     padding-top: 25px;
     overflow: hidden;
+    position: relative;
+
+    .photo-credit {
+        .photo-author {
+            @media(min-width: @screen-small) {
+                width: @container-tablet;
+            }
+
+            @media(min-width: @screen-desktop) {
+                width: @container-desktop;
+            }
+
+            @media(min-width: @screen-large-desktop) {
+                width: @container-large-desktop;
+            }
+            
+            position: absolute;
+            padding-left: 10px;
+            bottom: 10px;
+            text-align: right;
+            font-style: italic;
+            color: #fff;
+            font-size: 12pt;
+            .opacity(.1);
+        }
+    }
     
     &.backsplash {
         width: 100%;
@@ -96,7 +122,6 @@ header {
     
     .hero {
         margin-top: 20px;
-        height: 348px;
         z-index: 60;
         position: relative;
         text-align: center;

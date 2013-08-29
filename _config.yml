@@ -1,4 +1,5 @@
 lsi: false
+Exclude: ["less"]
 pygments: true
 excerpt_separator: "\n\n"
 markdown_ext:  markdown,mkd,mkdn,md
