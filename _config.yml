@@ -17,6 +17,6 @@ navigation:
 - text: Blog
   url: /blog
 - text: Help
-  url: /help
+  url: /help.html
 - text: About
   url: /about
