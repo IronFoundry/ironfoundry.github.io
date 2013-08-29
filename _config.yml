@@ -1,5 +1,5 @@
 lsi: false
-Exclude: ["less"]
+exclude: [less]
 pygments: true
 excerpt_separator: "\n\n"
 markdown_ext:  markdown,mkd,mkdn,md
@@ -15,8 +15,8 @@ navigation:
 - text: Sign Up
   url: http://app.ironfoundry.me/signup
 - text: Blog
-  url: /blog/index.html
+  url: /blog
 - text: Help
-  url: /help.html
+  url: /help
 - text: About
-  url: /about.html
+  url: /about
