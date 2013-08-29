@@ -2,7 +2,6 @@
 layout: help_doc
 title: Start Contributing
 tagline: General \ Getting Started
-caption: Start Contributing
 ---
 
 # Start Contributing

@@ -2,7 +2,6 @@
 layout: help_doc
 title: Reporting Issues
 tagline: General \ Getting Started
-caption: Reporting Issues
 ---
 
 In order to report issues found while using any of the Iron Foundry projects, you have a couple options:
