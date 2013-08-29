@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+   	<title>RealJenius.com - Tag: open source software</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Contribute to Iron Foundry, Here's How!</title>
+  <link>http://realjenius.com/2012/09/12/contribute-to-iron-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-09-12T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/09/12/contribute-to-iron-foundry/</guid>
+  <description><![CDATA[
+     We've been asked a few times, "<em>what's the quickest, easiest and fastest way to get the code, build it and contribute back to Iron Foundry?</em>" Here's a quick start for doing just that.
+
+First, there are a few prerequisites that you'll need:
+<ul>
+	<li>Visual Studio 2010 SP1 w/ all the latest patches, updates, etc.</li>
+	<li>Get the latest <a href="http://msdn.microsoft.com/en-us/vstudio/aa496123.aspx" target="_blank">.NET Framework</a> too.</li>
+	<li>You'll also need the <a href="http://www.microsoft.com/en-us/download/details.aspx?id=2680" target="_blank">Visual Studio 2010 SDK</a> if you want to edit or compile the Visual Studio extensions.</li>
+	<li>Github Account, <a href="https://github.com/login" target="_blank">sign up here</a>.</li>
+</ul>
+Once these are met, then navigate over to <a href="http://www.github.com" target="_blank">Github</a> and to the <a href="http://www.github.com/ironfoundry" target="_blank">Iron Foundry Repositories</a>. Here at this time you'll find a number of repositories. Here's a short description of each:
+<ul>
+	<li><a href="https://github.com/IronFoundry/ironfoundry" target="_blank">IronFoundry</a> - this repo is the core Iron Foundry Project Solution. This is where the Windows DEA, the Cloud Explorer (being replaced by the Thor Project) and other projects to extend Cloud Foundry into the Windows world.</li>
+	<li><a href="https://github.com/IronFoundry/cloud_controller" target="_blank">cloud_controller</a> - this repo is a fork that includes all of the updates from the VMware controlled github repos. We have this here to work on while we sync things up, add and extend and test to send pull requests back to the core Cloud Foundry Project.</li>
+	<li><a href="https://github.com/IronFoundry/vcap-staging" target="_blank">vcap-staging</a> - another fork of the Cloud Foundry Projects for use among the Iron Foundry Project. Updated regularly from upstream.</li>
+	<li><a href="https://github.com/IronFoundry/vcap" target="_blank">vcap</a> - another fork, same as the others. Updated from upstream.</li>
+	<li><a href="https://github.com/IronFoundry/vcap-services" target="_blank">vcap-services</a> - fork.</li>
+	<li><a href="https://github.com/IronFoundry/vcap-services-base" target="_blank">vcap-services-base</a> - fork.</li>
+	<li><a href="https://github.com/IronFoundry/bosh" target="_blank">bosh</a> - fork of the BOSH Project. This project is used for deploying Cloud Foundry &amp; we're working to set it up for use to deploy Iron Foundry bits too.</li>
+</ul>
+There are a lot of other core repositories and forks, but these are the base ones. The main one you'll want to pull down in order to contribute to is the <a href="https://github.com/IronFoundry/ironfoundry" target="_blank">Iron Foundry Repository</a>.
+
+When you clone the Iron Foundry repo down from Github and open it you'll need to make one setting to make sure everything builds appropriately. We've used Nuget to setup the dependencies and they're pulled down if not available during build time. To make sure that Nuget can do this click on Tools -&gt; Library Package Manager -&gt; Package Manager Settings and in the tree make sure Package Manager has General options displayed. Check the Allow NuGet to download packages during build.
+
+[caption id="attachment_123" align="aligncenter" width="1024"]<a href="http://blog.ironfoundry.org/2012/09/contribute-to-iron-foundry/blurgle/" rel="attachment wp-att-123"><img class="size-large wp-image-123" title="Package Manager Settings" src="/img/blog/blurgle-1024x640.png" alt="Package Manager Settings" width="1024" height="640" /></a> Package Manager Settings[/caption]
+
+Once this is done, select the solution and clean the entire solution. Now click on build or rebuild all, this will now build the entire solution, all the dependencies inline, and pull down any dependencies needed from Nuget.
+
+Over the next few days &amp; weeks we'll take a look at the various Thor Projects &amp; their respective build processes. As always, any comments, questions or otherwise, feel free to let us know in the comments or jump into the <a href="https://groups.google.com/forum/?fromgroups#!forum/ironfoundry" target="_blank">group conversation</a>.
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

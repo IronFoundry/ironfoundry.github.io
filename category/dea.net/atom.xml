@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+    <title>RealJenius.com - Category: dea.net</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Deploy .NET Apps to Cloud Foundry v2 with Iron Foundry</title>
+  <link>http://realjenius.com/2013/07/02/deploy-net-apps-to-cloud-foundry-v2-with-iron-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2013-07-02T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2013/07/02/deploy-net-apps-to-cloud-foundry-v2-with-iron-foundry/</guid>
+  <description><![CDATA[
+     <p>The Pivotal team recently made a significant upgrade to Cloud Foundry, changing how applications are <a href="http://docs.cloudfoundry.com/docs/running/architecture/" target="_blank">deployed, staged, isolated, and routed</a>. In order to work with this new model, Iron Foundry had to undergo some re-engineering work. <strong>Today, we’re proud to announce an initial release of a Cloud Foundry v2-compliant build of<a href="http://ironfoundry.org/download" target="_blank"> Iron Foundry</a>.</strong></p>
+
+<p>The Iron Foundry team has spent some hard-core engineering time building a quality .NET extension to Cloud Foundry. Specifically, we’ve made the following three major updates:</p>
+<ul>
+	<li><a href="https://github.com/IronFoundry/dea_ng" target="_blank"><strong>Updated .NET DEA</strong></a>. Unlike the previous version of Iron Foundry which included a .NET port of Ruby DEA code, we now use the base Ruby DEA code that is part of Cloud Foundry. It’s been modified slightly to run on Windows, but by reusing the Ruby code, we can more easily stay in sync with improvements introduced by the Cloud Foundry team.</li>
+	<li><a href="https://github.com/IronFoundry/cloudfoundry-buildpack-clr" target="_blank"><strong>.NET Buildpack</strong></a>. Cloud Foundry v2 <a href="http://docs.cloudfoundry.com/docs/using/deploying-apps/buildpacks.html" target="_blank">makes use of buildpacks</a> to package frameworks and runtimes, and the Iron Foundry team has created a CLR buildpack that supports ASP.NET and (soon) standalone apps.</li>
+	<li><a href="http://docs.cloudfoundry.com/docs/running/architecture/warden.html" target="_blank"><strong>.NET Warden.</strong></a> The Warden in Cloud Foundry v2 provides application isolation and resource constraints. It takes advantage of native Linux capabilities and is a key part of the Cloud Foundry framework. We’ve created a Windows-oriented Warden that delivers a secure, isolated container for each application instance. This behavior isn’t natural for a Windows environment, so we’ve been creative in our initial design and are using the IIS web server via the hostable web core vs. the “full” IIS experience. However, we’re considering additional techniques for taking advantage of IIS capabilities (such as application pool recycling) that aren’t present in the hostable web core.</li>
+</ul>
+<p>Cloud Foundry v2 introduced the <strong>cf tool</strong> that replaced the <strong>vmc tool</strong> that was used for Cloud Foundry v1 management. The <a href="http://docs.cloudfoundry.com/docs/using/managing-apps/cf/index.html" target="_blank">cf interface</a> includes an improved set of capabilities for interrogating, deploying, managing, and configuring Cloud Foundry environments and applications. Now with <a href="http://ironfoundry.org/download" target="_blank">Iron Foundry v2</a>, you can  use the cf tool against applications running in the .NET DEA! Push applications, scale up, scale down, and do all the things with .NET applications that you do with any other application running in a Cloud Foundry environment.</p>
+
+<p>What’s next?</p>
+<ul>
+	<li>Today we’re releasing a complete set of instructions for pulling Iron Foundry v2 from its <a href="https://github.com/IronFoundry" target="_blank">source on GitHub</a> and building a working environment. Read the <a href="https://github.com/IronFoundry/dea_ng/blob/ironfoundry/WINDOWS.md" target="_blank">DEA installation docs here</a>. We’re also providing an installer for the .NET Warden. Check out the <a href="https://github.com/IronFoundry/ironfoundry/blob/master/INSTALL.md" target="_blank">.NET Warden installation docs here</a>. Moving forward, we’re going to be creating a Micro Iron Foundry instance as well as an installer for the new .NET DEA.</li>
+	<li>We’re continuing engineering work on the .NET Warden and welcome any contribution from the community! We’re going to continue maturing the isolated, controlled Warden experience on Windows and would love your feedback.</li>
+	<li>Any issues you discover with the new DEA <a href="https://github.com/IronFoundry/dea_ng/issues" target="_blank">can be logged here in GitHub</a>. Any general Iron Foundry issues <a href="https://github.com/IronFoundry/ironfoundry/issues" target="_blank">should be logged here</a>.</li>
+	<li>The public ironfoundry.me sandbox environment is still running Cloud Foundry v1, but we’ll be offering a v2-compliant environment soon!</li>
+</ul>
+<p>We’re very excited that those running Cloud Foundry v2 environments can now use the best available .NET extension. Want to jump in and help out? Download the code, make changes, and submit a pull request in GitHub!</p>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Micro Iron Foundry Image Updated and Ready for Use</title>
+  <link>http://realjenius.com/2013/02/28/micro-iron-foundry-image-updated-and-ready-for-use/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2013-02-28T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2013/02/28/micro-iron-foundry-image-updated-and-ready-for-use/</guid>
+  <description><![CDATA[
+     <p><a href="http://ironfoundry.org/download" target="_blank">Micro Iron Foundry</a> is a VM image that makes it easy to add the .NET DEA to <a href="https://micro.cloudfoundry.com/" target="_blank">Micro Cloud Foundry</a> development environments. This powerful combination helps developers design their Cloud Foundry solutions locally before pushing to any number of public hosting providers.</p>
+
+<p>Today, we’ve updated the Micro Iron Foundry instance to ensure compatibility with the latest version of Micro Cloud Foundry. Download the VMX or OVF image now and <a href="http://blog.ironfoundry.org/2012/02/iron-foundry-micro-cloud-1-0-0-released/" target="_blank">plug it into your existing Micro Cloud Foundry image</a>. In addition to updating the image to the most recent Cloud Foundry-friendly bits, we’ve also made three other notable changes:</p>
+<ul>
+	<li><strong>Microsoft .NET 4.5 support.</strong> The latest version of the .NET framework includes a number of cool improvements from Web Sockets support, to better Windows Identity Foundation capabilities, to access to the new ASP.NET Web API. Micro Iron Foundry is running .NET 4.5 and soon you’ll see this support in IronFoundry.ME and other hosting environments.</li>
+	<li><strong>DEA compatible with latest ActiveState Stackato. </strong>We’ve ensured that this new Micro Iron Foundry instance works great with the <a href="http://www.activestate.com/stackato/download_vm" target="_blank">very latest Stackato Micro Cloud</a>. See <a href="http://blog.ironfoundry.org/2012/03/ironfoundry-and-stackato/" target="_blank">our previous blog post</a> on how to connect ActiveState’s great product to a Micro Cloud Foundry + Micro Iron Foundry setup.</li>
+	<li><strong>Standard vmc gem works against Iron Foundry applications. </strong>You no longer need to use the vmc-IronFoundry gem in order to push .NET applications to your Iron Foundry DEA in Micro Iron Foundry. Note that you still need this gem when pushing applications to IronFoundry.ME and other Iron Foundry hosting environments.</li>
+</ul>
+
+<p>Check it out and let us know if you have any problems!</p>
+  ]]></description>
+</item>
+
+	<item>
+  <title>DEA and Micro Updates.. Oh My!</title>
+  <link>http://realjenius.com/2012/02/08/dea-and-micro-updates-oh-my/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-02-08T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2012/02/08/dea-and-micro-updates-oh-my/</guid>
+  <description><![CDATA[
+     Today we released the updated to the DEA (Droplet Execution Agent) and our Micro Cloud download. These updates do address some of the bugs that have been reported and also a memory leak issue with the IIS Management COM object.
+
+Download the latest DEA, Micro, and Developer tools: <a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a>.
+
+Get Help: <a href="http://help.ironfoundry.org">http://help.ironfoundry.org</a>
+
+The Iron Foundry Trial environment has been updated to the latest and greatest DEA and you can sign up for <em><strong>FREE</strong></em> to try it out: <a href="http://www.ironfoundry.org/signup">http://www.ironfoundry.org/signup</a>
+
+Thanks
+
+Iron Foundry Team - Bringing the Hamma!
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Cloud Foundry with Iron Foundry (Windows Core) Install</title>
+  <link>http://realjenius.com/2012/01/25/cloud-foundry-with-iron-foundry-windows-core-install/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-01-25T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2012/01/25/cloud-foundry-with-iron-foundry-windows-core-install/</guid>
+  <description><![CDATA[
+     <div>
+<p class="c0"><img src="http://help.ironfoundry.org/attachments/token/zapjj9ooku5eroq/?name=image05.png" alt="image05.png" width="608" height="145" /></p>
+<p class="c0"><span>Cloud Foundry has been taking the web by storm. PaaS is growing in popularity as more developers find the disruptively positive deployment scenarios that are possible over traditional environments. Cloud Foundry, primarily centered around Linux-based PaaS, now has a sibling called Iron Foundry.</span></p>
+<p class="c0"><span>Iron Foundry is an open source project available for the Windows Server Environments with the ability to run the full spectrum of .NET Web Applications, SQL Server, and more. IronFoundry places the Microsoft tool stack on an even footing with the Linux-based stacks.</span></p>
+<p class="c0"><img src="http://help.ironfoundry.org/attachments/token/dse6cx1a3lzo1re/?name=image04.png" alt="image04.png" width="613" height="393" /></p>
+
+<h2 class="c0"><span class="c2">Step 1:  Get IronFoundry Installed and Running by </span><span class="c6 c2"><a class="c8" href="http://twitter.com/adron">Adron Hall</a></span></h2>
+<p class="c0"><span>The first thing you’ll need is to be sure to get a USB Thumb Drive or some mechanism to get the .NET 4.0 &amp; IronFoundry Software onto the Windows Server 2008 Core Instance. If you’re using a full install of Windows Server 2008 then you can use the normal means to retrieve this software. The files you’ll want on the external storage include:</span></p>
+
+<ol class="c12" start="1">
+	<li class="c3"><span>.NET 4.0 Framework for Server Core (</span><span class="c6"><a class="c8" href="http://www.microsoft.com/download/en/details.aspx?id=22833">dotNetFx40_Full_x86_x64_SC.exe</a></span><span>)</span></li>
+	<li class="c3"><span>IronFoundry DEA Service (</span><span class="c6"><a class="c8" href="http://www.ironfoundry.org/download">IronFoundry.Dea.Service.x86.msi</a></span><span> or </span><span class="c6"><a class="c8" href="https://github.com/downloads/IronFoundry/ironfoundry/IronFoundry.Dea.Service.x64.msi">IronFoundry.Dea.Service.x64.msi</a></span><span>)</span></li>
+</ol>
+<p class="c0"><span>Once you have the software downloaded to a medium to use, get a solid image of </span><span class="c6"><a class="c8" href="http://compositecode.com/2012/01/16/windows-server-2008-core-a-quick-run-down/">Windows 2008 Server Core up and running</a></span><span>. With the Windows 2008 Server Core command prompt get the following services installed and started with the following commands:</span></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup IIS-WebServerRole</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup WAS-NetFxEnvironment</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup IIS-ISAPIExtensions</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup IIS-ISAPIFilter</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup IIS-NetFxExtensibility</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup IIS-ASPNET</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup MicrosoftWindowsPowerShell</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup ServerCore-WOW64</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup NetFx2-ServerCore</em></p>
+<p class="c0 c10"><em>c:UsersMyUserNamestart /w ocsetup NetFx2-ServerCore-WOW64</em></p>
+<p class="c0"><img src="http://help.ironfoundry.org/attachments/token/npfp0lgocjivhdz/?name=image01.png" alt="image01.png" width="693" height="355" /></p>
+<p class="c0"><span>After these services are started, copy the software off of the USB / Storage Device that has .NET 4.0 and the IronFoundry DEA. In the below copy command, “e:” is the storage device.</span><span> </span></p>
+<p class="c0"><em>        e:copy *.* c:UsersMyUserName</em></p>
+<p class="c0"><span>Now execute the .NET 4.0 Framework (</span><span class="c6"><a class="c8" href="http://www.microsoft.com/download/en/details.aspx?id=22833">dotNetFx40_Full_x86_x64_SC.exe</a></span><span>) for Windows 2008 Server Core.</span></p>
+<p class="c0"><em>        c:UsersMyUserNamedotNetFx40_Full_x86_x64_SC.exe</em></p>
+<p class="c0"><span>From this point a standard Windows Wizard will display to step through the rest of the .NET 4.0 Server Core Installation. The next step is to enable IIS Remote Administration:</span><span> </span></p>
+<p class="c0"><span>        c:UsersMyUserNamereg add HKEY_LOCAL_MACHINESOFTWAREMicrosoftWebManagementServer /v EnableRemoteManagement /t REG_DWORD /d 1</span></p>
+<p class="c0"><span>At this point it is actually a good idea to reboot the server to insure all the services start correctly and the registry setting takes effect. I’m sure that just simply restarting the services might work, but when playing with the registry I like to stay safe and insure everything is set and has taken effect.</span></p>
+<p class="c0"><span>After the reboot, start wmsvc.</span></p>
+<p class="c0"><em>        c:UsersMyUserNamenet start wmsvc</em></p>
+<p class="c0"><span>Now kick off the </span><span class="c6"><a class="c8" href="https://github.com/downloads/IronFoundry/ironfoundry/IronFoundry.Dea.Service.x64.msi">IronFoundry DEA Installation</a></span><span>. When the wizard prompts for configuration information, enter the following:</span></p>
+
+<ol class="c12" start="1">
+	<li class="c3"><span>NATS Host: 10.0.0.1</span></li>
+	<li class="c3"><span>NATS Port: 4222</span></li>
+	<li class="c3"><span>App Directory: C:IronFoundryapps</span></li>
+	<li class="c3"><span>Droplet Directory: C:IronFoundrydroplets</span></li>
+	<li class="c3"><span>Install Directory: C:Program FilesIron FoundryDEA</span></li>
+</ol>
+<p class="c0"><span>Once the wizard is complete, then go to c:Program FilesIron FoundryDEA and run the DEA executable. This will start the IronFoundry DEA Service and insure it kicks off (self starting) anytime the server may be rebooted.</span></p>
+
+<h2 class="c0"><span class="c2">Step 2:  Deploy an ASP.NET MVC Application by </span><span class="c6 c2"><a class="c8" href="https://twitter.com/#!/jaredwray">Jared Wray</a></span></h2>
+<p class="c0"><span class="c14">Deploying an ASP.NET MVC application could not be easier when using Iron Foundry and the accompanying tools. There are three ways to deploy your application to Iron Foundry:</span></p>
+
+<ol class="c12" start="1">
+	<li class="c3"><span>Visual Studio: The Iron Foundry plugin for Visual Studio allows you to push your application to any Cloud Foundry environment supporting .NET.</span></li>
+	<li class="c3"><span>Cloud Foundry Explorer: The Cloud Foundry Explorer is a .NET Windows application that allows you to manage multiple cloud instances from a Windows desktop including all of the code and service deployment.</span></li>
+	<li class="c3"><span>Command Line (VMC): This is the command line version with all of the features that you see from the plugin and explorer.</span></li>
+</ol>
+<p class="c0"><span>You can download these from Iron Foundry at: </span><span class="c6"><a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a></span><span> </span></p>
+<p class="c0"><strong>Getting down to code a deployment…</strong><span> </span></p>
+<p class="c0"><span>Lets first start out with downloading and installing the Visual Studio Plugin from Iron Foundry. Go to </span><span class="c6"><a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a></span><span> and download the latest. After it is downloaded double click the file and do the install.  After the install is done open up Visual Studio and go to Tools &gt; Extension Manager &gt; From there you should see it installed:</span></p>
+<p class="c0"><img src="http://help.ironfoundry.org/attachments/token/itqsuvsnpodrrjx/?name=image00.png" alt="image00.png" width="491" height="61" /></p>
+<p class="c0"><span>Lets go ahead and write a simple ASP.NET MVC (MVC 3 is being used in this and can be downloaded here: </span><span class="c6"><a href="http://www.asp.net/mvc">http://www.asp.net/mvc</a><a class="c8" href="http://www.asp.net/mvc)">)</a></span><span> application by creating a simple “Hello World” application for testing. In Visual Studio do the following:</span></p>
+
+<ol class="c12" start="1">
+	<li class="c3"><span>Go to File &gt; New Project</span></li>
+	<li class="c3"><span>Select the ASP.NET MVC 3 Web Application, set the name, location, and solution name and click “ok”</span></li>
+	<li class="c3"><span>On the next screen you will be prompted with the “Project Template” and you can select “Empty” and your view engine as “Razor”.</span></li>
+</ol>
+<p class="c0"><span>Now we have setup the project we are going to write a simple page and publish it to an Iron Foundry instance.</span></p>
+
+<ol class="c12" start="1">
+	<li class="c3"><span>From the Solution Explorer right click on the “Controllers” folder and go to Add &gt; Controller.</span></li>
+	<li class="c3"><span>The “Add Controller” dialogue window will come up and name it “HomeController” then click the “Add” button.</span></li>
+	<li class="c3"><span>Next step is to add the Index View for the Home controller. You can do this by the following:</span></li>
+</ol>
+<ol class="c13" start="1">
+	<li class="c4"><span>Go to the “Views” folder &gt; Create a folder called “Home” inside it</span></li>
+	<li class="c4"><span>Right click on the “Home” folder that was just created and Add &gt; View. Name the View “Index.”</span></li>
+</ol>
+<span>In the Views &gt; Home &gt; Index.cshtml file modify the code to be:
+</span><img src="http://help.ironfoundry.org/attachments/token/8inunz2noc07acu/?name=image06.png" alt="image06.png" width="439" height="308" />
+<p class="c0"><em><strong>(NOTE: Make sure you have compiled the site at least once before pushing it live for the first time.)</strong></em></p>
+<p class="c0"><span>
+</span></p>
+<p class="c0"><span>With the </span><span class="c6"><a class="c8" href="http://www.ironfoundry.org/download">Visual Studio Plugin from Iron Foundry</a></span><span> it is very easy to do a deployment/update from. All you will need to do is define your Cloud Foundry instance with Iron Foundry support and then “Push” your application.</span></p>
+<p class="c0"><span>Define your Cloud Foundry instance with Iron Foundry Support:</span></p>
+
+<ol>
+	<li>
+<ol>
+	<li class="c3"><span>From Visual Studio Go to Tools &gt; Cloud Foundry Explorer</span></li>
+	<li class="c3"><span>From Cloud Foundry Explorer click the add new cloud button.</span><img alt="" /></li>
+	<li class="c3"><span>Enter in the following data:</span>
+<ol>
+	<li class="c4"><span>Server Name: The friendly name of the Cloud Foundry instance you plan to connect to. For this example we will use the</span></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<span class="c6"><a class="c8" href="http://www.ironfoundry.org/signup">Iron Foundry Trial</a></span><span> environment (api.gofoundry.net)</span>
+<ol>
+	<li>
+<ol>
+	<li class="c4"><span>Runtime Environment:  Select the correct runtime environment (right now it should default to: Cloud Foundry Runtime v1.0).</span></li>
+	<li class="c4"><span>Register/Logon Info: The Email, and Password are what you need to logon to your Cloud Foundry instance.</span></li>
+	<li class="c4"><span>URL: To setup the url of your cloud foundry instance do the following:</span></li>
+</ol>
+</li>
+	<li class="c11"><span>Click on the “Manage Cloud…” button.</span></li>
+	<li class="c11"><span>From the Manage Cloud Urls… window click “Add”</span></li>
+	<li class="c11"><span>From the Add Cloud Url.. window type the Name and URL such as:</span>
+<ol>
+	<li class="c7"><span>Name: Iron Foundry Trial</span></li>
+	<li class="c7"><span>Url: </span><span class="c6"><a href="http://api.gofoundry.net">http://api.gofoundry.net</a></span></li>
+	<li class="c11"><span>Click Ok.</span></li>
+</ol>
+</li>
+	<li class="c11"><span>From the Manage Cloud Urls… window verify that your URL has been added and click ok.
+</span><img src="http://help.ironfoundry.org/attachments/token/w0bkq0arl7wrx3y/?name=image07.png" alt="image07.png" width="615" height="367" /><span> </span></li>
+	<li class="c3"><span>Once you have entered the information correctly click to validate account and you will see an“Account Valid” message appear.</span></li>
+	<li class="c3"><span>Close out the Cloud Foundry Explorer window as you are now ready to push your application!</span></li>
+	<li><span>Push your Application (The Cool Stuff!)</span></li>
+</ol>
+<p class="c0"><span>Now that you have been able to setup your Cloud Foundry instance running Iron Foundry you can now push and update your application by doing the following:</span></p>
+
+<ol>
+	<li class="c3"><span>Right click on your project and then go to “Push Cloud Foundry Application…</span></li>
+	<li class="c3"><img src="http://help.ironfoundry.org/attachments/token/s8pqmfuk0vqweuj/?name=image02.png" alt="image02.png" width="470" height="413" /></li>
+	<li class="c3"><span>From the Push Cloud Foundry Application select the correct settings:</span></li>
+	<li class="c4"><span>Cloud: Select the cloud you entered above.</span></li>
+	<li class="c4"><span>Name: Enter in any name you want for the application.</span></li>
+	<li class="c4"><span>URL: enter in the full url of the application. Here we will use </span><span class="c6"><a class="c8" href="http://helloworld23451.gofoundry.net/">helloworld23451.gofoundry.net</a></span><span>.</span></li>
+	<li class="c4"><span>Memory Limit: Select the amount of memory you want your application to use.</span></li>
+	<li class="c4"><span>Instances: Select the number of instances you want your application running on.</span></li>
+	<li class="c4"><span>Select the services you want to bind to your application such as a database.</span></li>
+</ol>
+<p class="c0"><img src="http://help.ironfoundry.org/attachments/token/hiv9zl1l5wmatl9/?name=image03.png" alt="image03.png" width="596" height="497" /></p>
+<p class="c0"><span>Click the “Push” and it will package it up and push it live doing all the configuration of the services and application into Cloud Foundry with Iron Foundry.</span></p>
+
+</div>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>The .NET DEA is now Live!</title>
+  <link>http://realjenius.com/2011/12/26/the-net-dea-is-now-live/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2011-12-26T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2011/12/26/the-net-dea-is-now-live/</guid>
+  <description><![CDATA[
+     <p class="p1">Our new DEA (Droplet Execution Agent) built using .NET is now fully available from the Iron Foundry team. After an implementation of the DEA in Ruby to run on Windows Server, we found great value in rebuilding the DEA in .NET to run natively on Windows. This will give us great flexibility in expanding the capabilities of the framework deployed to Iron Foundry. The .NET DEA enables a more stable environment and easier deployment scenario. Now the .NET DEA is ready for prime time with all functionality as the original DEA and we are very excited.</p>
+<p class="p1">This new DEA comes with a full installer and runs as a windows service on the server. Here are the links to get you using it:</p>
+<p class="p1"><a href="http://www.ironfoundry.org/download" target="_blank">Download the .NET DEA to install</a></p>
+<p class="p1">Iron Foundry has already moved to the .NET DEA in our trial environment and you will notices improvements in the application deployment and stability.</p>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Whats next for Iron Foundry? .NET DEA and VMC in the next couple weeks</title>
+  <link>http://realjenius.com/2011/12/15/whats-next-for-iron-foundry-net-dea-and-vmc-in-the/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2011-12-15T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2011/12/15/whats-next-for-iron-foundry-net-dea-and-vmc-in-the/</guid>
+  <description><![CDATA[
+     <span>The launch of Iron Foundry this week was amazing and we want to send a sincere thanks out to the entire community. As things always do in a community process, we’ve received great suggestions, found a few hiccups, and seen some amazing engagement!  </span>
+
+<span>Today I want to share an update of what’s next – what is launching soon and where we are going longer term:</span>
+
+<strong><span>.NET based DEA and VMC in the next 2 weeks!</span></strong>
+
+<span>Currently we have modified the DEA that is based on Ruby to work on Windows. We always knew this was something that had to change, but we also knew that the Cloud Foundry code base is evolving at a very rapid rate. To keep compatibility we essentially ran two projects with one focusing on using current code base and doing modifications to have it work and the other to completely replace the Ruby code with .NET. </span>
+
+<span>That time has come and we will be releasing that code to the community in the next couple weeks. Over the next couple days we will begin to open the repositories of the BETA .NET DEA and VMC with the goal of a final release with all the fun stuff added in (installers, documentation).</span>
+
+<strong><span>What are the next things you will be working on?</span></strong>
+
+<span>With the releases of the .NET DEA and VMC we turn our attention to adding in services that compliment .NET in the Cloud Foundry Framework such as a session state service, caching service, and other items that enable developers to use Cloud Foundry with all the tools in their tool box they are used too. These services will of course be released under Iron Foundry.</span>
+
+<span>As always, we look forward to feedback from the community on these or any other next steps for Iron Foundry.</span>
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

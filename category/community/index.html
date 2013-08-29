@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4936699-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header class="header-short backsplash blog">
+        <div class="container menu">
+            <div class="navbar">
+  <div class="container">
+  	<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-brand"><a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a></div>
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav menu pull-right">
+          
+            
+            
+            
+
+            <li class="">
+              <a href="http://app.ironfoundry.me/download">Downloads</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="http://app.ironfoundry.me/signup">Sign Up</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/help">Help</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/about">About</a>
+            </li>
+          
+          <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+      </ul>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+        <div class="container photo-credit hidden-xs">
+            <div class="photo-author">photo by Nathan Young</div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-10">
+		
+			<h2>Category: 'community'</h2>		
+		
+		<hr />
+
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/08/15/choosing-the-right-database-option-for-your-iron-foundry-applications/">Choosing the Right Database Option for Your Iron Foundry Applications</a></h2>
+                    <div class="post-date">
+                        Posted in community, partners,  &#183; August 15, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>Iron Foundry offers a host of database services that developers can leverage when building Iron Foundry applications. While there may not be a “wrong” choice (although in some cases, there are horribly inefficient choices!), how can we choose the best database for the situation at hand? Below, we look at each database option in Iron Foundry and why you would, or would not, select it for your application.
+
+<hr align="left" width="95%" />
+
+<h3>MongoDB</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.mongodb.org/" target="_blank">MongoDB</a> is a popular open-source NoSQL database. While called a “document database”, MongoDB does not store unstructured documents like PDFs or Microsoft Word files, but rather, stores its data as <a href="http://en.wikipedia.org/wiki/BSON" target="_blank">JSON-like files</a>. Each <strong>document</strong> represents a database record while a <strong>collection</strong> is similar to a database table. However, unlike traditional relational databases with a fixed schema, MongoDB collections have no such restriction and each document could have entirely different fields. Developers use the <a href="http://www.mongodb.org/display/DOCS/SQL+to+Mongo+Mapping+Chart" target="_blank">Mongo Query Language</a> to find records in MongoDB collections. Through the <a href="http://www.mongodb.org/display/DOCS/Drivers" target="_blank">use of drivers</a>, MongoDB supports a wide variety of languages such as Ruby, Scala, C#, Node, Java and more. MongoDB supports a variety of features (such as <a href="http://www.mongodb.org/display/DOCS/Replication" target="_blank">replication</a> and <a href="http://www.mongodb.org/display/DOCS/Indexes" target="_blank">indexing</a>) that you’d typically find in RDMS offerings, but also offers unique capabilities such as <a href="http://www.mongodb.org/display/DOCS/Sharding" target="_blank">auto-sharding</a> and batch processing via <a href="http://www.mongodb.org/display/DOCS/MapReduce" target="_blank">MapReduce</a>.
+<h4>When to use it?</h4>
+There’s actually an <a href="http://www.mongodb.org/display/DOCS/Use+Cases" target="_blank">excellent page on the MongoDB site</a> that outlines the core use cases and anti-patterns. They also have a <a href="http://www.mongodb.org/display/DOCS/Production+Deployments" target="_blank">useful list of customer stories</a> that explain (sometimes with attachments!) how they are using MongoDB. Basically, MongoDB is a good choice for high performing apps that have complex data objects with a variable schema. Don’t choose MongoDB if you have intense cross-object transactions and heavy SQL coding requirements. While there has been some <a href="http://news.ycombinator.com/item?id=3200683" target="_blank">backlash against MongoDB</a> in the past year, it remains <a href="http://www.theregister.co.uk/2012/06/11/mongo_db/" target="_blank">crazy popular</a> for its performance, approachability and lively ecosystem.
+
+<hr align="left" width="95%" />
+
+<h3>Microsoft SQL Server</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.microsoft.com/sqlserver/en/us/default.aspx" target="_blank">SQL Server</a> is the flagship database product from Microsoft. It uses a relational structure and is made up of databases, tables and records. The tables in a SQL Server database have a fixed schema made up of typed columns. SQL Server has some of the capabilities that you expect to find in a traditional relational database: stored procedures, indexes, constraints and cross-object transactions. Data is queried through the rich <a href="http://en.wikipedia.org/wiki/T-SQL" target="_blank">T-SQL</a> syntax that allows variables, a full set of operations for creating/reading/updating/deleting data, control flow statements and more. Starting with SQL Server 2005, developers can also write <a href="http://en.wikipedia.org/wiki/SQL_CLR" target="_blank">stored procedures and triggers based on the .NET language</a>. While SQL Server uses a proprietary data streaming format (<a href="http://en.wikipedia.org/wiki/Tabular_Data_Stream" target="_blank">TDS</a>), there are still many ways to access SQL Server data from non-Microsoft clients <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2011/08/29/microsoft-aligning-with-odbc.aspx" target="_blank">through ODBC</a>. There are also many libraries to make this easier in <a href="https://github.com/rails-sqlserver/tiny_tds" target="_blank">Ruby</a>, <a href="http://www.microsoft.com/en-us/download/details.aspx?id=29995" target="_blank">Node</a>, and <a href="http://msdn.microsoft.com/en-us/sqlserver/aa937724.aspx" target="_blank">Java</a>.
+
+While relational databases sometimes get a bad rap for poor scalability, many high volume web sites <a href="http://cacm.acm.org/magazines/2011/6/108663-scalable-sql/fulltext" target="_blank">rely heavily on relational databases like SQL Server</a>. SQL Server consistently <a href="http://www.microsoft.com/sqlserver/en/us/product-info/benchmarks.aspx" target="_blank">ranks as a leader</a> among relational database providers  in “transactions per second” metrics as calculated by TPC.
+<h4>When to use it?</h4>
+If you have a relatively static data structure and have many objects with inter-relationships, SQL Server is a good choice. Likewise, if you already have an investment in SQL Server tools, then using the Iron Foundry version will be very straightforward. Developers <a href="http://blog.ironfoundry.org/2012/07/web_database_configuration_settings/" target="_blank">can easily use</a> the SQL Server Management Studio against Iron Foundry instances and treat the PaaS database just like one installed locally. Microsoft themselves <a href="http://www.microsoft.com/sqlserver/en/us/product-info/case-studies.aspx" target="_blank">tout use cases</a> for internal business applications, <a href="http://www.microsoft.com/casestudies/Microsoft-SQL-Server-2008-R2-Enterprise/Match.com/Largest-Online-Dating-Service-Gains-Competitive-Edge-with-Microsoft-Solution/710000000118" target="_blank">high volume storage for web applications</a>, and more.
+
+<hr align="left" width="95%" />
+
+<h3>MySQL</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.mysql.com/" target="_blank">MySQL</a>, now owned by Oracle, claims to be the most popular open source database and is the “M'” in the ubiquitous LAMP (Linux/Apache/MySQL/PHP) web stack. It is a relational database that runs on multiple platforms including Linux, Windows, Mac OS, Solaris and IBM AIX. MySQL has a wide range of capabilities including support for stored procedures, triggers, database views, indexing, and ACID-compliant transactions. Something that’s unique about MySQL (vs other relational databases) is that it offers <a href="http://www.supportsages.com/blog/2010/08/mysql-storage-engines-an-overview-their-limitations-and-an-attempt-for-comparison/" target="_blank">multiple storage engines</a> that can be used for a given table. Some engines support data types that others do not, and some offer differently levels of support for transactions and indexing. There are engines provided natively, as well as engines created by partners and community members. Queries against MySQL data are performed use SQL that should familiar to anyone who has coded against databases in the past. MySQL offers a <a href="http://www.mysql.com/products/connector/" target="_blank">series of drivers</a> for client connectivity and there are plenty of other libraries for technologies like <a href="https://github.com/joyent/node/wiki/modules#wiki-db-mysql" target="_blank">Node</a> and <a href="http://dev.mysql.com/downloads/ruby.html" target="_blank">Ruby</a>.
+<h4>When to use it?</h4>
+Some of the largest web properties in the world <a href="http://www.mysql.com/customers/" target="_blank">rely on MySQL</a> for their data storage. Many of the same reasons that you would use Microsoft SQL Server apply here as well. Structured data, object relationships, and a need for transactions and indexing. Also, if you already have a skills investment in MySQL, then using MySQL for your Iron Foundry application is a no-brainer. The MySQL team has a very nice article on why you’d <a href="http://dev.mysql.com/tech-resources/articles/move_from_microsoft_SQL_Server.html" target="_blank">choose MySQL over Microsoft SQL Server</a>, and Microsoft has the <a href="http://www.microsoft.com/sqlserver/en/us/product-info/competitor-compare.aspx" target="_blank">same sort of article on their site</a>. You won’t really go wrong with either choice!
+
+<hr align="left" width="95%" />
+
+<h3>Neo4j</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://neo4j.org/" target="_blank">Neo4j</a> is an open-source, NoSQL graph database. While many of us are familiar with the other types of NoSQL databases (document databases like MongoDB, or key-value stores like Redis), graph databases are a bit more obscure. Graph databases put a high priority on the relationships between objects and makes it easy to query these relationships. In fact, it’s often <a href="http://adam.heroku.com/past/2010/3/15/graph_databases/" target="_blank">much easier than querying relationships in a relational database</a>! The “things” in a graph database are called a <strong>node</strong>, and the “relationships” are called <strong>edges</strong>. The Neo4j database is Java-based and stores its data on disk. It’s designed to be very fast and also ACID transaction compliant. The database itself can be embedded within an application or deployed as a full-fledged standalone server. While the <a href="http://api.neo4j.org/current/" target="_blank">API</a> places a premium on Java, developers can also access it through an <a href="http://components.neo4j.org/neo4j-server/1.3.M02/rest.html" target="_blank">HTTP/REST interface</a>. Data queries are executed using the <a href="http://docs.neo4j.org/chunked/stable/cypher-query-lang.html" target="_blank">Cypher Query Language</a> which is designed for efficient traversal of graphs.
+<h4>When to use it?</h4>
+This database will be a great choice for Iron Foundry applications that place a premium on relationships between schema-less data structures. That means that this will be a good fit for social networks, genome analysis, recommendation algorithms <a href="http://www.infoq.com/articles/graph-nosql-neo4j" target="_blank">and more</a>.
+
+<hr align="left" width="95%" />
+
+<h3>PostgreSQL</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> is an increasingly popular open-source <a href="http://en.wikipedia.org/wiki/Object-relational_database" target="_blank">object-relational</a> database system. You can run PostgreSQL on <a href="http://www.postgresql.org/download/" target="_blank">nearly every operating system</a> including Linux, UNIX, and Windows. It’s a very robust database that is ACID-compliant and has features like joins, views, triggers, stored procedures and <a href="http://www.postgresql.org/docs/9.1/static/external-interfaces.html" target="_blank">native programming interfaces</a> for popular languages/frameworks like Java, .NET, Python, Ruby, ODBC and more. PostgreSQL has a lot of sophisticated features such as <a href="http://www.sai.msu.su/~megera/postgres/gist/doc/intro.shtml" target="_blank">GIST indexing</a>, <a href="http://www.postgresql.org/docs/9.1/static/ddl-inherit.html" target="_blank">table inheritance</a>,  and a <a href="http://www.postgresql.org/docs/9.1/interactive/rules.html" target="_blank">rules system</a>. Queries against the structured tables are done using <a href="http://www.postgresql.org/docs/9.1/interactive/sql.html" target="_blank">SQL</a> and should be easy for any database programmer to use. An <a href="http://wekeroad.com/2012/07/19/postgresql-rising" target="_blank">article about the rise of PostgreSQL</a> generated a <a href="http://news.ycombinator.com/item?id=4268525" target="_blank">lengthy discussion on Hacker News</a> where many proponents and detractors of the platform debated the merits and shortfalls of the platform. It’s a good read.
+<h4>When to use it?</h4>
+PostgreSQL has some <a href="http://www.postgresql.org/about/users/" target="_blank">prominent customers</a> across industries. You’ll <a href="http://stackoverflow.com/questions/8181604/postgres-9-1-vs-mysql-5-6-innodb" target="_blank">often</a> <a href="http://www.craigkerstiens.com/2012/04/30/why-postgres/" target="_blank">find</a> PostgreSQL compared to MySQL <a href="http://facility9.com/2011/12/ten-reasons-postgresql-is-better-than-sql-server/" target="_blank">or</a> SQL Server. In essence though, consider choosing PostgreSQL for your Iron Foundry application if you want to use an open-source database for a high-performing (web) application that uses SQL queries. It’s a great fit for complex scenarios that can take advantage of the differentiating features like inheritance and advanced query optimization.
+
+<hr align="left" width="95%" />
+
+<h3>Redis</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://redis.io/" target="_blank">Redis</a> is a fast, widely used open-source NoSQL database that uses a key-value store paradigm. Data is typically stored in-memory, although now users can optionally snapshot data to disk periodically. It runs on UNIX/Linux/MacOS (although non-production quality ports for Windows exist). Redis supports a handful of <a href="http://redis.io/topics/data-types" target="_blank">data types</a> including strings, lists (of strings), sets (unordered collections of strings), sorted sets and hashes (which are useful for object representations). While optimized for individual key retrieval, database content can be filtered/searched through operations like <a href="http://redis.io/commands/zrange" target="_blank">ZRANGE</a>, <a href="http://redis.io/commands/lrange" target="_blank">LRANGE</a>,  <a href="http://redis.io/commands/getrange" target="_blank">GETRANGE</a> and <a href="http://redis.io/commands" target="_blank">more</a>. Redis also has some cool features like <a href="http://redis.io/commands/expire" target="_blank">content expiration</a>, and a pub/sub engine that opens up a whole host of <a href="http://robots.thoughtbot.com/post/6325247416/redis-pub-sub-how-does-it-work" target="_blank">possibilities</a>. There are a variety of data access libraries available for languages/frameworks like <a href="https://github.com/ServiceStack/ServiceStack.Redis" target="_blank">.NET</a>, <a href="https://github.com/xetorthio/jedis" target="_blank">Java</a>, <a href="https://github.com/mranney/node_redis" target="_blank">Node</a>, <a href="https://github.com/nicolasff/phpredis" target="_blank">PHP</a> and <a href="http://redis.io/clients" target="_blank">many more</a>.
+<h4>When to use it?</h4>
+Use Redis with your Iron Foundry application when you want blazing speed and have a data set that can sit comfortably in RAM. You would need to be comfortable with the prospects of losing data in the event of a server failure. Many <a href="http://redis.io/topics/whos-using-redis" target="_blank">large organizations are using Redis</a>, often to provide a high performing <a href="http://meta.stackoverflow.com/questions/69164/does-stack-overflow-use-caching-and-if-so-how/69172#69172" target="_blank">caching layer</a> to their application. You’ll also see everything from  storing session data to creating URL shorteners built with Redis.
+
+
+</p>
+                    <a href="/2012/08/15/choosing-the-right-database-option-for-your-iron-foundry-applications/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/08/01/sync-with-cloud-foundry/">Sync with Cloud Foundry</a></h2>
+                    <div class="post-date">
+                        Posted in community, vcap, vmc, vmc.net,  &#183; August 01, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>On the Iron Foundry Project we are diligent about keeping up to date with any significant Cloud Foundry changes. With the recent refactoring the Cloud Foundry team has been working there has been a lot more to keep track of. For information on the Cloud Foundry side of things check out these write ups by Mark Lucovsky (<a href="http://blog.cloudfoundry.org/2012/04/27/cloud-foundry-roadmap-below-the-water-line/" target="_blank">Cloud Foundry Roadmap: Below the Water Line</a>, <a href="http://blog.cloudfoundry.org/2012/05/17/refactoring-the-vcap-repo/" target="_blank">Refactoring the VCAP Repo</a>, and <a href="http://blog.cloudfoundry.org/2012/06/20/heads-up-on-some-new-cloud-controller-features/" target="_blank">Heads Up on Some New Cloud Controller Features</a>).
+
+To check out the changes, with appropriate <a href="http://ironfoundry.org/download" target="_blank">Iron Foundry</a> extensions, check out the <a href="https://github.com/IronFoundry" target="_blank">Iron Foundry Repositories</a>. If you'd like to try out your own custom deployment, the scripts have been updated accordingly also.
+
+<strong>VMC CLI</strong>
+
+One of the key things we've done in the last few weeks is change the vmc (<a href="http://docs.cloudfoundry.com/tools/vmc/vmc-quick-ref.html" target="_blank">usage information</a>) from preview release to a full release. So to get the latest Iron Foundry enabled vmc be sure to uninstall the previous version:
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry uninstall"></script>
+
+Then simply use gems to install the latest (<a href="http://help.ironfoundry.org/entries/21783872-managing-applications-from-the-command-line" target="_blank">KB Article Available</a>):
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry Install"></script>
+
+If ruby and gems isn't installed on Windows yet follow these quick steps.
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version & installing on Windows:
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry Windows Install"></script>
+
+
+</p>
+                    <a href="/2012/08/01/sync-with-cloud-foundry/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/04/28/pizza-beer-paas-and-lots-of-frameworks/">Pizza, Beer, PaaS and Lots of Frameworks</a></h2>
+                    <div class="post-date">
+                        Posted in community,  &#183; April 28, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p><a href="http://blog.ironfoundry.org/2012/04/pizza-beer-paas-and-lots-of-frameworks/7651tier3logopng-550x0-m/" rel="attachment wp-att-59"><img class="alignright  wp-image-59" title="Tier 3" src="/img/blog/7651Tier3Logopng-550x0-M-297x300.png" alt="" width="107" height="108" /></a>This past Wednesday the Iron Foundry Team held a Pizza and PaaS Meetup at <a href="http://www.tier3.com/" target="_blank">Tier 3</a> (<a href="https://twitter.com/#!/tier3" target="_blank">@Tier3</a>) headquarters in Bellevue, Washington. It was a great event with individuals coming to check out what the Iron Foundry Project enables and also to talk about PaaS Technologies in general.
+
+</p>
+                    <a href="/2012/04/28/pizza-beer-paas-and-lots-of-frameworks/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/04/07/pdx-cloud-foundry-hackathon/">PDX Cloud Foundry Hackathon</a></h2>
+                    <div class="post-date">
+                        Posted in community,  &#183; April 07, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p><a href="http://www.cloudfoundry.org"><img class="alignright" src="http://adronhall.smugmug.com/Software/Software-Development/The-CloudFoundry-Story/i-jgKK2k7/0/S/Screen-Shot-2012-01-05-at-S.png" alt="" width="400" height="96" /></a>Members of the Iron Foundry Contributors Team will be attending the <a href="http://lanyrd.com/2012/pdx-cloud-foundry-hackathon/" target="_blank">PDX Cloud Foundry Hackathon</a> this coming April 14th at <a href="http://puppetlabs.com/" target="_blank">Puppet Labs</a> in Portland, Oregon. If you're in Portland or want to come to Portland for a great day of Pizza, Beer, and <em><strong>DevOp</strong></em>ing come and check out the event. Ok, so I got your attention with the beer and pizza, but what's the hacking really about?
+
+<a href="http://www.ironfoundry.org/"><img class="alignleft" src="http://adronhall.smugmug.com/Software/Software-Development/The-CloudFoundry-Story/i-DfwBtVq/0/O/IronFoundry.png" alt="" width="140" height="140" /></a>The event is going to be multi-track with a focus on hacking the <a href="http://www.cloudfoundry.org" target="_blank">Cloud Foundry</a> (and <a href="http://www.ironfoundry.org/" target="_blank">Iron Foundry</a>) Code base. This track will dive into what is in the code base and how it is put together. The other track will focus on working to deploy and build applications specifically for the Cloud Foundry + Iron Foundry based platforms.
+
+In addition to the main tracks there are a few other workshops we'll be putting on. These include:
+<ul>
+	<li><a href="http://lanyrd.com/2012/pdx-cloud-foundry-hackathon/sqtqm/" target="_blank">On Premise, Off Premise Cloud Foundry</a> - As quoted on the description "<em>You have internal infrastructure and external infrastructure in this "cloud" thing and would like to utilize both... we'll dive into that.</em>"</li>
+	<li><a href="http://lanyrd.com/2012/pdx-cloud-foundry-hackathon/sqtqp/" target="_blank">Cloud Foundry + Iron Foundry and Bridging the Gaps</a> - "<em>Now we're talking FULL stack across every major stack. Iron Foundry, the missing linq in Cloud Foundry. Adding .NET &amp; having it play nicely with Node.js, Ruby on Rails, and more. We'll also dive into SQL Server, Mongo, and how to make the best use of RDBMS + NoSQL bits. Making the most of the abilities with PaaS.</em>"</li>
+	<li><a href="http://lanyrd.com/2012/pdx-cloud-foundry-hackathon/sqxzb/" target="_blank">The Interoperable Cloud App Gallery</a> - "<em>Ingy döt Net would like to see a huge collection of apps that have been made to work on any PaaS solution. Think of it as the http://rosettacode.org/ of PaaS. Ingy started a GitHub organization called Cloud-Apps that is meant to curate forks of popular apps that have been made to work with one or more PaaS solutions like:  <a href="http://www.cloudfoundry.com" target="_blank">Cloud Foundry</a>, <a href="http://www.activestate.com/stackato" target="_blank">Stackato</a>, <a href="http://www.appfog.com/" target="_blank">AppFog</a>, <a href="http://paas.io/" target="_blank">PaaS.io</a>, <a href="http://www.ironfoundry.org/" target="_blank">Iron Foundry</a>, <a href="https://openshift.redhat.com/app/" target="_blank">OpenShift</a>, <a href="http://www.heroku.com/" target="_blank">Heroku</a>, <a href="https://www.dotcloud.com/" target="_blank">DotCloud</a>, etc. He is giving out commit to whomever wants it!</em>"</li>
+</ul>
+&nbsp;
+
+
+</p>
+                    <a href="/2012/04/07/pdx-cloud-foundry-hackathon/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/04/05/caldecott-with-ms-sql-server/">Caldecott with MS SQL Server!</a></h2>
+                    <div class="post-date">
+                        Posted in community, how to guide, release, vmc,  &#183; April 05, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>Yesterday we launched our new testing environment that you can read about. With that announcement we added support for <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> which allows you to tunnel from your environment to services in the Cloud Foundry environment. Today we have enabled MS SQL support with <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> into our <a href="http://www.ironfoundry.org/signup" target="_blank">.ME environment</a> and also our own version of the Cloud Foundry VMC that has all of the Iron Foundry support built in.
+
+<strong>Install VMC Iron Foundry</strong>
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version:
+<pre>C:\&gt;ruby --version
+ruby 1.9.3p125 (2012-02-16) [i386-mingw32]</pre>
+<pre>C:\&gt;gem install vmc-ironfoundry --pre</pre>
+<strong>Caldecott and MS SQL</strong>
+
+To use Caldecott on Iron Foundry from a Windows machine to connect to a provisioned MS SQL database, follow these steps.
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version:
+<pre>C:\&gt;ruby --version
+ruby 1.9.3p125 (2012-02-16) [i386-mingw32]</pre>
+Ensuring that sqlcmd.exe is in your PATH. If not, it is located by default at
+
+C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe
+<pre>C:\&gt;sqlcmd /?
+Microsoft (R) SQL Server Command Line Tool
+Version 10.50.2500.0 NT x64
+Copyright (c) Microsoft Corporation. All rights reserved.</pre>
+Install the vmc-IronFoundry gem
+<pre>C:\&gt;gem install vmc-IronFoundry --pre
+Fetching: vmc-IronFoundry-0.3.16.IF.1.gem (100%)
+Successfully installed vmc-IronFoundry-0.3.16.IF.1
+1 gem installed
+Installing ri documentation for vmc-IronFoundry-0.3.16.IF.1...
+Installing RDoc documentation for vmc-IronFoundry-0.3.16.IF.1...</pre>
+Target api.ironfoundry.me and log in to your account
+<pre>C:\&gt;vmc target api.ironfoundry.me
+Successfully targeted to [<a href="http://api.ironfoundry.me/">http://api.ironfoundry.me</a>]
+C:\&gt;vmc login --email <a href="mailto:foo@bar.com">foo@bar.com</a> --passwd XXXYYYZZZ
+Attempting login to [<a href="http://api.ironfoundry.me/">http://api.ironfoundry.me</a>]
+Successfully logged into [<a href="http://api.ironfoundry.me/">http://api.ironfoundry.me</a>]</pre>
+Provision an MS SQL database
+<pre>C:\&gt;vmc create-service mssql
+Creating Service [mssql-c902d]: OK</pre>
+Tunnel to your database
+<pre>C:\&gt;vmc tunnel mssql-c902d sqlcmd
+Deploying tunnel application 'caldecott'.
+Uploading Application:
+ Checking for available resources: OK
+ Packing application: OK
+ Uploading (1K): OK
+Push Status: OK
+Binding Service [mssql-c902d]: OK
+Staging Application 'caldecott': OK
+Starting Application 'caldecott': OK
+Getting tunnel connection info: OK
+Service connection info:
+ username : uxeBbNM0jYAFS
+ password : psOmxGWibimeX
+ name : d7dedaf7e01ae42568c07c44ec30bff99
+Starting tunnel to mssql-c902d on port 10000.
+Launching 'sqlcmd -S localhost,10000 -U uxeBbNM0jYAFS -P psOmxGWibimeX -d d7dedaf7e01ae42568c07c44ec30bff99'
+1&gt;</pre>
+You can now run commands from within sqlcmd against your database!
+<pre>1&gt; select @@VERSION
+2&gt; GO
+Microsoft SQL Server 2008 R2 (SP1) - 10.50.2500.0 (X64)
+ Jun 17 2011 00:54:03
+ Copyright (c) Microsoft Corporation
+ Enterprise Edition (64-bit) on Windows NT 6.1 &lt;X64&gt; (Build 7601: Service Pack 1) (Hypervisor)</pre>
+In addition, you can use the displayed connection information to connect via SQL Management Studio. Just use localhost,10000 as the "Server name". Be sure to start the tunnel first and keep it open during the time you're using Management Studio. Quitting sqlcmd will close the tunnel.
+
+<img src="http://help.ironfoundry.org/attachments/token/jzyoooizzrtrzfq/?name=connect_local.png" alt="connect_local.png" />
+
+
+</p>
+                    <a href="/2012/04/05/caldecott-with-ms-sql-server/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/04/04/new-iron-foundry-test-environment-me/">New Iron Foundry Test Environment .ME</a></h2>
+                    <div class="post-date">
+                        Posted in community, release, test environment,  &#183; April 04, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>Today we have released a major update to the Iron Foundry test environment. Currently this environment is supporting over 350 developers constantly deploying/hosting applications using .NET and the Iron Foundry developer tool set. Here are some of the major changes and highlights:
+<ul>
+	<li>Multi-Runtime Support: We have extended the offering to support polyglot applications with the support of Java, Ruby, PHP, Python, Node.js, and .NET.</li>
+	<li>Rabbit MQ Support: Rabbit MQ is now added as a service offering to use in the environment. For more information about Rabbit MQ visit our <a href="http://help.ironfoundry.org/entries/21238376-getting-up-and-running-with-rabbit-mq">quick start guide</a>.</li>
+	<li>Extended Database Support: Adding support for MySQL and Postgres to extend the other databases currently offered (MS SQL, Redis, and MongoDB).</li>
+	<li>Caldecott Support: We have enabled <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> support for the entire environment so that you can tunnel to backend services. Learn more about it at the <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Cloud Foundry Blog</a>.</li>
+	<li>No more trial expiration: We have removed the 90 day trial limitation so that you can test your application longer if needed. This is a testing environment and we do not give support for it beyond what a standard test environment needs so please <em><strong>do not run production applications on it</strong></em>. The limitation is now based on resources being provisioned to 3 application instances and 2 database instances. If you need more <a href="http://help.ironfoundry.org">contact us</a> so that we can help.</li>
+	<li>New Friendly Url: The new friendly url is ironfoundry.me and will enable your applications with [appname].ironfoundry.me. The API to access the new environment is api.ironfoundry.me.</li>
+</ul>
+<strong>For the developers who already have signed up you will not have to sign up again as we have ported your user names and passwords over to the ironfoundry.me environment.</strong>
+
+As this is a new environment with many features, we decided to keep the gofoundry.net environment running so users have time to migrate their applications to the new environment. All new accounts will have access to the new environment and you can <a href="http://www.ironfoundry.org/signup">sign up</a> here for free.
+
+<a href="http://www.ironfoundry.org/signup">Go here to get started!</a>
+
+
+</p>
+                    <a href="/2012/04/04/new-iron-foundry-test-environment-me/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/02/18/have-you-brought-the-hamma/">Have you brought the HAMMA?</a></h2>
+                    <div class="post-date">
+                        Posted in community,  &#183; February 18, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p><p class="p1">If you have contributed to Iron Foundry in any way, let us know. We’ll send you a free exclusive “I BRING THE HAMMA” Iron Foundry t-shirt while supplies last. Using Iron Foundry on a project, providing feedback, blogging about Iron Foundry, or source code improvements are some of the ways that you can contribute. Here are a couple of examples:</p>
+
+<ul class="ul1">
+	<li class="li2"><span class="s1">J. Adams (UK): </span>Updated the install script to use the new rvm script (only a small change)</li>
+	<li class="li2">R. Seroter (US): Wrote multiple articles on using Iron Foundry: <a href="http://seroter.wordpress.com/category/cloud-foundry/">http://seroter.wordpress.com/category/cloud-foundry/</a></li>
+</ul>
+<p class="p1">Let us know how you are contributing by going to: <a href="http://www.ironfoundry.org/hamma">http://www.ironfoundry.org/hamma</a></p>
+<p class="p3"><span class="s4">Check out how to start contributing: <a href="http://help.ironfoundry.org/entries/20777076-start-contributing">http://help.ironfoundry.org/entries/20777076-start-contributing</a></span></p>
+
+
+</p>
+                    <a href="/2012/02/18/have-you-brought-the-hamma/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/01/31/open-paas-for-enterprise-devs-a-free-session-at-the/">Open PaaS for Enterprise Devs -  A free session at the Cloud Connect Conference</a></h2>
+                    <div class="post-date">
+                        Posted in community,  &#183; January 31, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p><p class="p1">Open PaaS for Enterprise Devs - A free session at the Cloud Connect Conference, Wed Feb 15, Santa Clara Hyatt Room G</p>
+<p class="p1">This <em>free session</em> at the Cloud Connect conference is for anyone who wants to learn how open PaaS is enabling enterprise developers. It’s also an ideal opportunity for an informal meet-up of anyone in the Cloud Foundry community interested in deploying PaaS behind the firewall.</p>
+<p class="p1"><a href="http://www.cloudfoundry.org">Cloud Foundry’s</a> James Watters<span class="s1"> and</span> Jared Wray from the<span class="s1"> </span><a href="http://www.ironfoundry.org">Iron Foundry</a> team at <span class="s1"><a href="http://www.tier3.com">Tier 3</a> team</span> up to share insights, best practices and how to’s–with good info for both developers and infrastructure architects. You’ll hear an update on Open PaaS services including <a href="http://cloudfoundry.org/">Cloud Foundry</a> and why now is the right for IT Ops to transform their thinking from VMs to apps and services. You’ll learn why PaaS may be the best bet yet for quickly enabling Devs with access to the latest technologies for a more agile enterprise. And, we’ll share best practices tips and tricks from  real experiences deploying PaaS on a public cloud that can be applied today in your private cloud environment.    Our hands-on PaaS demos will include:</p>
+
+<ul>
+	<li>How an Open PaaS can free-up enterprise  to support “any” language in their dev environments: We’ll  deploy  a multi-tier application with Node.js, .NET WCF, and PHP or Java as the front end.</li>
+	<li>How to scale and consume services with PaaS:  we’ll show how to leverage PaaS to scale the application layer while enabling custom, consumable enterprise services</li>
+</ul>
+<p class="p3">Want to join the free session (and stop by to get some good swag on the Expo Floor) Simply <a href="http://www.exhibitorinvites.com/cgi-bin/click2?EI_CLOUDCONNECT+reg+%ccode%25+%25email%25+www.cloudconnectevent.com/santaclara/registration/?_mc=CPNACC95"><span class="s4">register yourself</span></a> on the <a href="http://www.cloudconnectevent.com/">Cloud Connect</a> site for a Free Expo Pass (use priority code CPNACC95). If you are interested in joining the whole conference, that code will get you a 25% discount.</p>
+<p class="p3">See you in Santa Clara!</p>
+
+
+</p>
+                    <a href="/2012/01/31/open-paas-for-enterprise-devs-a-free-session-at-the/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2011/12/20/iron-foundry-governance-and-the-community/">Iron Foundry Governance and the Community</a></h2>
+                    <div class="post-date">
+                        Posted in community,  &#183; December 20, 2011 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p><p class="MsoNormal"><strong><span>Governance Model</span></strong></p>
+<p class="MsoNormal"><span>Today we are sharing more information on the Iron Foundry governance model.</span></p>
+<p class="MsoNormal"><span>Anybody who believes in enabling the .NET ecosystem into the Cloud Foundry platform and who wants to contribute or help build the community is more than welcome to participate or contribute to Iron Foundry.</span></p>
+<p class="MsoNormal"><span>While <a href="http://www.tier3.com" target="_blank">Tier 3</a> is the lead on the project and will remain a strong active voice, we welcome contributors and sponsors to take an active role In the Iron Foundry project.  This effort will in turn  be recognized:  top contributors of the project and sponsors who are active in the community  will be asked to join the governance team.</span></p>
+<p class="MsoNormal"><strong><span>How do I get started?</span></strong></p>
+<p class="MsoNormal"><span>As always the simplest way is to fork the Iron Foundry code on <a href="http://github.com/ironfoundry" target="_blank">github</a> for simple changes and then issue a pull request to the Iron Foundry team for review. For significant contributions —  as with most open source projects — we do require to sign a Contributors License Agreement (CLA). The CLA is modeled after the Apache Foundation and Cloud Foundry CLAs, which have worked out well with both communities.</span></p>
+<p class="MsoNormal"><span> </span><span>You can read more about this here: </span><a href="http://help.ironfoundry.org/entries/20777076-start-contributing">http://help.ironfoundry.org/entries/20777076-start-contributing</a><span>  </span></p>
+
+
+</p>
+                    <a href="/2011/12/20/iron-foundry-governance-and-the-community/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2011/12/15/whats-next-for-iron-foundry-net-dea-and-vmc-in-the/">Whats next for Iron Foundry? .NET DEA and VMC in the next couple weeks</a></h2>
+                    <div class="post-date">
+                        Posted in community, dea.net, release,  &#183; December 15, 2011 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p><span>The launch of Iron Foundry this week was amazing and we want to send a sincere thanks out to the entire community. As things always do in a community process, we’ve received great suggestions, found a few hiccups, and seen some amazing engagement!  </span>
+
+</p>
+                    <a href="/2011/12/15/whats-next-for-iron-foundry-net-dea-and-vmc-in-the/">Read More</a>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<hr />
+
+
+	
+
+
+<div class="row">    
+    <div class="col-lg-6">
+    
+    </div>
+
+    <div class="col-lg-6 text-right">
+    
+    </div>
+</div>
+
+
+
+<hr />
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-12">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p class="trademark"><a href="http://www.cloudfoundry.com" target="_blank">Cloud Foundry</a> and <a href="https://micro.cloudfoundry.com" target="_blank">Micro Cloud Foundry</a> are trademarks of <a href="http://pivotallabs.com" target="_blank">Pivotal Labs</a> in the United States and/or other jurisdictions.</p>
+    		</div>
+    	</div>
+    </div>
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4936699-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header class="header-short backsplash blog">
+        <div class="container menu">
+            <div class="navbar">
+  <div class="container">
+  	<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-brand"><a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a></div>
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav menu pull-right">
+          
+            
+            
+            
+
+            <li class="">
+              <a href="http://app.ironfoundry.me/download">Downloads</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="http://app.ironfoundry.me/signup">Sign Up</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/help">Help</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/about">About</a>
+            </li>
+          
+          <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+      </ul>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+        <div class="container photo-credit hidden-xs">
+            <div class="photo-author">photo by Nathan Young</div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-10">
+		
+			<h2>Tag: 'asp.net'</h2>
+		
+		<hr />
+
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/07/23/web_database_configuration_settings/">Deploying Web+Database Apps to Iron Foundry Without Changing Configuration Settings</a></h2>
+                    <div class="post-date">
+                        Posted in how to guide,  &#183; July 23, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>One of the tricky things you’ll experience when working with PaaS platforms is that the local development environment won’t exactly mirror the targeted PaaS environment. While some cloud providers do a good job of having a local simulated fabric that closely mimics the cloud environment, it’s inevitable that SOME differences will exist.
+
+In this post, I want to specifically focus on database connection strings. A connection string with “server=localhost” may be perfectly fine when running on a developer’s machine, but this won’t fly when we deploy an application elsewhere. In this example, I’ll show you how we can easily keep a local database connection string while leveraging the built-in connection string rewrite that’s baked into Iron Foundry.
+
+I’ve got a ridiculously simple ASP.NET web form, and within it, a GridView that used a SqlDataSource to grab records from a database on my machine.
+
+[caption id="attachment_77" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=77" rel="attachment wp-att-77"><img class="size-full wp-image-77" title="connstrings01" src="/img/blog/connstrings01.png" alt="Configuration File Markup" width="450" height="234" /></a> Configuration File Markup[/caption]
+
+This application’s web.config file had a connection string (named “Default”) that included the details necessary to talk to the database.
+
+[caption id="attachment_78" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=78" rel="attachment wp-att-78"><img class="size-full wp-image-78" title="connstrings02" src="/img/blog/connstrings02.png" alt="Default Connection String" width="450" height="138" /></a> Default Connection String[/caption]
+
+With this robust website ready to go, I first published the site to the file system, and then spun up the Cloud Foundry Explorer tool.
+
+[caption id="attachment_79" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=79" rel="attachment wp-att-79"><img class="size-full wp-image-79" title="connstrings03" src="/img/blog/connstrings03.png" alt="Cloud Foundry Explorer" width="450" height="166" /></a> Cloud Foundry Explorer[/caption]
+
+I then chose which Iron Foundry environment to target with my “push.” In this case, I chose a Web Fabric instance hosted by Tier 3. During the push, I was asked to select the name of the application, code source location, resource needs, and which application services to bind to. I chose a Microsoft SQL Server application service.
+
+[caption id="attachment_80" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=80" rel="attachment wp-att-80"><img class="size-full wp-image-80" title="connstrings04" src="/img/blog/connstrings04.png" alt="Push Application" width="450" height="347" /></a> Push Application[/caption]
+
+In a few seconds, the application was deployed, and I could see it was up and running. All that remained was to get my local database provisioned into the cloud. Recall that Microsoft SQL Server is just one of many services available in Iron Foundry.
+
+[caption id="attachment_81" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=81" rel="attachment wp-att-81"><img class="size-full wp-image-81" title="connstrings05" src="/img/blog/connstrings05.png" alt="Checking Services via the Iron Foundry VMC" width="450" height="415" /></a> Checking Services via the Iron Foundry VMC[/caption]
+
+While I’ve previously demonstrated some funky ways to instantiate the underlying database in an Iron Foundry environment, we’ve since made it MUCH easier to tunnel into these databases. We now use the Cloud Foundry Caldecott process to connect to the Iron Foundry / Web Fabric SQL Server database service. With a simple command (“vmc tunnel SeroterSqlDb”) I connected my machine to the hosted environment and when the tunnel was set up, vmc returned my database credentials.
+
+[caption id="attachment_82" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=82" rel="attachment wp-att-82"><img class="size-full wp-image-82" title="connstrings06" src="/img/blog/connstrings06.png" alt="Tunneling" width="450" height="521" /></a> Tunneling[/caption]
+
+I could now fire up SQL Management Studio and log into the database with these credentials.
+
+[caption id="attachment_83" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=83" rel="attachment wp-att-83"><img class="size-full wp-image-83" title="connstrings07" src="/img/blog/connstrings071.png" alt="SQL Server Management Studio (2008 R2)" width="450" height="324" /></a> SQL Server Management Studio (2008 R2)[/caption]
+
+After generating a T-SQL script out of the local database, I ran that script against the cloud database and produced the necessary tables.
+
+[caption id="attachment_84" align="aligncenter" width="277"]<a href="http://blog.ironfoundry.org/?attachment_id=84" rel="attachment wp-att-84"><img class="size-full wp-image-84" title="connstrings08" src="/img/blog/connstrings08.png" alt="Databases" width="277" height="413" /></a> Databases[/caption]
+
+You may recall that the application’s original connection string targeted my local database. How did I update it with these new cloud database settings? The answer is: I didn’t have to! When we push a web application to Iron Foundry, and it is associated with an application service like SQL Server, the provisioning process injects the new database connection details into the web.config file of the web application. We can prove this by first finding our application in the Cloud Foundry Explorer.
+
+[caption id="attachment_85" align="aligncenter" width="320"]<a href="http://blog.ironfoundry.org/?attachment_id=85" rel="attachment wp-att-85"><img class="size-full wp-image-85" title="connstrings09" src="/img/blog/connstrings09.png" alt="Databases Listed in Cloud Foundry Explorer" width="320" height="377" /></a> Databases Listed in Cloud Foundry Explorer[/caption]
+
+When I double-clicked the web.config file, I could see that a series of “app settings” were added, and, the “Default” connection string was overwritten with the details of the cloud database. Note that the connection strong had to be named “Default” for this to work!
+
+[caption id="attachment_86" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=86" rel="attachment wp-att-86"><img class="size-full wp-image-86" title="connstrings10" src="/img/blog/connstrings10.png" alt="Configuration" width="450" height="263" /></a> Configuration[/caption]
+
+Sure enough, when we visit the application deployed to Tier 3’s Web Fabric, we can see that it correctly connects to the database and retrieves a set of records.
+
+[caption id="attachment_87" align="aligncenter" width="450"]<a href="http://blog.ironfoundry.org/?attachment_id=87" rel="attachment wp-att-87"><img class="size-full wp-image-87" title="connstrings11" src="/img/blog/connstrings11.png" alt="Viewing the Site" width="450" height="193" /></a> Viewing the Site[/caption]
+
+This is just one way that we’ve tried to make it easier to build your applications locally and confidently deploy them to an Iron Foundry cloud without requiring error-prone connection string synchronization tasks!
+
+
+</p>
+                    <a href="/2012/07/23/web_database_configuration_settings/">Read More</a>
+                </div>
+            </div>
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/07/10/stackato-2-0-integrates-iron-foundry/">Stackato 2.0 integrates Iron Foundry!</a></h2>
+                    <div class="post-date">
+                        Posted in partners,  &#183; July 10, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>Today <a href="http://www.activestate.com/" target="_blank">ActiveState</a> released a new version of their Stackato PaaS built on Cloud Foundry. In this new version they've done a spectacular job integrating the Iron Foundry code into the solution, just add a Windows DEA and you're set.
+
+</p>
+                    <a href="/2012/07/10/stackato-2-0-integrates-iron-foundry/">Read More</a>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<hr />
+
+
+	
+
+
+<div class="row">    
+    <div class="col-lg-6">
+    
+    </div>
+
+    <div class="col-lg-6 text-right">
+    
+    </div>
+</div>
+
+
+
+<hr />
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-12">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p class="trademark"><a href="http://www.cloudfoundry.com" target="_blank">Cloud Foundry</a> and <a href="https://micro.cloudfoundry.com" target="_blank">Micro Cloud Foundry</a> are trademarks of <a href="http://pivotallabs.com" target="_blank">Pivotal Labs</a> in the United States and/or other jurisdictions.</p>
+    		</div>
+    	</div>
+    </div>
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+</html>

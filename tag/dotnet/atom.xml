@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+   	<title>RealJenius.com - Tag: dotnet</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Stackato 2.0 integrates Iron Foundry!</title>
+  <link>http://realjenius.com/2012/07/10/stackato-2-0-integrates-iron-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-07-10T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/07/10/stackato-2-0-integrates-iron-foundry/</guid>
+  <description><![CDATA[
+     Today <a href="http://www.activestate.com/" target="_blank">ActiveState</a> released a new version of their Stackato PaaS built on Cloud Foundry. In this new version they've done a spectacular job integrating the Iron Foundry code into the solution, just add a Windows DEA and you're set.
+
+Diane Mueller (<a href="https://twitter.com/pythondj" target="_blank">@pythondj</a>) put together a deep dive using the new <a href="http://www.activestate.com/stackato" target="_blank">Stackato Release</a> with .NET Support, check out "<a href="http://www.activestate.com/blog/2012/07/how-deploy-net-apps-stackato-20" target="_blank">How to Deploy .NET Apps to Stackato 2.0</a>". You no longer need to take the steps <a href="http://blog.ironfoundry.org/2012/03/ironfoundry-and-stackato/" target="_blank">previously written about</a>, instead the integration is now basically plug and play. Stay tuned for more information about this and further Iron Foundry integration work. We've got some good material coming your way.
+
+So check out the release and pick up a copy to test out now. For this release we've been testing with our existing <a href="http://ironfoundry.org/" target="_blank">Iron Foundry DEA VMs</a>, which are available in two formats: <a href="http://www.ironfoundry.org/download" target="_blank">VMware VMX</a> &amp; <a href="http://www.ironfoundry.org/download" target="_blank">OVF Format</a>.
+
+Let's take a quick tour of Stackato with Iron Foundry. When you boot up the Stackato VM you'll be able to navigate to the Stackato Admin site.
+
+[caption id="attachment_68" align="aligncenter" width="1024"]<a href="http://blog.ironfoundry.org/2012/07/stackato-2-0-integrates-iron-foundry/stackato-setup-01/" rel="attachment wp-att-68"><img class="size-large wp-image-68" title="Stackato Setup" src="/img/blog/Stackato-Setup-01-1024x377.jpg" alt="Stackato Setup" width="1024" height="377" /></a> Stackato Setup[/caption]
+
+Once launched login with your account and you'll be brought tot the Overview screen. One of the beauties of the Stackato Deploy is this administration interface that they've built at ActiveState. It really eases the way to get a high level overview of what is going on in your PaaS Environment.
+
+[caption id="attachment_69" align="aligncenter" width="1024"]<a href="http://blog.ironfoundry.org/2012/07/stackato-2-0-integrates-iron-foundry/running-stackato-w-iron-foundry-02/" rel="attachment wp-att-69"><img class="size-large wp-image-69" title="The left hand side default logged in display." src="/img/blog/Running-Stackato-w-Iron-Foundry-02-1024x654.jpg" alt="The left hand side default logged in display." width="1024" height="654" /></a> The left hand side default logged in display.[/caption]
+
+When an Iron Foundry DEA VM is added ASP.NET shows up on the runtimes list (awesome!)
+
+[caption id="attachment_71" align="aligncenter" width="1024"]<a href="http://www.activestate.com/blog/2012/07/how-deploy-net-apps-stackato-20" rel="attachment wp-att-71"><img class="size-large wp-image-71 " title="ASP.NET 4.0 Available in Stackato UI" src="/img/blog/Running-Stackato-w-Iron-Foundry-03-1024x594.jpg" alt="ASP.NET 4.0 Available in Stackato UI" width="1024" height="594" /></a> ASP.NET 4.0 Available in Stackato UI[/caption]
+
+At this point you can deploy a .NET application alongside any other application you have in your <a href="http://www.activestate.com/stackato" target="_blank">Stackato PaaS</a> Environment using Iron Foundry.
+
+If you have any feedback for Stackato or how Iron Foundry Project should be integrated in or other ideas please <a href="http://help.ironfoundry.org/tickets/new" target="_blank">let us know</a>.
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

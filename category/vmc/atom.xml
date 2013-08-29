@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+    <title>RealJenius.com - Category: vmc</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Micro Iron Foundry Image Updated and Ready for Use</title>
+  <link>http://realjenius.com/2013/02/28/micro-iron-foundry-image-updated-and-ready-for-use/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2013-02-28T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2013/02/28/micro-iron-foundry-image-updated-and-ready-for-use/</guid>
+  <description><![CDATA[
+     <p><a href="http://ironfoundry.org/download" target="_blank">Micro Iron Foundry</a> is a VM image that makes it easy to add the .NET DEA to <a href="https://micro.cloudfoundry.com/" target="_blank">Micro Cloud Foundry</a> development environments. This powerful combination helps developers design their Cloud Foundry solutions locally before pushing to any number of public hosting providers.</p>
+
+<p>Today, we’ve updated the Micro Iron Foundry instance to ensure compatibility with the latest version of Micro Cloud Foundry. Download the VMX or OVF image now and <a href="http://blog.ironfoundry.org/2012/02/iron-foundry-micro-cloud-1-0-0-released/" target="_blank">plug it into your existing Micro Cloud Foundry image</a>. In addition to updating the image to the most recent Cloud Foundry-friendly bits, we’ve also made three other notable changes:</p>
+<ul>
+	<li><strong>Microsoft .NET 4.5 support.</strong> The latest version of the .NET framework includes a number of cool improvements from Web Sockets support, to better Windows Identity Foundation capabilities, to access to the new ASP.NET Web API. Micro Iron Foundry is running .NET 4.5 and soon you’ll see this support in IronFoundry.ME and other hosting environments.</li>
+	<li><strong>DEA compatible with latest ActiveState Stackato. </strong>We’ve ensured that this new Micro Iron Foundry instance works great with the <a href="http://www.activestate.com/stackato/download_vm" target="_blank">very latest Stackato Micro Cloud</a>. See <a href="http://blog.ironfoundry.org/2012/03/ironfoundry-and-stackato/" target="_blank">our previous blog post</a> on how to connect ActiveState’s great product to a Micro Cloud Foundry + Micro Iron Foundry setup.</li>
+	<li><strong>Standard vmc gem works against Iron Foundry applications. </strong>You no longer need to use the vmc-IronFoundry gem in order to push .NET applications to your Iron Foundry DEA in Micro Iron Foundry. Note that you still need this gem when pushing applications to IronFoundry.ME and other Iron Foundry hosting environments.</li>
+</ul>
+
+<p>Check it out and let us know if you have any problems!</p>
+  ]]></description>
+</item>
+
+	<item>
+  <title>IronFoundry.ME Environment Now Running Latest Iron Foundry Bits</title>
+  <link>http://realjenius.com/2012/10/10/ironfoundry-me-environment-now-running-latest-iron-foundry-bits/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-10T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/10/ironfoundry-me-environment-now-running-latest-iron-foundry-bits/</guid>
+  <description><![CDATA[
+     Last weekend, we <a href="http://blog.ironfoundry.org/2012/10/weekend-iron-foundry-work-downtime-window/" target="_blank">did a refresh</a> of the sandbox <a href="http://api.ironfoundry.me/" target="_blank">IronFoundry.ME</a> environment to make sure that it was running the latest Iron Foundry bits. As part of that update, we've enabled and upgraded a few interesting things.
+
+First of all, we added some new services. You can confirm this by using vmc (and don't forget to upgrade your <a href="http://rubygems.org/gems/vmc-IronFoundry" target="_blank">vmc-IronFoundry</a> gem!) and executing a <strong>vmc services</strong> command.
+
+<img class="alignnone size-full wp-image-182" title="upgrade01" src="/img/blog/upgrade01.png" alt="" width="500" height="266" />
+
+You should notice a few things here. First, MongoDB has been upgraded from version 1.8 to 2.0. Also, we're now running PostgreSQL 9.0. You'll also find the new Cloud Foundry blob service available here.
+
+As far as application runtimes go, we upgraded a couple of those too. You can see this by executing <strong>vmc runtimes</strong> against the IronFoundry.ME environment.
+
+<img class="alignnone size-full wp-image-183" title="upgrade02" src="/img/blog/upgrade02.png" alt="" width="500" height="316" />
+
+See that we are running both Java 6 and 7 now. Also, we've upgraded our versions of Node and included support for Node 0.8.2.
+
+Besides upgrading services and runtimes, we also <a href="http://uaa.ironfoundry.me/login" target="_blank">added support</a> for the Cloud Foundry User Account and Authorization Service (UAA). The Cloud Foundry blog has articles that <a href="http://blog.cloudfoundry.org/2012/07/23/uaa-intro/" target="_blank">Introduce the UAA</a>, review the<a href="http://blog.cloudfoundry.org/2012/07/24/high-level-features-of-the-uaa/" target="_blank"> high level features of the UAA</a>,  and <a href="http://blog.cloudfoundry.org/2012/10/09/oauth-rest/" target="_blank">secure REST web services with the UAA</a>. You'll also find docs on Github that outline the <a href="https://github.com/cloudfoundry/uaa/blob/master/docs/UAA-Security.md" target="_blank">features and configurations</a>, as well as <a href="https://github.com/cloudfoundry/uaa/blob/master/docs/UAA-APIs.rst" target="_blank">how to use the UAA APIs</a>. Keep an eye out for an upcoming blog post that shows an example of how you use the UAA service within Iron Foundry.
+
+We hope that you can immediately take advantage of the new capabilities in this free IronFoundry.ME environment.
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Managing PostgreSQL and MySQL Application Instances in Iron Foundry</title>
+  <link>http://realjenius.com/2012/09/26/administering-postgresql-and-mysql-application-instances-in-iron-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-09-26T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/09/26/administering-postgresql-and-mysql-application-instances-in-iron-foundry/</guid>
+  <description><![CDATA[
+     One reasonable concern with PaaS platforms is whether or not developers can easily access and administer backend application services. Iron Foundry database services such as PostgreSQL and MySQL have very strong management tools that you don't want to abandon when working with a PaaS instance. In this post, we'll look at how to wire up existing database management tools to PostgreSQL and MySQL.
+<h2>PostgreSQL</h2>
+PostgreSQL (discussed in this <a href="http://blog.ironfoundry.org/2012/08/choosing-the-right-database-option-for-your-iron-foundry-applications/" target="_blank">previous Iron Foundry blog post</a>), is a very popular open source database. Developers or database administrators typically use the <a href="http://www.pgadmin.org/" target="_blank">pgAdmin tool</a> to author and debug <a href="http://www.pgadmin.org/docs/1.16/query.html" target="_blank">queries</a>, perform database <a href="http://www.pgadmin.org/docs/1.16/backup.html" target="_blank">backups</a>/<a href="http://www.pgadmin.org/docs/1.16/restore.html" target="_blank">restorations</a>, <a href="http://www.pgadmin.org/docs/1.16/maintenance.html" target="_blank">reindex and cleanup (VACUUM) data</a>,  manage <a href="http://www.pgadmin.org/docs/1.16/pgagent-jobs.html" target="_blank">server jobs</a>, and much more.
+
+You can download the pgAdmin tool <a href="http://www.pgadmin.org/download/" target="_blank">directly</a>, or find it included in the <a href="http://www.enterprisedb.com/products-services-training/pgdownload" target="_blank">PostgreSQL package</a> itself. For this demonstration, I installed PostgreSQL locally and got the pgAdmin tool along with it. After installing the database software, I opened a command prompt on my Windows machine and targeted my Iron Foundry environment.
+
+<img class="alignnone size-full wp-image-152" title="dbadmin01" src="/img/blog/dbadmin01.png" alt="" width="450" height="289" />
+
+After authenticating myself, I issued a vmc command ("<strong>vmc services</strong>") to see which application services were available, and which services I had already provisioned.
+
+<img class="alignnone size-full wp-image-153" title="dbadmin02" src="/img/blog/dbadmin02.png" alt="" width="450" height="242" />
+
+So far, no application services were provisioned. Let's change that. I created a new PostgreSQL instance by issuing the vmc command <strong>vmc create-service postgresql</strong>. Note that I didn't need to bind it to an application and can simply create a standalone instance that could be used by many Iron Foundry web applications.
+
+<img class="alignnone size-full wp-image-154" title="dbadmin03" src="/img/blog/dbadmin03.png" alt="" width="450" height="303" />
+
+Now there was a running instance of PostgreSQL in my environment. At this stage, there was no way for the pgAdmin tool to access this instance. However, thanks to the Cloud Foundry <a href="http://blog.ironfoundry.org/2012/04/caldecott-with-ms-sql-server/" target="_blank">Caldecott</a> technology, I could create a secure tunnel for pgAdmin. The <strong>vmc tunnel &lt;instance name&gt;</strong> command opens up a port that pgAdmin can use to administer that database server.
+
+<img class="alignnone size-full wp-image-155" title="dbadmin04" src="/img/blog/dbadmin04.png" alt="" width="450" height="284" />
+
+I could have chosen to use the psql client which would have let me issue commands right here in the command prompt, but since I wanted to use the full-featured pgAdmin tool, I selected the "none" client. Notice that I got four key pieces of information back: username, password, name and port. Together, these data points will get us logged into our environment.
+
+I opened the pgAdmin tool and could see that the only server currently recognized was the one on my local machine.
+
+<img class="alignnone size-full wp-image-156" title="dbadmin05" src="/img/blog/dbadmin05.png" alt="" width="450" height="330" />
+
+I clicked the "Add a connection to a server" and was shown the "New Server Registration" prompt. For the "Name" value, I used the "name" that came back from the tunnel command; for "Host" value I set it to "localhost"; for the "Port" I used "10000"; and for the Username and Password, I used the corresponding values returned by the tunnel command.
+
+<img class="alignnone size-full wp-image-157" title="dbadmin06" src="/img/blog/dbadmin06.png" alt="" width="450" height="470" />
+
+Once connected, I could navigate all the database artifacts and browse the standard options for backing up data, querying tables, and creating new tables.
+
+<img class="alignnone size-full wp-image-158" title="dbadmin07" src="/img/blog/dbadmin07.png" alt="" width="450" height="330" />
+
+The pgAdmin tool is a very handy and useful way to manage your database artifacts and Iron Foundry makes it easy to use this tool against your application services.
+<h2>MySQL</h2>
+MySQL is also a very popular open source database and we want to make sure that database developers and administrators can use familiar tooling even if their application instance sits in a PaaS like Iron Foundry.
+
+The MySQL team has made significant investments in their Workbench tool, and here we'll see exactly how you hook the Workbench up to an Iron Foundry instance. First, I downloaded the<a href="http://dev.mysql.com/downloads/workbench/5.2.html" target="_blank"> standalone Workbench tool</a>.
+
+Then, I added a new MySQL instance to my Iron Foundry environment by using the <strong>vmc create-service mysql</strong> command.
+
+<img class="alignnone size-full wp-image-159" title="dbadmin08" src="/img/blog/dbadmin08.png" alt="" width="450" height="312" />
+
+Like the PostgreSQL example prior, I created a tunnel so that the MySQL Workbench tool could "see" our Iron Foundry instance. As before, I also chose the "none" client so that I could connect the GUI tool instead of issuing command statements only.
+
+<img class="alignnone size-full wp-image-162" title="dbadmin09" src="/img/blog/dbadmin091.png" alt="" width="450" height="300" />
+
+Notice that I got back database credentials ("username"/"password"), a schema instance name ("name"), and a port number.
+
+I was now ready to connect the MySQL Workbench to my database instance. The Workbench has three core functions: <a href="http://dev.mysql.com/doc/workbench/en/wb-sql-development.html" target="_blank">SQL development</a>, <a href="http://dev.mysql.com/doc/workbench/en/wb-data-modeling.html" target="_blank">data modeling</a>, and <a href="http://dev.mysql.com/doc/workbench/en/wb-server-administration.html" target="_blank">server administration</a>.
+
+<img class="alignnone size-full wp-image-161" title="dbadmin10" src="/img/blog/dbadmin10.png" alt="" width="450" height="328" />
+
+In this example, I created a new pair of tables, and deployed them to the database instance in Iron Foundry. In the Workbench, I clicked the "Create New EER Model" in order to generate a data model. The first thing that I did was right-click the schema name and choose "Edit Schema." On the subsequent window, I changed the default "mydb" name to the the "name" value returned by the vmc tunnel command.
+
+<img class="alignnone size-full wp-image-163" title="dbadmin11" src="/img/blog/dbadmin11.png" alt="" width="450" height="328" />
+
+I then chose to add a new diagram to the model and proceeded to create a pair of new tables, "customer" and "order", and defined a relationship between them.
+
+<img class="alignnone size-full wp-image-164" title="dbadmin12" src="/img/blog/dbadmin12.png" alt="" width="450" height="494" />
+
+With the model complete, I chose the "Forward Engineer" option so that this model could be used to generate the actual tables.
+
+<img class="alignnone size-full wp-image-165" title="dbadmin13" src="/img/blog/dbadmin13.png" alt="" width="450" height="267" />
+
+I was then prompted to create an actual connection to the target database, and this is where the tunnel-provided values came into play. I plugged in the username and password, and set the Hostname value to "localhost" and the Default Schema to the tunnel-provided "name" value.
+
+<img class="alignnone size-full wp-image-166" title="dbadmin14" src="/img/blog/dbadmin14.png" alt="" width="450" height="183" />
+
+I then kept the remaining default options, including the selection of the two tables to forward engineer, and reviewed the pending SQL Script to be executed. After successfully completing the wizard, I could open an instance of the SQL Editor and browse my schema.
+
+<img class="alignnone size-full wp-image-167" title="dbadmin15" src="/img/blog/dbadmin15.png" alt="" width="328" height="568" />
+
+Sure enough my two tables, relationship included, were there.
+<h2>Summary</h2>
+While one of the key benefits of a PaaS is managed services, it's important to have the option to administer these application services using the powerful,  familiar management tools currently available to users. Both PostgreSQL and MySQL have solid management interfaces and we saw here how you can tunnel into these Iron Foundry database instances  and perform standard operations against your service.
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Iron Foundry Adds Microsoft Service Bus as a New Application Service</title>
+  <link>http://realjenius.com/2012/08/22/iron-foundry-adds-microsoft-service-bus-as-a-new-application-service/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-08-22T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/08/22/iron-foundry-adds-microsoft-service-bus-as-a-new-application-service/</guid>
+  <description><![CDATA[
+     Microsoft recently released a beta version of their <a href="http://msdn.microsoft.com/en-us/library/windowsazure/jj193027(v=azure.10).aspx" target="_blank">Service Bus for Windows</a> messaging technology, and the Iron Foundry team has now added this as an available service in Iron Foundry. The Service Bus for Windows is a scaled down version of the <a href="https://www.windowsazure.com/en-us/home/features/messaging/" target="_blank">Service Bus</a> product included in their Windows Azure cloud offering. The Service Bus for Windows, which supports brokered message through both traditional <a href="https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-queues/" target="_blank">Queues</a> and multi-subscriber <a href="https://www.windowsazure.com/en-us/develop/net/how-to-guides/service-bus-topics/" target="_blank">Topics</a>, provides Iron Foundry developers yet another option when building distributed applications.
+
+Our awesome dev team followed the standard steps for adding new application services to a Cloud Foundry / Iron Foundry environment and also used a <a href="http://seroter.wordpress.com/2012/07/17/installing-and-testing-the-new-service-bus-for-windows/" target="_blank">previous write-up of mine</a> to guide the software installation. We’ve already updated the <a href="https://github.com/IronFoundry/vcap-services" target="_blank">vcap-services source code into Github</a> and you can clone the <a href="https://github.com/IronFoundry/vcap-services/tree/ironfoundry/mssb" target="_blank">mssb</a> (Microsoft Service Bus) directory today. There were also changes to the <a href="https://github.com/IronFoundry/ironfoundry/tree/master/src/IronFoundry.Dea" target="_blank">.NET DEA</a> to account for this new service and handing credentials back to the user. The Service Bus for Windows uses Microsoft SQL Server for its persistence tier, so we’ve tied the service to the instance of SQL Server that runs in Iron Foundry. <strong>Our hosted ironFoundry.me environment is running this today,</strong> and we’ve provisioned a shared Service Bus farm and host that holds each consumer’s individual namespace. Let’s see a demonstration of this in action!
+
+To make life easier, we’ve built a sample web application that interacts with Service Bus Queues. We’ll start by looking at that application, and then deploy the application to Iron Foundry. The application contains a few ASP.NET Web Forms and a helper class. The helper class (<strong>QueueManager.cs</strong>)  contains a singleton that upon startup, parses Iron Foundry-provided URLs and credentials encoded as JSON in the application’s web.config file and uses those parameters to instantiate the core objects in the <a href="http://nuget.org/packages/ServiceBus.v1_0" target="_blank">Windows Service Bus SDK</a>.
+
+<script src="https://gist.github.com/3429427.js"> </script>
+
+Then we have some static operations for both sending to and receiving from the Service Bus Queue.
+
+<script src="https://gist.github.com/3429452.js"> </script>
+
+These operations are used in the pair of core ASP.NET pages to send and receive messages. Let’s now deploy this application to Iron Foundry and see how it works. Using vmc, I targeted the api.ironfoundry.me environment.
+
+<img class="alignnone size-full wp-image-106" src="/img/blog/ironFoundryMssb02.png" alt="" width="450" height="236" />
+
+I can confirm that the Service Bus for Windows is an available service by issuing a <strong>vmc services</strong> command.
+
+<img class="alignnone size-full wp-image-107" src="/img/blog/ironFoundryMssb03.png" alt="" width="450" height="229" />
+
+Great. Now let’s push this web application and provision an instance of this new service type. After publishing the ASP.NET web application to a file directory, I issued the <strong>vmc push</strong> command to start the deployment process.
+
+<img class="alignnone size-full wp-image-108" src="/img/blog/ironFoundryMssb04.png" alt="" width="450" height="146" />
+
+At this stage, I’m asked if I want to create a new service instance to bind to, or if I had already provisioned one, which instance I’d like to associate with. In this case, I have no existing services, so I’ll choose to create a new service.
+
+<img class="alignnone size-full wp-image-109" src="/img/blog/ironFoundryMssb05.png" alt="" width="450" height="463" />
+
+Within a matter of moments, my application is deployed and a new service instance is provisioned in the shared environment. This environment is not currently part of a Windows domain, so during service provisioning, a new local user is created and assigned to the developer’s own Service Bus namespace. All the URLs and credentials for the application are injected into the application’s web.config file. We can see this through vmc by viewing the file with the<strong> vmc files &lt;application name&gt; app/web.config</strong> command.
+
+<img class="alignnone size-full wp-image-110" src="/img/blog/ironFoundryMssb06.png" alt="" width="450" height="451" />
+
+These JSON-encoded values are then read by our application and used when authenticating the caller during Queue operations. Upon visiting the URL of the Iron Foundry application, we can see the option to send a message to a Queue.
+
+<img class="alignnone size-full wp-image-111" src="/img/blog/ironFoundryMssb07.png" alt="" width="500" height="273" />
+
+When we submit the message, it is added to a Queue, which means that it is persisted in a database. I then switch over to the “Receive” web form and choose to pull all of the messages from the Queue.
+
+<img class="alignnone size-full wp-image-105" src="/img/blog/ironFoundryMssb08.png" alt="" width="500" height="253" />
+
+The Service Bus for Windows is still in Beta, but we thought it would be fun to add this as an Iron Foundry service. You can <a href="/img/blog/IronFoundry.ServiceBusMessaging.WebUI_.zip" target="_blank">download the source code for this sample application from here</a>. Messaging is a core part of many modern web applications and the Service Bus for Windows gives Iron Foundry developers another way to link systems together.
+
+<a rev="vote-for" href="http://dotnetshoutout.com/Iron-Foundry-Adds-Microsoft-Service-Bus-Support"><img alt="Shout it" src="http://dotnetshoutout.com/image.axd?url=http%3A%2F%2Fblog.ironfoundry.org%2F2012%2F08%2Firon-foundry-adds-microsoft-service-bus-as-a-new-application-service%2F" style="border:0px"/></a>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Sync with Cloud Foundry</title>
+  <link>http://realjenius.com/2012/08/01/sync-with-cloud-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-08-01T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/08/01/sync-with-cloud-foundry/</guid>
+  <description><![CDATA[
+     On the Iron Foundry Project we are diligent about keeping up to date with any significant Cloud Foundry changes. With the recent refactoring the Cloud Foundry team has been working there has been a lot more to keep track of. For information on the Cloud Foundry side of things check out these write ups by Mark Lucovsky (<a href="http://blog.cloudfoundry.org/2012/04/27/cloud-foundry-roadmap-below-the-water-line/" target="_blank">Cloud Foundry Roadmap: Below the Water Line</a>, <a href="http://blog.cloudfoundry.org/2012/05/17/refactoring-the-vcap-repo/" target="_blank">Refactoring the VCAP Repo</a>, and <a href="http://blog.cloudfoundry.org/2012/06/20/heads-up-on-some-new-cloud-controller-features/" target="_blank">Heads Up on Some New Cloud Controller Features</a>).
+
+To check out the changes, with appropriate <a href="http://ironfoundry.org/download" target="_blank">Iron Foundry</a> extensions, check out the <a href="https://github.com/IronFoundry" target="_blank">Iron Foundry Repositories</a>. If you'd like to try out your own custom deployment, the scripts have been updated accordingly also.
+
+<strong>VMC CLI</strong>
+
+One of the key things we've done in the last few weeks is change the vmc (<a href="http://docs.cloudfoundry.com/tools/vmc/vmc-quick-ref.html" target="_blank">usage information</a>) from preview release to a full release. So to get the latest Iron Foundry enabled vmc be sure to uninstall the previous version:
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry uninstall"></script>
+
+Then simply use gems to install the latest (<a href="http://help.ironfoundry.org/entries/21783872-managing-applications-from-the-command-line" target="_blank">KB Article Available</a>):
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry Install"></script>
+
+If ruby and gems isn't installed on Windows yet follow these quick steps.
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version & installing on Windows:
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry Windows Install"></script>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Caldecott with MS SQL Server!</title>
+  <link>http://realjenius.com/2012/04/05/caldecott-with-ms-sql-server/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-04-05T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/04/05/caldecott-with-ms-sql-server/</guid>
+  <description><![CDATA[
+     Yesterday we launched our new testing environment that you can read about. With that announcement we added support for <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> which allows you to tunnel from your environment to services in the Cloud Foundry environment. Today we have enabled MS SQL support with <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> into our <a href="http://www.ironfoundry.org/signup" target="_blank">.ME environment</a> and also our own version of the Cloud Foundry VMC that has all of the Iron Foundry support built in.
+
+<strong>Install VMC Iron Foundry</strong>
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version:
+<pre>C:\&gt;ruby --version
+ruby 1.9.3p125 (2012-02-16) [i386-mingw32]</pre>
+<pre>C:\&gt;gem install vmc-ironfoundry --pre</pre>
+<strong>Caldecott and MS SQL</strong>
+
+To use Caldecott on Iron Foundry from a Windows machine to connect to a provisioned MS SQL database, follow these steps.
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version:
+<pre>C:\&gt;ruby --version
+ruby 1.9.3p125 (2012-02-16) [i386-mingw32]</pre>
+Ensuring that sqlcmd.exe is in your PATH. If not, it is located by default at
+
+C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe
+<pre>C:\&gt;sqlcmd /?
+Microsoft (R) SQL Server Command Line Tool
+Version 10.50.2500.0 NT x64
+Copyright (c) Microsoft Corporation. All rights reserved.</pre>
+Install the vmc-IronFoundry gem
+<pre>C:\&gt;gem install vmc-IronFoundry --pre
+Fetching: vmc-IronFoundry-0.3.16.IF.1.gem (100%)
+Successfully installed vmc-IronFoundry-0.3.16.IF.1
+1 gem installed
+Installing ri documentation for vmc-IronFoundry-0.3.16.IF.1...
+Installing RDoc documentation for vmc-IronFoundry-0.3.16.IF.1...</pre>
+Target api.ironfoundry.me and log in to your account
+<pre>C:\&gt;vmc target api.ironfoundry.me
+Successfully targeted to [<a href="http://api.ironfoundry.me/">http://api.ironfoundry.me</a>]
+C:\&gt;vmc login --email <a href="mailto:foo@bar.com">foo@bar.com</a> --passwd XXXYYYZZZ
+Attempting login to [<a href="http://api.ironfoundry.me/">http://api.ironfoundry.me</a>]
+Successfully logged into [<a href="http://api.ironfoundry.me/">http://api.ironfoundry.me</a>]</pre>
+Provision an MS SQL database
+<pre>C:\&gt;vmc create-service mssql
+Creating Service [mssql-c902d]: OK</pre>
+Tunnel to your database
+<pre>C:\&gt;vmc tunnel mssql-c902d sqlcmd
+Deploying tunnel application 'caldecott'.
+Uploading Application:
+ Checking for available resources: OK
+ Packing application: OK
+ Uploading (1K): OK
+Push Status: OK
+Binding Service [mssql-c902d]: OK
+Staging Application 'caldecott': OK
+Starting Application 'caldecott': OK
+Getting tunnel connection info: OK
+Service connection info:
+ username : uxeBbNM0jYAFS
+ password : psOmxGWibimeX
+ name : d7dedaf7e01ae42568c07c44ec30bff99
+Starting tunnel to mssql-c902d on port 10000.
+Launching 'sqlcmd -S localhost,10000 -U uxeBbNM0jYAFS -P psOmxGWibimeX -d d7dedaf7e01ae42568c07c44ec30bff99'
+1&gt;</pre>
+You can now run commands from within sqlcmd against your database!
+<pre>1&gt; select @@VERSION
+2&gt; GO
+Microsoft SQL Server 2008 R2 (SP1) - 10.50.2500.0 (X64)
+ Jun 17 2011 00:54:03
+ Copyright (c) Microsoft Corporation
+ Enterprise Edition (64-bit) on Windows NT 6.1 &lt;X64&gt; (Build 7601: Service Pack 1) (Hypervisor)</pre>
+In addition, you can use the displayed connection information to connect via SQL Management Studio. Just use localhost,10000 as the "Server name". Be sure to start the tunnel first and keep it open during the time you're using Management Studio. Quitting sqlcmd will close the tunnel.
+
+<img src="http://help.ironfoundry.org/attachments/token/jzyoooizzrtrzfq/?name=connect_local.png" alt="connect_local.png" />
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

@@ -1,7 +1,6 @@
 lsi: false
 exclude: [less]
 pygments: true
-excerpt_separator: "\n\n"
 markdown_ext:  markdown,mkd,mkdn,md
 markdown:  rdiscount
 paginate: 10

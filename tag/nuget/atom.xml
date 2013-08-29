@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+   	<title>RealJenius.com - Tag: nuget</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Iron Foundry vcap-client (AKA The .NET Cloud Foundry vcap-client)</title>
+  <link>http://realjenius.com/2012/10/03/iron-foundry-vcap-client-aka-the-net-cloud-foundry-vcap-client/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-03T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/03/iron-foundry-vcap-client-aka-the-net-cloud-foundry-vcap-client/</guid>
+  <description><![CDATA[
+     <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" rel="attachment wp-att-177"><img class="size-full wp-image-177 alignright" src="/img/blog/nuget_35366349.png" alt="" width="229" height="64" /></a>Ever want to write code against the Cloud Foundry API but you don't want to go to the trouble of wrapping up the API calls with library? Well, have no fear there's no need to! With dilligent work from the Iron Foundry team, a few suggestions from outside, and a few contributions from the community we've pulled this together for you. Here's a step by step of what we've accomplished in the last week to bring a solid, clean and tested library to you.
+
+Presenting the Iron Foundry vcap-client. This library provides all of the capabilities wrapped up in the standard Cloud Foundry vcap-client libraries, except for .NET. Not only did we build out this library to provide a programmatic way for .NET Developers to access and manage Cloud Foundry and Iron Foundry environments, we've also provided a Nuget Package for the easiest of access.
+
+With the <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">Iron Foundry Nuget Package</a> it will handle all of your dependencies. We only have two in the package, but it is always nice to have those just handled for you.
+
+If you'd like to contribute, find any issues let us know, or just want to download the project directly check out our <a href="https://github.com/IronFoundry/vcap-client" target="_blank">Iron Foundry vcap-client Github Repo</a>.
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

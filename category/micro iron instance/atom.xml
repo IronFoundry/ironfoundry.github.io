@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+    <title>RealJenius.com - Category: micro iron instance</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Micro Iron Foundry Image Updated and Ready for Use</title>
+  <link>http://realjenius.com/2013/02/28/micro-iron-foundry-image-updated-and-ready-for-use/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2013-02-28T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2013/02/28/micro-iron-foundry-image-updated-and-ready-for-use/</guid>
+  <description><![CDATA[
+     <p><a href="http://ironfoundry.org/download" target="_blank">Micro Iron Foundry</a> is a VM image that makes it easy to add the .NET DEA to <a href="https://micro.cloudfoundry.com/" target="_blank">Micro Cloud Foundry</a> development environments. This powerful combination helps developers design their Cloud Foundry solutions locally before pushing to any number of public hosting providers.</p>
+
+<p>Today, we’ve updated the Micro Iron Foundry instance to ensure compatibility with the latest version of Micro Cloud Foundry. Download the VMX or OVF image now and <a href="http://blog.ironfoundry.org/2012/02/iron-foundry-micro-cloud-1-0-0-released/" target="_blank">plug it into your existing Micro Cloud Foundry image</a>. In addition to updating the image to the most recent Cloud Foundry-friendly bits, we’ve also made three other notable changes:</p>
+<ul>
+	<li><strong>Microsoft .NET 4.5 support.</strong> The latest version of the .NET framework includes a number of cool improvements from Web Sockets support, to better Windows Identity Foundation capabilities, to access to the new ASP.NET Web API. Micro Iron Foundry is running .NET 4.5 and soon you’ll see this support in IronFoundry.ME and other hosting environments.</li>
+	<li><strong>DEA compatible with latest ActiveState Stackato. </strong>We’ve ensured that this new Micro Iron Foundry instance works great with the <a href="http://www.activestate.com/stackato/download_vm" target="_blank">very latest Stackato Micro Cloud</a>. See <a href="http://blog.ironfoundry.org/2012/03/ironfoundry-and-stackato/" target="_blank">our previous blog post</a> on how to connect ActiveState’s great product to a Micro Cloud Foundry + Micro Iron Foundry setup.</li>
+	<li><strong>Standard vmc gem works against Iron Foundry applications. </strong>You no longer need to use the vmc-IronFoundry gem in order to push .NET applications to your Iron Foundry DEA in Micro Iron Foundry. Note that you still need this gem when pushing applications to IronFoundry.ME and other Iron Foundry hosting environments.</li>
+</ul>
+
+<p>Check it out and let us know if you have any problems!</p>
+  ]]></description>
+</item>
+
+	<item>
+  <title>Iron Foundry, Stackato, a New Micro Image Pair</title>
+  <link>http://realjenius.com/2012/03/27/ironfoundry-and-stackato/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-03-27T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/03/27/ironfoundry-and-stackato/</guid>
+  <description><![CDATA[
+     <p class="p1">Today we’re releasing a new update for the Iron Foundry Micro Instance. The biggest changes are two fold. One is our full support of the Stackato from ActiveState powered micro instance. We’ve taken the great work that the ActiveState Team has done with Cloud Foundry and rolled that into our Iron Foundry enabled Micro Instance! The second big addition is full support for the Cloud Foundry <a href="http://blog.cloudfoundry.com/post/13481010689/micro-cloud-foundry-streamlines-offline-support-and-adds-java-debugging" target="_blank">Micro Cloud Foundry 1.2</a> release.</p>
+<p class="p1">For those of you that have dived heavily into the overall framework, some of the specifics include changes that enhance the reliability of the controller and self-healing nature of the system.</p>
+<p class="p1">How to get it up and running? Easy…</p>
+<p class="p1"><strong>First download and get the Stackato Micro Cloud Running.</strong></p>
+
+<ol class="ol1">
+	<li class="li3"><span class="s2">Download the Stackato Micro Cloud here: <a href="http://www.activestate.com/stackato/download_vm">http://www.activestate.com/stackato/download_vm</a></span></li>
+	<li class="li1">Unzip the image to the location you want the image to execute from.</li>
+	<li class="li1">Set the network on the staccato image to bridged.</li>
+	<li class="li1">Startup the Stackato Image.</li>
+	<li class="li1">When it boots up get the IP and Hostname Address. Note both the host name and IP address.</li>
+	<li class="li1">The Hostname will need to be added to your hosts file, either /etc/hosts in OS-X or Linux and c:WindowsSystem32Drivershosts. Add the IP &amp; host to the file like ‘192.168.NNN.YYYY <a href="http://stackato-XXXX.local/"><span class="s1">stackato-XXXX.local</span></a>’ and  ’<a href="http://api.stackato-XXXX.local/"><span class="s1">api.stackato-XXXX.local</span></a> <a href="http://testwebapp.stackato-XXXX.local/"><span class="s1">testwebapp.stackato-XXXX.local</span></a>‘ (add additional entries at the end for other web apps you intend to push)</li>
+	<li class="li1">Navigate to <a href="http://stackato-XXXX.local">http://stackato-XXXX.local</a> and it will redirect to the initial setup page where you enter an email address and password. These credentials are added to the Stackato Instance, so be sure to remember them.</li>
+</ol>
+<p class="p1"><strong>Next step get the Micro Iron Foundry VM Running &amp; Communicating w/ The Stackato Micro Cloud.</strong></p>
+
+<ol class="ol1">
+<ol class="ol1">
+	<li class="li1">Download the Micro Iron Foundry VM here: <a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a> (Use 7-zip to unzip, or on the Mac use a tool like the “Unarchiver”(<a href="http://wakaba.c3.cx/s/apps/unarchiver.html">http://wakaba.c3.cx/s/apps/unarchiver.html</a> or get it from the App Store)).</li>
+	<li class="li1">If VMWare asks if you have moved or copied the VM, choose “I copied it”.</li>
+	<li class="li1">It will show “Setup is starting services” as this is a Windows VM. After it goes through the inital setup it will continue and require your input</li>
+	<li class="li1">Set the timezone. Click Next</li>
+	<li class="li1">Accept the licensing terms. Click Next</li>
+	<li class="li1">It will now say that the users password must be changed before logging on the first time. Click OK and set the password (make sure to remember the password!)</li>
+	<li class="li1">After setting the password you will now be logged into the core terminal prompt. You can now enable Iron Foundry on your Cloud Foundry Micro Cloud. (Make sure your Cloud Foundry Micro Cloud is running at the same time)</li>
+	<li class="li1">Boot up the Micro Iron Foundry instance. It will prompt you for a password for the Administrator user.</li>
+	<li class="li1">At the command prompt (C:UsersAdministrator) execute these commands:</li>
+	<li class="li1">C:UsersAdministrator&gt;cd C:IronFoundrySetup</li>
+	<li class="li1">C:IronFoundrySetup&gt;RunSetup.cmd</li>
+	<li class="li1">At the prompt enter your domain stackato-XXXX.local, IP address and password.</li>
+	<li class="li1">It will then connect via ssh, patch the system, restart the cloud controller, and setup the local SQL provisioning services in the Iron Foundry VM.</li>
+</ol>
+</ol>
+<img src="http://help.ironfoundry.org/attachments/token/y4khhx10yupemos/?name=image03.png" alt="command line results" />
+<p class="p1">Once the setup process is done you can use Cloud Foundry Explorer (<a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a>) to push an <a href="http://ASP.NET/"><span class="s1">ASP.NET</span></a> application. I’ve attached a sample <a href="http://ASP.NET/"><span class="s1">ASP.NET</span></a> application. Click the gear icon to add a cloud, click the green + button to add a New Server. Rename server to something and add an api url of <a href="http://api.stackato-XXXX.local/"><span class="s1">api.stackato-XXXX.local</span></a>, email and password. Clicking ”Validate Account” should succeed. Once the cloud is added, you can use push and choose that cloud to publish to it. You should use “testwebapp” as the name since you added it to the hosts file above. Once pushed, you can visit <a href="http://testwebapp.stackato-XXXX.local">http://testwebapp.stackato-XXXX.local</a> to browse to your application, and <a href="http://testwebapp.stackato-XXXX.local/env">http://testwebapp.stackato-XXXX.local/env</a> to see more detailed info.</p>
+<p class="p1">To get involved with Iron Foundry check out the project at <a href="http://www.ironfoundry.org">http://www.ironfoundry.org</a> and Cloud Foundry at <a href="http://www.cloudfoundry.org/">http://www.cloudfoundry.org/</a>. With the code available on github at <a href="https://github.com/IronFoundry">https://github.com/IronFoundry</a> or <a href="https://github.com/cloudfoundry">https://github.com/cloudfoundry</a>.</p>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>DEA and Micro Updates.. Oh My!</title>
+  <link>http://realjenius.com/2012/02/08/dea-and-micro-updates-oh-my/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-02-08T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2012/02/08/dea-and-micro-updates-oh-my/</guid>
+  <description><![CDATA[
+     Today we released the updated to the DEA (Droplet Execution Agent) and our Micro Cloud download. These updates do address some of the bugs that have been reported and also a memory leak issue with the IIS Management COM object.
+
+Download the latest DEA, Micro, and Developer tools: <a href="http://www.ironfoundry.org/download">http://www.ironfoundry.org/download</a>.
+
+Get Help: <a href="http://help.ironfoundry.org">http://help.ironfoundry.org</a>
+
+The Iron Foundry Trial environment has been updated to the latest and greatest DEA and you can sign up for <em><strong>FREE</strong></em> to try it out: <a href="http://www.ironfoundry.org/signup">http://www.ironfoundry.org/signup</a>
+
+Thanks
+
+Iron Foundry Team - Bringing the Hamma!
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Iron Foundry Micro Cloud 1.0.0 Released!</title>
+  <link>http://realjenius.com/2012/02/02/iron-foundry-micro-cloud-1-0-0-released/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-02-02T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2012/02/02/iron-foundry-micro-cloud-1-0-0-released/</guid>
+  <description><![CDATA[
+     The micro instance enables you to do local development in .NET on the <a href="https://my.cloudfoundry.com/micro">Micro Cloud Foundry</a> instance. The Iron Foundry team has worked very hard to make this an easy transition without much hassle. You are four steps away from running your own cloud locally with .NET support:
+<h3><span>Step 1: Get all the bits needed to setup</span></h3>
+<ul>
+	<li>Sign up on <a href="https://my.cloudfoundry.com/micro">Cloud Foundry</a> for your micro cloud v1.1.0</li>
+	<li>Download <a href="http://www.ironfoundry.org/download">Iron Foundry Micro Cloud</a></li>
+</ul>
+<h3><span>Step 2: Get your Cloud Foundry Micro Cloud Working</span></h3>
+It is very easy to get your <a href="https://my.cloudfoundry.com/micro">Cloud Foundry Micro Cloud</a> running. Here are the simple steps taken:
+<ol>
+	<li>Unzip the virtual machine and start it up in VMware Workstation, Player, or Fusion.</li>
+	<li>After it starts up select option 1 to configure.</li>
+<ol>
+	<li>Set your password<strong> (make sure to remember it!)</strong></li>
+	<li>Set DHCP or Static for network (we chose DHCP)</li>
+	<li>HTTP Proxy: (Choose none by hitting enter)</li>
+	<li>Enter in your configuration token (if you dont know it generate it <a href="https://my.cloudfoundry.com/micro/dns">here</a>)</li>
+	<li>After it is done updating your DNS it will Reinitialize the monit daemon and get everything installed. (can take up to 5 minutes)</li>
+</ol>
+</ol>
+<strong><strong><img src="http://help.ironfoundry.org/attachments/token/7ijnfqxjdbze8c6/?name=image02.png" alt="image02.png" /></strong></strong>
+
+Next thing to do is register a user within your Micro Cloud (Required).  Here is how to do this:
+<a href="http://start.cloudfoundry.com/infrastructure/micro/installing-mcf.html#registering-a-micro-cloud-foundry-user-with-vmc">http://start.cloudfoundry.com/infrastructure/micro/installing-mcf.html#registering-a-micro-cloud-foundry-user-with-vmc</a><strong><strong></strong></strong>
+
+<span>If you are still having trouble getting this part working please refer to the </span><a href="http://support.cloudfoundry.com/entries/20316811-micro-cloud-foundry-getting-started-guide"><span>Getting Started</span></a><span> guide from the Cloud Foundry team.</span>
+<h3><span>
+Step 3: Get your Iron Foundry Micro Cloud Working</span></h3>
+Now that you have the Cloud Foundry Micro Cloud installed and up and running you can easily extend it to support .NET with the Iron Foundry Micro Cloud. The Iron Foundry Micro Cloud is a Windows Server 2008 R2 Standard Edition Server and has no software keys initialized which means you will need to provide your own license key to keep it running after the Windows trial period.<strong><strong></strong></strong>
+
+<span>Here are the steps to get started:</span>
+<ol>
+	<li><span>Use </span><a href="http://www.7-zip.org/"><span>7-zip</span></a><span> to unzip the Iron Foundry Micro Cloud VM and start it up in VMware Workstation, Player, or Fusion.</span></li>
+	<li><span>If VMWare asks if you have moved or copied the VM, choose “I copied it”.</span></li>
+	<li><span>It will show “Setup is starting services” as this is a Windows VM. After it goes through the inital setup it will continue and require your input</span></li>
+<ol>
+	<li><span>Set the timezone. Click Next</span></li>
+	<li><span>Accept the licensing terms. Click Next</span></li>
+	<li><span>It will now say that the users password must be changed before logging on the first time. Click OK and set the password </span><span>(make sure to remember the password!)</span></li>
+</ol>
+	<li><span>After setting the password you will now be logged into the desktop. You can now enable Iron Foundry on your Cloud Foundry Micro Cloud. (Make sure your Cloud Foundry Micro Cloud is running at the same time)</span></li>
+<ol>
+	<li><span>Browse to </span><span>C:IronFoundrySetup</span></li>
+	<li><span>Double Click </span><span>RunSetup.cmd</span><span> from there follow the instructions to configure Iron Foundry with Cloud Foundry.</span></li>
+<ol>
+	<li><span>Enter Micro CF Identity: This is your Cloud Foundry Micro Instance Url (example: </span><a href="http://jwray.cloudfoundry.me/"><span>jwray.cloudfoundry.me</span></a><span> is the one we are using for this demo)</span></li>
+	<li><span>Enter Micro CF Password: This is the password you entered when setting up your Micro Cloud in step 1.</span></li>
+	<li><span>Once it is done installing press any key to exit</span></li>
+</ol>
+</ol>
+</ol>
+<strong><strong><img src="http://help.ironfoundry.org/attachments/token/y4khhx10yupemos/?name=image03.png" alt="image03.png" />
+
+</strong></strong>
+<h3><span>Step 4: Push an Application and feel the love</span></h3>
+<strong><strong>
+<span>Now that you have been able to setup your Cloud Foundry instance running Iron Foundry you can now push and update your application by doing the following:</span></strong></strong>
+<ol>
+	<li><span>Download and install the VS 2010 extension from </span><a href="http://www.ironfoundry.org/download"><span>here.</span></a></li>
+	<li><span>Right click on your project and then go to “Push Cloud Foundry Application…</span></li>
+	<li><span>Choose “Manage Clouds…” to set up your new Micro Iron Foundry Cloud</span></li>
+</ol>
+<strong><strong><img src="http://help.ironfoundry.org/attachments/token/yqaj0vqfvnfzthb/?name=image05.png" alt="image05.png" />
+
+</strong></strong>
+<ol start="4">
+	<li><span>Choose “Add Cloud Connection…”</span></li>
+</ol>
+<strong><strong><img src="http://help.ironfoundry.org/attachments/token/p4sxr2xgqpu0j8o/?name=image01.png" alt="image01.png" />
+</strong></strong>
+<ol start="5">
+	<li><span>Next choose “Add Cloud…” then “Add” and enter information similar to that shown here</span></li>
+</ol>
+<strong><strong><img src="http://help.ironfoundry.org/attachments/token/gqroib2pzm1bhgc/?name=image04.png" alt="image04.png" />
+</strong></strong>
+<ol start="6">
+	<li><span>Back on the “Add Cloud” screen, enter your credentials and validate the connection</span></li>
+</ol>
+<strong><strong><img src="http://help.ironfoundry.org/attachments/token/z7qzgegvm2myrjd/?name=image06.png" alt="image06.png" />
+</strong></strong>
+<ol start="7">
+	<li><span>When your account validates, close the “Add Cloud” and Explorer windows to return to the push dialog.</span></li>
+	<li><span>From the Push Cloud Foundry Application select the correct settings (you can see what we did below)</span></li>
+	<li><span>Cloud: Select the cloud you entered above.</span></li>
+	<li><span>Name: Enter in any name you want for the application.</span></li>
+	<li><span>URL: enter in the full url of the application. Here we will use </span><a href="http://helloworld23451.gofoundry.net/"><span>helloworld</span></a><span>.jwray.cloudfoundry.me</span></li>
+	<li><span>Memory Limit: Select the amount of memory you want your application to use.</span></li>
+	<li><span>Instances: Select the number of instances you want your application running on.</span></li>
+	<li><span>Select the services you want to bind to your application such as a database.</span></li>
+</ol>
+<strong><img src="http://help.ironfoundry.org/attachments/token/b7jlujpjoceoeyu/?name=image00.png" alt="image00.png" /></strong>
+
+<strong>
+<span>Click the “Push” and it will package it up and push it live doing all the configuration of the services and application into Cloud Foundry with Iron Foundry.</span></strong>
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

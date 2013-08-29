@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+   	<title>RealJenius.com - Tag: thor project</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Latest Alpha Release Features & Additions for the Thor Cloud Foundry UI</title>
+  <link>http://realjenius.com/2012/10/15/latest-alpha-release-feature-additions-for-thor/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-15T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/15/latest-alpha-release-feature-additions-for-thor/</guid>
+  <description><![CDATA[
+     Hello Thor Users. We're still in alpha with Thor, but I wanted to share some of the latest progress that has been made over the last few weeks. Here's a run down point by point of the latest <a href="https://github.com/IronFoundry/Thor/pull/109" target="_blank">pull request #109</a>:
+<ul>
+	<li>Button, styles, and related materials are in line with OS-X standards for the workflow screen of deploying an application.</li>
+	<li>Deployments for node.js, erlang, java, .NET and the other supported applications now works.</li>
+	<li>More unit tests added around new key features, especially detection of the language/framework support.</li>
+	<li>Easier to navigate workflow wizard for deployment with appropriate drop out points, etc.</li>
+</ul>
+As for the next steps, our <a href="https://github.com/IronFoundry/Thor/issues?milestone=8&amp;state=open" target="_blank">list of stories is listed on Github</a>. Get involved and we'll have them knocked out even faster. We'd also love any input on features that are available now or in the future or any code reviews, architecture suggestions, or similar. Just join the <a href="https://groups.google.com/forum/#!forum/ironfoundry" target="_blank">discussion group</a> and let's talk.
+
+Here's a list of some of the key feature stories coming in our next push:
+<ul>
+	<li>Thor User wants to be able to add a service to the available services.</li>
+	<li>Thor User wants to view a list of services available for use.</li>
+	<li>Thor user wants to be able to view multiple bound services for an application.</li>
+	<li>Thor User wants to be able to bind a service to an application.</li>
+	<li>Thor user wants to see various X parameters for their running services.</li>
+	<li>Thor user wants to be able to view available services for their application(s).</li>
+</ul>
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

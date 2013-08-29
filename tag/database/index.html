@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog - Iron Foundry</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://use.typekit.net/xvy7ell.js"></script> <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4936699-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <header class="header-short backsplash blog">
+        <div class="container menu">
+            <div class="navbar">
+  <div class="container">
+  	<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-brand"><a href="/"><img src="/img/logo-ironfoundry.png" alt="Iron Foundry" /></a></div>
+    <div class="nav-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav menu pull-right">
+          
+            
+            
+            
+
+            <li class="">
+              <a href="http://app.ironfoundry.me/download">Downloads</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="http://app.ironfoundry.me/signup">Sign Up</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/help">Help</a>
+            </li>
+          
+            
+            
+            
+
+            <li class="">
+              <a href="/about">About</a>
+            </li>
+          
+          <li class="fork"><iframe src="http://ghbtns.com/github-btn.html?user=IronFoundry&repo=IronFoundry&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="81" height="31"></iframe></li>
+      </ul>
+    </div>
+  </div>
+</div>
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">BLOG</h1>
+            </div>
+        </div>
+        <div class="container photo-credit hidden-xs">
+            <div class="photo-author">photo by Nathan Young</div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        <div class="row">
+    <div class="col-lg-10">
+		
+			<h2>Tag: 'database'</h2>
+		
+		<hr />
+
+        
+            <div class="row post-index">
+                <div class="col-lg-4 visible-lg">
+                    <div class="author-info pull-right">
+                        <div class="author-name">
+                            
+                                Iron Foundry
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 post">
+                    <h2><a href="/2012/08/15/choosing-the-right-database-option-for-your-iron-foundry-applications/">Choosing the Right Database Option for Your Iron Foundry Applications</a></h2>
+                    <div class="post-date">
+                        Posted in community, partners,  &#183; August 15, 2012 
+                        	<div class="hidden-lg">
+                        	
+                            
+                            </div>
+                    </div>
+                    <p>Iron Foundry offers a host of database services that developers can leverage when building Iron Foundry applications. While there may not be a “wrong” choice (although in some cases, there are horribly inefficient choices!), how can we choose the best database for the situation at hand? Below, we look at each database option in Iron Foundry and why you would, or would not, select it for your application.
+
+<hr align="left" width="95%" />
+
+<h3>MongoDB</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.mongodb.org/" target="_blank">MongoDB</a> is a popular open-source NoSQL database. While called a “document database”, MongoDB does not store unstructured documents like PDFs or Microsoft Word files, but rather, stores its data as <a href="http://en.wikipedia.org/wiki/BSON" target="_blank">JSON-like files</a>. Each <strong>document</strong> represents a database record while a <strong>collection</strong> is similar to a database table. However, unlike traditional relational databases with a fixed schema, MongoDB collections have no such restriction and each document could have entirely different fields. Developers use the <a href="http://www.mongodb.org/display/DOCS/SQL+to+Mongo+Mapping+Chart" target="_blank">Mongo Query Language</a> to find records in MongoDB collections. Through the <a href="http://www.mongodb.org/display/DOCS/Drivers" target="_blank">use of drivers</a>, MongoDB supports a wide variety of languages such as Ruby, Scala, C#, Node, Java and more. MongoDB supports a variety of features (such as <a href="http://www.mongodb.org/display/DOCS/Replication" target="_blank">replication</a> and <a href="http://www.mongodb.org/display/DOCS/Indexes" target="_blank">indexing</a>) that you’d typically find in RDMS offerings, but also offers unique capabilities such as <a href="http://www.mongodb.org/display/DOCS/Sharding" target="_blank">auto-sharding</a> and batch processing via <a href="http://www.mongodb.org/display/DOCS/MapReduce" target="_blank">MapReduce</a>.
+<h4>When to use it?</h4>
+There’s actually an <a href="http://www.mongodb.org/display/DOCS/Use+Cases" target="_blank">excellent page on the MongoDB site</a> that outlines the core use cases and anti-patterns. They also have a <a href="http://www.mongodb.org/display/DOCS/Production+Deployments" target="_blank">useful list of customer stories</a> that explain (sometimes with attachments!) how they are using MongoDB. Basically, MongoDB is a good choice for high performing apps that have complex data objects with a variable schema. Don’t choose MongoDB if you have intense cross-object transactions and heavy SQL coding requirements. While there has been some <a href="http://news.ycombinator.com/item?id=3200683" target="_blank">backlash against MongoDB</a> in the past year, it remains <a href="http://www.theregister.co.uk/2012/06/11/mongo_db/" target="_blank">crazy popular</a> for its performance, approachability and lively ecosystem.
+
+<hr align="left" width="95%" />
+
+<h3>Microsoft SQL Server</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.microsoft.com/sqlserver/en/us/default.aspx" target="_blank">SQL Server</a> is the flagship database product from Microsoft. It uses a relational structure and is made up of databases, tables and records. The tables in a SQL Server database have a fixed schema made up of typed columns. SQL Server has some of the capabilities that you expect to find in a traditional relational database: stored procedures, indexes, constraints and cross-object transactions. Data is queried through the rich <a href="http://en.wikipedia.org/wiki/T-SQL" target="_blank">T-SQL</a> syntax that allows variables, a full set of operations for creating/reading/updating/deleting data, control flow statements and more. Starting with SQL Server 2005, developers can also write <a href="http://en.wikipedia.org/wiki/SQL_CLR" target="_blank">stored procedures and triggers based on the .NET language</a>. While SQL Server uses a proprietary data streaming format (<a href="http://en.wikipedia.org/wiki/Tabular_Data_Stream" target="_blank">TDS</a>), there are still many ways to access SQL Server data from non-Microsoft clients <a href="http://blogs.technet.com/b/dataplatforminsider/archive/2011/08/29/microsoft-aligning-with-odbc.aspx" target="_blank">through ODBC</a>. There are also many libraries to make this easier in <a href="https://github.com/rails-sqlserver/tiny_tds" target="_blank">Ruby</a>, <a href="http://www.microsoft.com/en-us/download/details.aspx?id=29995" target="_blank">Node</a>, and <a href="http://msdn.microsoft.com/en-us/sqlserver/aa937724.aspx" target="_blank">Java</a>.
+
+While relational databases sometimes get a bad rap for poor scalability, many high volume web sites <a href="http://cacm.acm.org/magazines/2011/6/108663-scalable-sql/fulltext" target="_blank">rely heavily on relational databases like SQL Server</a>. SQL Server consistently <a href="http://www.microsoft.com/sqlserver/en/us/product-info/benchmarks.aspx" target="_blank">ranks as a leader</a> among relational database providers  in “transactions per second” metrics as calculated by TPC.
+<h4>When to use it?</h4>
+If you have a relatively static data structure and have many objects with inter-relationships, SQL Server is a good choice. Likewise, if you already have an investment in SQL Server tools, then using the Iron Foundry version will be very straightforward. Developers <a href="http://blog.ironfoundry.org/2012/07/web_database_configuration_settings/" target="_blank">can easily use</a> the SQL Server Management Studio against Iron Foundry instances and treat the PaaS database just like one installed locally. Microsoft themselves <a href="http://www.microsoft.com/sqlserver/en/us/product-info/case-studies.aspx" target="_blank">tout use cases</a> for internal business applications, <a href="http://www.microsoft.com/casestudies/Microsoft-SQL-Server-2008-R2-Enterprise/Match.com/Largest-Online-Dating-Service-Gains-Competitive-Edge-with-Microsoft-Solution/710000000118" target="_blank">high volume storage for web applications</a>, and more.
+
+<hr align="left" width="95%" />
+
+<h3>MySQL</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.mysql.com/" target="_blank">MySQL</a>, now owned by Oracle, claims to be the most popular open source database and is the “M'” in the ubiquitous LAMP (Linux/Apache/MySQL/PHP) web stack. It is a relational database that runs on multiple platforms including Linux, Windows, Mac OS, Solaris and IBM AIX. MySQL has a wide range of capabilities including support for stored procedures, triggers, database views, indexing, and ACID-compliant transactions. Something that’s unique about MySQL (vs other relational databases) is that it offers <a href="http://www.supportsages.com/blog/2010/08/mysql-storage-engines-an-overview-their-limitations-and-an-attempt-for-comparison/" target="_blank">multiple storage engines</a> that can be used for a given table. Some engines support data types that others do not, and some offer differently levels of support for transactions and indexing. There are engines provided natively, as well as engines created by partners and community members. Queries against MySQL data are performed use SQL that should familiar to anyone who has coded against databases in the past. MySQL offers a <a href="http://www.mysql.com/products/connector/" target="_blank">series of drivers</a> for client connectivity and there are plenty of other libraries for technologies like <a href="https://github.com/joyent/node/wiki/modules#wiki-db-mysql" target="_blank">Node</a> and <a href="http://dev.mysql.com/downloads/ruby.html" target="_blank">Ruby</a>.
+<h4>When to use it?</h4>
+Some of the largest web properties in the world <a href="http://www.mysql.com/customers/" target="_blank">rely on MySQL</a> for their data storage. Many of the same reasons that you would use Microsoft SQL Server apply here as well. Structured data, object relationships, and a need for transactions and indexing. Also, if you already have a skills investment in MySQL, then using MySQL for your Iron Foundry application is a no-brainer. The MySQL team has a very nice article on why you’d <a href="http://dev.mysql.com/tech-resources/articles/move_from_microsoft_SQL_Server.html" target="_blank">choose MySQL over Microsoft SQL Server</a>, and Microsoft has the <a href="http://www.microsoft.com/sqlserver/en/us/product-info/competitor-compare.aspx" target="_blank">same sort of article on their site</a>. You won’t really go wrong with either choice!
+
+<hr align="left" width="95%" />
+
+<h3>Neo4j</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://neo4j.org/" target="_blank">Neo4j</a> is an open-source, NoSQL graph database. While many of us are familiar with the other types of NoSQL databases (document databases like MongoDB, or key-value stores like Redis), graph databases are a bit more obscure. Graph databases put a high priority on the relationships between objects and makes it easy to query these relationships. In fact, it’s often <a href="http://adam.heroku.com/past/2010/3/15/graph_databases/" target="_blank">much easier than querying relationships in a relational database</a>! The “things” in a graph database are called a <strong>node</strong>, and the “relationships” are called <strong>edges</strong>. The Neo4j database is Java-based and stores its data on disk. It’s designed to be very fast and also ACID transaction compliant. The database itself can be embedded within an application or deployed as a full-fledged standalone server. While the <a href="http://api.neo4j.org/current/" target="_blank">API</a> places a premium on Java, developers can also access it through an <a href="http://components.neo4j.org/neo4j-server/1.3.M02/rest.html" target="_blank">HTTP/REST interface</a>. Data queries are executed using the <a href="http://docs.neo4j.org/chunked/stable/cypher-query-lang.html" target="_blank">Cypher Query Language</a> which is designed for efficient traversal of graphs.
+<h4>When to use it?</h4>
+This database will be a great choice for Iron Foundry applications that place a premium on relationships between schema-less data structures. That means that this will be a good fit for social networks, genome analysis, recommendation algorithms <a href="http://www.infoq.com/articles/graph-nosql-neo4j" target="_blank">and more</a>.
+
+<hr align="left" width="95%" />
+
+<h3>PostgreSQL</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> is an increasingly popular open-source <a href="http://en.wikipedia.org/wiki/Object-relational_database" target="_blank">object-relational</a> database system. You can run PostgreSQL on <a href="http://www.postgresql.org/download/" target="_blank">nearly every operating system</a> including Linux, UNIX, and Windows. It’s a very robust database that is ACID-compliant and has features like joins, views, triggers, stored procedures and <a href="http://www.postgresql.org/docs/9.1/static/external-interfaces.html" target="_blank">native programming interfaces</a> for popular languages/frameworks like Java, .NET, Python, Ruby, ODBC and more. PostgreSQL has a lot of sophisticated features such as <a href="http://www.sai.msu.su/~megera/postgres/gist/doc/intro.shtml" target="_blank">GIST indexing</a>, <a href="http://www.postgresql.org/docs/9.1/static/ddl-inherit.html" target="_blank">table inheritance</a>,  and a <a href="http://www.postgresql.org/docs/9.1/interactive/rules.html" target="_blank">rules system</a>. Queries against the structured tables are done using <a href="http://www.postgresql.org/docs/9.1/interactive/sql.html" target="_blank">SQL</a> and should be easy for any database programmer to use. An <a href="http://wekeroad.com/2012/07/19/postgresql-rising" target="_blank">article about the rise of PostgreSQL</a> generated a <a href="http://news.ycombinator.com/item?id=4268525" target="_blank">lengthy discussion on Hacker News</a> where many proponents and detractors of the platform debated the merits and shortfalls of the platform. It’s a good read.
+<h4>When to use it?</h4>
+PostgreSQL has some <a href="http://www.postgresql.org/about/users/" target="_blank">prominent customers</a> across industries. You’ll <a href="http://stackoverflow.com/questions/8181604/postgres-9-1-vs-mysql-5-6-innodb" target="_blank">often</a> <a href="http://www.craigkerstiens.com/2012/04/30/why-postgres/" target="_blank">find</a> PostgreSQL compared to MySQL <a href="http://facility9.com/2011/12/ten-reasons-postgresql-is-better-than-sql-server/" target="_blank">or</a> SQL Server. In essence though, consider choosing PostgreSQL for your Iron Foundry application if you want to use an open-source database for a high-performing (web) application that uses SQL queries. It’s a great fit for complex scenarios that can take advantage of the differentiating features like inheritance and advanced query optimization.
+
+<hr align="left" width="95%" />
+
+<h3>Redis</h3>
+
+<hr align="left" width="95%" />
+
+<h4>What is it?</h4>
+<a href="http://redis.io/" target="_blank">Redis</a> is a fast, widely used open-source NoSQL database that uses a key-value store paradigm. Data is typically stored in-memory, although now users can optionally snapshot data to disk periodically. It runs on UNIX/Linux/MacOS (although non-production quality ports for Windows exist). Redis supports a handful of <a href="http://redis.io/topics/data-types" target="_blank">data types</a> including strings, lists (of strings), sets (unordered collections of strings), sorted sets and hashes (which are useful for object representations). While optimized for individual key retrieval, database content can be filtered/searched through operations like <a href="http://redis.io/commands/zrange" target="_blank">ZRANGE</a>, <a href="http://redis.io/commands/lrange" target="_blank">LRANGE</a>,  <a href="http://redis.io/commands/getrange" target="_blank">GETRANGE</a> and <a href="http://redis.io/commands" target="_blank">more</a>. Redis also has some cool features like <a href="http://redis.io/commands/expire" target="_blank">content expiration</a>, and a pub/sub engine that opens up a whole host of <a href="http://robots.thoughtbot.com/post/6325247416/redis-pub-sub-how-does-it-work" target="_blank">possibilities</a>. There are a variety of data access libraries available for languages/frameworks like <a href="https://github.com/ServiceStack/ServiceStack.Redis" target="_blank">.NET</a>, <a href="https://github.com/xetorthio/jedis" target="_blank">Java</a>, <a href="https://github.com/mranney/node_redis" target="_blank">Node</a>, <a href="https://github.com/nicolasff/phpredis" target="_blank">PHP</a> and <a href="http://redis.io/clients" target="_blank">many more</a>.
+<h4>When to use it?</h4>
+Use Redis with your Iron Foundry application when you want blazing speed and have a data set that can sit comfortably in RAM. You would need to be comfortable with the prospects of losing data in the event of a server failure. Many <a href="http://redis.io/topics/whos-using-redis" target="_blank">large organizations are using Redis</a>, often to provide a high performing <a href="http://meta.stackoverflow.com/questions/69164/does-stack-overflow-use-caching-and-if-so-how/69172#69172" target="_blank">caching layer</a> to their application. You’ll also see everything from  storing session data to creating URL shorteners built with Redis.
+
+
+</p>
+                    <a href="/2012/08/15/choosing-the-right-database-option-for-your-iron-foundry-applications/">Read More</a>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<hr />
+
+
+	
+
+
+<div class="row">    
+    <div class="col-lg-6">
+    
+    </div>
+
+    <div class="col-lg-6 text-right">
+    
+    </div>
+</div>
+
+
+
+<hr />
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+<footer>
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-12">
+        <h4>Provided by Tier 3</h4>
+        <p>Iron Foundry is a project initiated by <a href="http://www.tier3.com">Tier 3</a>, an enterprise cloud computing and hosting platform.</p>
+        <p class="trademark"><a href="http://www.cloudfoundry.com" target="_blank">Cloud Foundry</a> and <a href="https://micro.cloudfoundry.com" target="_blank">Micro Cloud Foundry</a> are trademarks of <a href="http://pivotallabs.com" target="_blank">Pivotal Labs</a> in the United States and/or other jurisdictions.</p>
+    		</div>
+    	</div>
+    </div>
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+</html>

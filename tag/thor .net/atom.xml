@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+   	<title>RealJenius.com - Tag: thor .net</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Windows 8 & RT Discussions, Thor, Thor .NET and vcap-client Status Updates</title>
+  <link>http://realjenius.com/2012/10/30/thor-thor-net-and-vcap-client-status-updates/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-30T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/30/thor-thor-net-and-vcap-client-status-updates/</guid>
+  <description><![CDATA[
+     A few updates from the teams:
+<h2>Thor</h2>
+<p>Thor is moving along with implementation of services starting yesterday (Monday). You can view our live <a href="http://huboard.com/IronFoundry/Thor/board" target="_blank">Huboard Kanban</a> to see what is currently being worked on. The interface in the last few weeks has gotten a faster, cleaner appearance and stabilized even more around deploying and maintaining your Cloud Foundry based environments.</p>
+
+<p><a href="http://www.ironfoundry.org/"><img src="http://adronhall.smugmug.com/Software/Software-Development/Thor/i-fQFJCBP/0/S/square-S.png" alt="" width="180" height="180" /></a></p>
+<p>If you're an XCode user and familiar with Git, check out the <a href="https://github.com/IronFoundry/Thor/blob/master/README.md" target="_blank">README.md</a> to pull down the latest code and try it out yourself against your own Cloud Foundry Projects - private or public hosted!</p>
+
+<h2>Thor .NET for Windows Users</h2>
+<p>The Windows version of the Thor Client is about to go into beta in the coming weeks. It has an elegant metro style interface and will initially be available for Windows 7.</p>
+
+<p>For the WinRT and Windows 8 versions we're still determining what the best approach is to development of this version of the UI. We'd love any additional input on the WinRT or Windows 8 Applications or how you see you may use the application on WinRT or Windows 8. Let us know in the <a href="https://groups.google.com/forum/?fromgroups=#!topic/ironfoundry/bJJucnSx1Vc" target="_blank">Iron Foundry Discussion Group</a>.</p>
+<h2>vcap-client on Nuget</h2>
+<p>Recently we released the <a href="https://github.com/IronFoundry/vcap-client" target="_blank">vcap-client library</a> for client usage against any <a href="http://www.cloudfoundry.org" target="_blank">Cloud Foundry</a> and <a href="http://ironfoundry.org" target="_blank">Iron Foundry</a> Built Environments. So if you're a use of the .NET Framework, this library has all the functionality wrapped up in a <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">Nuget Package</a> for you.</p>
+
+<p>So if you're a user of <a href="http://www.appfog.com" target="_blank">AppFog</a>, <a href="http://cloudfoundry.com" target="_blank">CloudFoundry.com</a>, <a href="http://www.tier3.com/services/fabric" target="_blank">Tier 3 Web Fabric</a>, <a href="http://www.activestate.com/stackato" target="_blank">Stackato</a> or another Cloud Foundry enabled environment and write code against the .NET Framework, this is a <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">great library</a> to try out.</p>
+<h2>Conversations Around Iron Foundry Library</h2>
+<p>We're currently having conversations via the <a href="https://groups.google.com/forum/?fromgroups#!forum/ironfoundry" target="_blank">Iron Foundry Discussion Group</a> for implementing <a href="https://groups.google.com/forum/?fromgroups=#!topic/ironfoundry/qa2c9S88r_o" target="_blank">background services for .NET</a>. Join the conversation if you'd like to contribute, add your suggestions or have any ideas on how this should be implemented.</p>
+  ]]></description>
+</item>
+
+	<item>
+  <title>Alpha For Thor - Download, Try, Get Involved</title>
+  <link>http://realjenius.com/2012/09/17/alpha-for-thor-download-try-get-involved/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-09-17T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/09/17/alpha-for-thor-download-try-get-involved/</guid>
+  <description><![CDATA[
+     Today we're releasing the alpha Thor Applications with installers for Mac OS-X and a partial Windows 7 release. We wanted to get minimally viable products out the door as soon as possible so people could check out our progress and work we've accomplished for the Thor User Interfaces with Cloud Foundry and Iron Foundry Environments! So here they are. Here's a few screen shots to how we're doing...
+
+[caption id="attachment_145" align="aligncenter" width="816"]<a href="http://blog.ironfoundry.org/2012/09/alpha-for-thor-download-try-get-involved/004-thor-running/" rel="attachment wp-att-145"><img class="size-full wp-image-145" title="Thor Running on OS-X" src="/img/blog/004-Thor-Running.jpg" alt="Thor Running on OS-X" width="816" height="802" /></a> Thor Running on OS-X[/caption]
+
+[caption id="attachment_144" align="aligncenter" width="707"]<a href="http://blog.ironfoundry.org/2012/09/alpha-for-thor-download-try-get-involved/003-add-a-cloud/" rel="attachment wp-att-144"><img class="size-full wp-image-144" title="Adding a Cloud Foundry Target" src="/img/blog/003-Add-a-Cloud.png" alt="Adding a Cloud Foundry Target" width="707" height="595" /></a> Adding a Cloud Foundry Target[/caption]
+
+To download the Thor OS-X and Windows 7 installer releases check out the <a href="http://www.ironfoundry.org/download" target="_blank">downloads</a> page. We'll be iterating on the code base regularly still, so if you know github well I'd suggest going to clone the code itself and running it. The installers are still however a working option to check it out.
+<h2>Getting Involved</h2>
+<strong>What's Being Worked On?</strong>
+
+The workflow we're using for Thor &amp; Thor .NET is viewable via the issues section on Github and also for a good kanban visualization we're using <a href="http://huboard.com" target="_blank">Huboard</a>. For each of the projects we've started or are starting a Hubaord Kanban.
+<ul>
+	<li><a href="http://huboard.com/IronFoundry/Thor/board" target="_blank">Thor</a> on <a href="http://bit.ly/UfGdXC" target="_blank">Github</a> (OS-X Version) and the respective <a href="https://github.com/IronFoundry/Thor/issues?milestone=4&amp;state=open" target="_blank">issues, stories and more</a>.</li>
+	<li><a href="http://huboard.com/IronFoundry/Thor.NET/board" target="_blank">Thor .NET</a> on <a href="http://bit.ly/SugiK9" target="_blank">Github</a> (Win 7 Version) and the respective <a href="https://github.com/IronFoundry/Thor.NET/issues?state=open" target="_blank">issues, stories and more</a>.</li>
+	<li><a href="http://huboard.com/IronFoundry/ironfoundry/board" target="_blank">Iron Foundry</a> (Core Iron Foundry .NET Support &amp; Libraries for extending Cloud Foundry)</li>
+</ul>
+<strong>Getting the Code</strong>
+
+To clone/fork/download the latest code to work with, contribute, and send pull requests with follow these steps.
+<ol>
+	<li>Navigate to the main source and fork the code.</li>
+	<li>Once you've forked the code, navigate to your repository and clone to your local development machine.</li>
+</ol>
+<code>git clone git@github.com:YourGithubAccount/Thor.git</code>
+<ol>
+	<li>Once the clone is complete, for the OS-X version you'll need to pull the submodules with the following command. For the Windows 7 version just do a clone and build.</li>
+</ol>
+<code>git submodule update --init --recursive</code>
+
+Your local repository should have executable code now. Open the project with XCode or Visual Studio 2010, depending on which project you're checking out and see if everything works. If it doesn't, please post a comment to our <a href="https://groups.google.com/forum/#!forum/ironfoundry" target="_blank">discussion list</a> or message us via Twitter on <a href="http://twitter.com/ironfoundryorg" target="_blank">@ironfoundryorg</a>.
+
+<strong>Working on the Code</strong>
+
+Once you've added the feature, or completed one of the stories or items in the <a href="https://github.com/IronFoundry/Thor/issues?state=open">Thor issues list</a> or <a href="https://github.com/IronFoundry/Thor.NET/issues?state=open" target="_blank">Thor .NET issues list</a> leave a comment on the issue and submit a pull request (or just submit the pull request). We'll then merge it back in, or if there are conflicts we'll work with you to merge it back in and add the code to master.
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

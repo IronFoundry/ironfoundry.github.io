@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+   	<title>RealJenius.com - Tag: windows RT</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Windows 8 & RT Discussions, Thor, Thor .NET and vcap-client Status Updates</title>
+  <link>http://realjenius.com/2012/10/30/thor-thor-net-and-vcap-client-status-updates/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-30T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/30/thor-thor-net-and-vcap-client-status-updates/</guid>
+  <description><![CDATA[
+     A few updates from the teams:
+<h2>Thor</h2>
+<p>Thor is moving along with implementation of services starting yesterday (Monday). You can view our live <a href="http://huboard.com/IronFoundry/Thor/board" target="_blank">Huboard Kanban</a> to see what is currently being worked on. The interface in the last few weeks has gotten a faster, cleaner appearance and stabilized even more around deploying and maintaining your Cloud Foundry based environments.</p>
+
+<p><a href="http://www.ironfoundry.org/"><img src="http://adronhall.smugmug.com/Software/Software-Development/Thor/i-fQFJCBP/0/S/square-S.png" alt="" width="180" height="180" /></a></p>
+<p>If you're an XCode user and familiar with Git, check out the <a href="https://github.com/IronFoundry/Thor/blob/master/README.md" target="_blank">README.md</a> to pull down the latest code and try it out yourself against your own Cloud Foundry Projects - private or public hosted!</p>
+
+<h2>Thor .NET for Windows Users</h2>
+<p>The Windows version of the Thor Client is about to go into beta in the coming weeks. It has an elegant metro style interface and will initially be available for Windows 7.</p>
+
+<p>For the WinRT and Windows 8 versions we're still determining what the best approach is to development of this version of the UI. We'd love any additional input on the WinRT or Windows 8 Applications or how you see you may use the application on WinRT or Windows 8. Let us know in the <a href="https://groups.google.com/forum/?fromgroups=#!topic/ironfoundry/bJJucnSx1Vc" target="_blank">Iron Foundry Discussion Group</a>.</p>
+<h2>vcap-client on Nuget</h2>
+<p>Recently we released the <a href="https://github.com/IronFoundry/vcap-client" target="_blank">vcap-client library</a> for client usage against any <a href="http://www.cloudfoundry.org" target="_blank">Cloud Foundry</a> and <a href="http://ironfoundry.org" target="_blank">Iron Foundry</a> Built Environments. So if you're a use of the .NET Framework, this library has all the functionality wrapped up in a <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">Nuget Package</a> for you.</p>
+
+<p>So if you're a user of <a href="http://www.appfog.com" target="_blank">AppFog</a>, <a href="http://cloudfoundry.com" target="_blank">CloudFoundry.com</a>, <a href="http://www.tier3.com/services/fabric" target="_blank">Tier 3 Web Fabric</a>, <a href="http://www.activestate.com/stackato" target="_blank">Stackato</a> or another Cloud Foundry enabled environment and write code against the .NET Framework, this is a <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">great library</a> to try out.</p>
+<h2>Conversations Around Iron Foundry Library</h2>
+<p>We're currently having conversations via the <a href="https://groups.google.com/forum/?fromgroups#!forum/ironfoundry" target="_blank">Iron Foundry Discussion Group</a> for implementing <a href="https://groups.google.com/forum/?fromgroups=#!topic/ironfoundry/qa2c9S88r_o" target="_blank">background services for .NET</a>. Join the conversation if you'd like to contribute, add your suggestions or have any ideas on how this should be implemented.</p>
+  ]]></description>
+</item>
+
+</channel>
+</rss>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+    <title>RealJenius.com - Category: vcap</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>Windows 8 & RT Discussions, Thor, Thor .NET and vcap-client Status Updates</title>
+  <link>http://realjenius.com/2012/10/30/thor-thor-net-and-vcap-client-status-updates/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-30T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/30/thor-thor-net-and-vcap-client-status-updates/</guid>
+  <description><![CDATA[
+     A few updates from the teams:
+<h2>Thor</h2>
+<p>Thor is moving along with implementation of services starting yesterday (Monday). You can view our live <a href="http://huboard.com/IronFoundry/Thor/board" target="_blank">Huboard Kanban</a> to see what is currently being worked on. The interface in the last few weeks has gotten a faster, cleaner appearance and stabilized even more around deploying and maintaining your Cloud Foundry based environments.</p>
+
+<p><a href="http://www.ironfoundry.org/"><img src="http://adronhall.smugmug.com/Software/Software-Development/Thor/i-fQFJCBP/0/S/square-S.png" alt="" width="180" height="180" /></a></p>
+<p>If you're an XCode user and familiar with Git, check out the <a href="https://github.com/IronFoundry/Thor/blob/master/README.md" target="_blank">README.md</a> to pull down the latest code and try it out yourself against your own Cloud Foundry Projects - private or public hosted!</p>
+
+<h2>Thor .NET for Windows Users</h2>
+<p>The Windows version of the Thor Client is about to go into beta in the coming weeks. It has an elegant metro style interface and will initially be available for Windows 7.</p>
+
+<p>For the WinRT and Windows 8 versions we're still determining what the best approach is to development of this version of the UI. We'd love any additional input on the WinRT or Windows 8 Applications or how you see you may use the application on WinRT or Windows 8. Let us know in the <a href="https://groups.google.com/forum/?fromgroups=#!topic/ironfoundry/bJJucnSx1Vc" target="_blank">Iron Foundry Discussion Group</a>.</p>
+<h2>vcap-client on Nuget</h2>
+<p>Recently we released the <a href="https://github.com/IronFoundry/vcap-client" target="_blank">vcap-client library</a> for client usage against any <a href="http://www.cloudfoundry.org" target="_blank">Cloud Foundry</a> and <a href="http://ironfoundry.org" target="_blank">Iron Foundry</a> Built Environments. So if you're a use of the .NET Framework, this library has all the functionality wrapped up in a <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">Nuget Package</a> for you.</p>
+
+<p>So if you're a user of <a href="http://www.appfog.com" target="_blank">AppFog</a>, <a href="http://cloudfoundry.com" target="_blank">CloudFoundry.com</a>, <a href="http://www.tier3.com/services/fabric" target="_blank">Tier 3 Web Fabric</a>, <a href="http://www.activestate.com/stackato" target="_blank">Stackato</a> or another Cloud Foundry enabled environment and write code against the .NET Framework, this is a <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">great library</a> to try out.</p>
+<h2>Conversations Around Iron Foundry Library</h2>
+<p>We're currently having conversations via the <a href="https://groups.google.com/forum/?fromgroups#!forum/ironfoundry" target="_blank">Iron Foundry Discussion Group</a> for implementing <a href="https://groups.google.com/forum/?fromgroups=#!topic/ironfoundry/qa2c9S88r_o" target="_blank">background services for .NET</a>. Join the conversation if you'd like to contribute, add your suggestions or have any ideas on how this should be implemented.</p>
+  ]]></description>
+</item>
+
+	<item>
+  <title>Iron Foundry vcap-client (AKA The .NET Cloud Foundry vcap-client)</title>
+  <link>http://realjenius.com/2012/10/03/iron-foundry-vcap-client-aka-the-net-cloud-foundry-vcap-client/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-03T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/03/iron-foundry-vcap-client-aka-the-net-cloud-foundry-vcap-client/</guid>
+  <description><![CDATA[
+     <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" rel="attachment wp-att-177"><img class="size-full wp-image-177 alignright" src="/img/blog/nuget_35366349.png" alt="" width="229" height="64" /></a>Ever want to write code against the Cloud Foundry API but you don't want to go to the trouble of wrapping up the API calls with library? Well, have no fear there's no need to! With dilligent work from the Iron Foundry team, a few suggestions from outside, and a few contributions from the community we've pulled this together for you. Here's a step by step of what we've accomplished in the last week to bring a solid, clean and tested library to you.
+
+Presenting the Iron Foundry vcap-client. This library provides all of the capabilities wrapped up in the standard Cloud Foundry vcap-client libraries, except for .NET. Not only did we build out this library to provide a programmatic way for .NET Developers to access and manage Cloud Foundry and Iron Foundry environments, we've also provided a Nuget Package for the easiest of access.
+
+With the <a href="http://www.nuget.org/packages/IronFoundry-VcapClient" target="_blank">Iron Foundry Nuget Package</a> it will handle all of your dependencies. We only have two in the package, but it is always nice to have those just handled for you.
+
+If you'd like to contribute, find any issues let us know, or just want to download the project directly check out our <a href="https://github.com/IronFoundry/vcap-client" target="_blank">Iron Foundry vcap-client Github Repo</a>.
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>Sync with Cloud Foundry</title>
+  <link>http://realjenius.com/2012/08/01/sync-with-cloud-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-08-01T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/08/01/sync-with-cloud-foundry/</guid>
+  <description><![CDATA[
+     On the Iron Foundry Project we are diligent about keeping up to date with any significant Cloud Foundry changes. With the recent refactoring the Cloud Foundry team has been working there has been a lot more to keep track of. For information on the Cloud Foundry side of things check out these write ups by Mark Lucovsky (<a href="http://blog.cloudfoundry.org/2012/04/27/cloud-foundry-roadmap-below-the-water-line/" target="_blank">Cloud Foundry Roadmap: Below the Water Line</a>, <a href="http://blog.cloudfoundry.org/2012/05/17/refactoring-the-vcap-repo/" target="_blank">Refactoring the VCAP Repo</a>, and <a href="http://blog.cloudfoundry.org/2012/06/20/heads-up-on-some-new-cloud-controller-features/" target="_blank">Heads Up on Some New Cloud Controller Features</a>).
+
+To check out the changes, with appropriate <a href="http://ironfoundry.org/download" target="_blank">Iron Foundry</a> extensions, check out the <a href="https://github.com/IronFoundry" target="_blank">Iron Foundry Repositories</a>. If you'd like to try out your own custom deployment, the scripts have been updated accordingly also.
+
+<strong>VMC CLI</strong>
+
+One of the key things we've done in the last few weeks is change the vmc (<a href="http://docs.cloudfoundry.com/tools/vmc/vmc-quick-ref.html" target="_blank">usage information</a>) from preview release to a full release. So to get the latest Iron Foundry enabled vmc be sure to uninstall the previous version:
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry uninstall"></script>
+
+Then simply use gems to install the latest (<a href="http://help.ironfoundry.org/entries/21783872-managing-applications-from-the-command-line" target="_blank">KB Article Available</a>):
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry Install"></script>
+
+If ruby and gems isn't installed on Windows yet follow these quick steps.
+
+Install Ruby for Windows from <a title="Ruby Installer" href="http://rubyinstaller.org/downloads/" target="_blank">Ruby Installer</a>. This is tested using version 1.9.3. During installation you can either add ruby to your PATH or add it manually later.
+
+Run the following commands from a command prompt. You should ensure that ruby and sqlcmd are in your PATH as well.
+
+Checking ruby version & installing on Windows:
+<script src="https://gist.github.com/3231458.js?file=vmc-IronFoundry Windows Install"></script>
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>

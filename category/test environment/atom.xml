@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+   
+    <title>RealJenius.com - Category: test environment</title>
+   
+   <link>http://realjenius.com</link>
+   <description>I'm a software developer in the game industry, and have been (for better or worse) coding on the Java platform for the last decade. I also do all my own stunts.</description>
+   <language>en-us</language>
+   <managingEditor>R.J. Lorimer</managingEditor>
+   <atom:link href="rss" rel="self" type="application/rss+xml" />
+   
+	<item>
+  <title>IronFoundry.ME Environment Now Running Latest Iron Foundry Bits</title>
+  <link>http://realjenius.com/2012/10/10/ironfoundry-me-environment-now-running-latest-iron-foundry-bits/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-10-10T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/10/10/ironfoundry-me-environment-now-running-latest-iron-foundry-bits/</guid>
+  <description><![CDATA[
+     Last weekend, we <a href="http://blog.ironfoundry.org/2012/10/weekend-iron-foundry-work-downtime-window/" target="_blank">did a refresh</a> of the sandbox <a href="http://api.ironfoundry.me/" target="_blank">IronFoundry.ME</a> environment to make sure that it was running the latest Iron Foundry bits. As part of that update, we've enabled and upgraded a few interesting things.
+
+First of all, we added some new services. You can confirm this by using vmc (and don't forget to upgrade your <a href="http://rubygems.org/gems/vmc-IronFoundry" target="_blank">vmc-IronFoundry</a> gem!) and executing a <strong>vmc services</strong> command.
+
+<img class="alignnone size-full wp-image-182" title="upgrade01" src="/img/blog/upgrade01.png" alt="" width="500" height="266" />
+
+You should notice a few things here. First, MongoDB has been upgraded from version 1.8 to 2.0. Also, we're now running PostgreSQL 9.0. You'll also find the new Cloud Foundry blob service available here.
+
+As far as application runtimes go, we upgraded a couple of those too. You can see this by executing <strong>vmc runtimes</strong> against the IronFoundry.ME environment.
+
+<img class="alignnone size-full wp-image-183" title="upgrade02" src="/img/blog/upgrade02.png" alt="" width="500" height="316" />
+
+See that we are running both Java 6 and 7 now. Also, we've upgraded our versions of Node and included support for Node 0.8.2.
+
+Besides upgrading services and runtimes, we also <a href="http://uaa.ironfoundry.me/login" target="_blank">added support</a> for the Cloud Foundry User Account and Authorization Service (UAA). The Cloud Foundry blog has articles that <a href="http://blog.cloudfoundry.org/2012/07/23/uaa-intro/" target="_blank">Introduce the UAA</a>, review the<a href="http://blog.cloudfoundry.org/2012/07/24/high-level-features-of-the-uaa/" target="_blank"> high level features of the UAA</a>,  and <a href="http://blog.cloudfoundry.org/2012/10/09/oauth-rest/" target="_blank">secure REST web services with the UAA</a>. You'll also find docs on Github that outline the <a href="https://github.com/cloudfoundry/uaa/blob/master/docs/UAA-Security.md" target="_blank">features and configurations</a>, as well as <a href="https://github.com/cloudfoundry/uaa/blob/master/docs/UAA-APIs.rst" target="_blank">how to use the UAA APIs</a>. Keep an eye out for an upcoming blog post that shows an example of how you use the UAA service within Iron Foundry.
+
+We hope that you can immediately take advantage of the new capabilities in this free IronFoundry.ME environment.
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>New Iron Foundry Test Environment .ME</title>
+  <link>http://realjenius.com/2012/04/04/new-iron-foundry-test-environment-me/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-04-04T00:00:00-07:00</pubDate>
+  <guid>http://realjenius.com/2012/04/04/new-iron-foundry-test-environment-me/</guid>
+  <description><![CDATA[
+     Today we have released a major update to the Iron Foundry test environment. Currently this environment is supporting over 350 developers constantly deploying/hosting applications using .NET and the Iron Foundry developer tool set. Here are some of the major changes and highlights:
+<ul>
+	<li>Multi-Runtime Support: We have extended the offering to support polyglot applications with the support of Java, Ruby, PHP, Python, Node.js, and .NET.</li>
+	<li>Rabbit MQ Support: Rabbit MQ is now added as a service offering to use in the environment. For more information about Rabbit MQ visit our <a href="http://help.ironfoundry.org/entries/21238376-getting-up-and-running-with-rabbit-mq">quick start guide</a>.</li>
+	<li>Extended Database Support: Adding support for MySQL and Postgres to extend the other databases currently offered (MS SQL, Redis, and MongoDB).</li>
+	<li>Caldecott Support: We have enabled <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Caldecott</a> support for the entire environment so that you can tunnel to backend services. Learn more about it at the <a href="http://blog.cloudfoundry.com/post/12928974099/now-you-can-tunnel-into-any-cloud-foundry-data-service">Cloud Foundry Blog</a>.</li>
+	<li>No more trial expiration: We have removed the 90 day trial limitation so that you can test your application longer if needed. This is a testing environment and we do not give support for it beyond what a standard test environment needs so please <em><strong>do not run production applications on it</strong></em>. The limitation is now based on resources being provisioned to 3 application instances and 2 database instances. If you need more <a href="http://help.ironfoundry.org">contact us</a> so that we can help.</li>
+	<li>New Friendly Url: The new friendly url is ironfoundry.me and will enable your applications with [appname].ironfoundry.me. The API to access the new environment is api.ironfoundry.me.</li>
+</ul>
+<strong>For the developers who already have signed up you will not have to sign up again as we have ported your user names and passwords over to the ironfoundry.me environment.</strong>
+
+As this is a new environment with many features, we decided to keep the gofoundry.net environment running so users have time to migrate their applications to the new environment. All new accounts will have access to the new environment and you can <a href="http://www.ironfoundry.org/signup">sign up</a> here for free.
+
+<a href="http://www.ironfoundry.org/signup">Go here to get started!</a>
+
+  ]]></description>
+</item>
+
+	<item>
+  <title>How To Deploy Orchard CMS on Iron Foundry</title>
+  <link>http://realjenius.com/2012/02/23/how-to-deploy-orchard-cms-on-iron-foundry/</link>
+  <author>R.J. Lorimer</author>
+  <pubDate>2012-02-23T00:00:00-08:00</pubDate>
+  <guid>http://realjenius.com/2012/02/23/how-to-deploy-orchard-cms-on-iron-foundry/</guid>
+  <description><![CDATA[
+     <div class="grey_box_top"><span class="c2"><a class="c5" href="http://orchardproject.net/">Orchard </a></span>is a free, open source, community-focused project aimed at delivering applications and reusable components on the ASP.NET platform. The Orchard project as a very active and vibrant community that is actively developing and also using it for personal and commercial offerings.</div>
+<div class="frame">
+<div class="entry nobottom">
+<div class="user_formatted header_section clearfix">
+<p class="c0"><span class="c2"><a class="c5" href="http://www.ironfoundry.org/">Iron Foundry</a></span> is an open source project  that extends .NET to <span class="c2"><a class="c5" href="http://www.cloudfoundry.org/">Cloud Foundry</a></span> (The Open Platform as a Service). available for the Windows Server Environments with the ability to run the full spectrum of .NET Web Applications, SQL Server, and more. Iron Foundry places the Microsoft tool stack on an even footing with the Linux-based stacks. This platform is all open source and can be deployed anywhere. Today we are going to use the free trial environment provided by the Iron Foundry project.</p>
+<p class="c0">With Iron Foundry and Cloud Foundry Orchard can scale within minutes to handle load on the system. This also gives an environment for rapid testing and staging of your application.</p>
+<p class="c0">In four easy steps you can deploy and start configuring your Orchard CMS instance on Iron Foundry:</p>
+
+<h2 class="c0">Step 1:  Download Orchard CMS</h2>
+<p class="c0">To download Orchard just go to the <span class="c2"><a class="c5" href="http://orchardproject.net/download">Download Page</a></span> and then select the “Download as a zip” it is about 8MB in size. It will then ask you to agree to the terms.</p>
+<p class="c0">Step 2:  Make changes to be supported on Iron Foundry</p>
+
+<ol class="c6" start="1">
+	<li class="c3 c0">Go ahead and unzip it to your temporary directory.</li>
+</ol>
+<p class="c0">You can read more about the manual install here:<span class="c2"><a href="http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file">http://docs.orchardproject.net/Documentation/Manually-installing-Orchard-zip-file</a></span></p>
+
+<h2 class="c0">Step 3:  Sign up and Deploy to Iron Foundry</h2>
+<ol class="c6" start="1">
+	<li class="c3 c0"><span class="c2"><a class="c5" href="http://www.ironfoundry.org/signup">Sign up </a></span>for your free account on <span class="c2"><a class="c5" href="http://www.ironfoundry.org/signup">Iron Foundry</a></span> so you can test your deployment. (Note: this can take up to 24 hours to get your account activated.)</li>
+	<li class="c3 c0">Once your account is activated you can also download the <span class="c2"><a class="c5" href="http://www.ironfoundry.org/download">Cloud Foundry Explorer</a></span> from Iron Foundry.</li>
+	<li class="c3 c0">After installing the Cloud Foundry explorer you will need to run the application.</li>
+	<li class="c3 c0"><span class="c1">Upon startup, use the gear icon to add a connection to api.gofoundry.net:
+</span><img src="http://help.ironfoundry.org/attachments/token/rkj8yswyipcbess/?name=image00.png" alt="image00.png" /></li>
+</ol>
+<ol class="c6" start="5">
+	<li class="c3 c0"><span class="c1">You will be presented with the “Manage Clouds” screen (new in 1.6.0). To add a well-known cloud, use the dropdown at the bottom of the left side of the screen, with the cloud-plus icon. Select “Iron Foundry” to add a connection to this cloud. The url will be pre-filled to </span><span class="c7"><a href="http://api.gofoundry.net">http://api.gofoundry.net</a></span></li>
+	<li class="c3 c0"><span class="c1">Enter the email address and password credentials that were mailed to you upon signup. Use the “Validate Account” button to double-check your entries<img src="http://help.ironfoundry.org/attachments/token/ywezokgqwx0wx6a/?name=image01.png" alt="image01.png" /></span><span class="c1"> </span></li>
+	<li class="c3 c0"><span class="c1">When you choose “Ok”, you will see this new cloud connection added to your explorer window.
+</span><img src="http://help.ironfoundry.org/attachments/token/du6v6vtgiksfcht/?name=image03.png" alt="image03.png" /></li>
+</ol>
+<ol class="c6" start="8">
+	<li class="c3 c0"><span class="c1">Double-click the new connection to see an overview that will be displayed on the right.
+<img src="http://help.ironfoundry.org/attachments/token/zt1hg7pr1dwt0xd/?name=image05.png" alt="image05.png" width="500" /> </span></li>
+</ol>
+<ol class="c6" start="9">
+	<li class="c3 c0"><span class="c1">Next you will want to create an SQL instance to use. Main Iron Foundry Production tab at the bottom switch to “Applications” view.</span></li>
+	<li class="c3 c0"><span class="c1">On the services click the button to create a new service. Create a name for it and then from the drop down select MS SQL.
+<img src="http://help.ironfoundry.org/attachments/token/89zjf3dgckvyxp2/?name=image04.png" alt="image04.png" />
+</span></li>
+	<li class="c0 c3"><span class="c1">Use the “Push Application” button to push a new application to Iron Foundry:
+</span><img src="http://help.ironfoundry.org/attachments/token/dtsikbnxwm6laah/?name=image02.png" alt="image02.png" /></li>
+</ol>
+<ol class="c6" start="12">
+	<li class="c3 c0"><span class="c1">In the dialog, choose the cloud to which to push. Then, choose an application name that does not contain spaces. The url to specify will be in the form APPNAME.gofoundry.net, where APPNAME is the name you chose. Choose Browse… to pick the directory in which you unziped your orchard application. Note: this directory is the one in which a Web.config file and a bin subdirectory exists.<img src="http://help.ironfoundry.org/attachments/token/ha9b9ny3nnnrfvu/?name=image06.png" alt="image06.png" /></span></li>
+	<li class="c3 c0"><span class="c1">Once push completes, browse to </span><span class="c1">APPNAME.gofoundry.net</span><span class="c1"> to see your deployed application.</span></li>
+</ol>
+<h2 class="c0">Step 4: Setup your new Orchard Instance</h2>
+<p class="c0">You should be able to browse to your new orchard install at your application url (<span class="c2"><a href="http://APPNAME.gofoundry.net">http://APPNAME.gofoundry.net</a></span>) where you will see a getting started page:
+<img src="http://help.ironfoundry.org/attachments/token/mvksyylxte7byvs/?name=image07.png" alt="image07.png" /></p>
+<p class="c0">When you get to the screen below you are going to want to select to deploy SQL server and put in the connection string. To get the connection string you need to do the following:</p>
+
+<ol class="c6" start="1">
+	<li class="c3 c0">Go back to the Cloud Foundry Explorer</li>
+	<li class="c3 c0">Once there browse to your cloud and then browse to your application</li>
+	<li class="c3 c0">Once you have expanded to see the files double click on the web.config file which will open for you. In there you will see more entries added. All you need to do is copy the SQL server configuration settings and then put it into the orchard setup screen.
+<img src="http://help.ironfoundry.org/attachments/token/kxh0kdrdz9d3udu/?name=image08.png" alt="image08.png" /></li>
+</ol>
+<div class="grey_box_top">Anybody deploying Orchard on Iron Foundry can <a href="http://www.ironfoundry.org/hamma">contribute</a> and get a free Iron Foundry shirt!</div>
+<div class="frame"></div>
+</div>
+</div>
+</div>
+
+  ]]></description>
+</item>
+
+</channel>
+</rss>
