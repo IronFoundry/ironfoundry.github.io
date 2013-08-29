@@ -11,7 +11,8 @@
       <ul class="nav navbar-nav menu pull-right">
           {% for link in site.navigation %}
             {% assign current = nil %}
-            {% if page.url == link.url or page.layout == link.layout %}
+            {% assign url = link.url | append: "/index.html" %}
+            {% if page.url == link.url or page.url == url or page.layout == link.layout %}
               {% assign current = 'active' %}
             {% endif %}
 

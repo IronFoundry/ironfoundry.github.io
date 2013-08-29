@@ -1,3 +1,6 @@
+# Plugin via RealJenius.com
+# http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/
+
 module Jekyll
 
   class CatsAndTags < Generator
