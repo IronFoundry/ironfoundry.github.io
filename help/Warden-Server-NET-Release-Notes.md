@@ -13,6 +13,6 @@ Features:
 Works in conjunction with Ruby DEA (NG) running on Windows 8 or 2012
 Allows deployment and management of ASP.NET applications
 Isolates applications via a dedicated low-privilege user, network and firewall rules
-Available for download from [http://www.ironfoundry.org/download](http://www.ironfoundry.org/download)
+Available for download from [http://app.ironfoundry.me/download](http://app.ironfoundry.me/download)
 
 Source code is available on GitHub: [https://github.com/IronFoundry/ironfoundry](https://github.com/IronFoundry/ironfoundry)

@@ -10,7 +10,7 @@ tagline: Legacy Cloud Foundry \ Getting Started
 
 Before we start attaching to a queue in RabbitMQ, we need to create a service and bind to it.  This can be achieved by using vmc
 
-1) Lets verify that the service is available
+1. Lets verify that the service is available
 
 	vmc services
 	============== System Services ==============
@@ -25,7 +25,7 @@ Before we start attaching to a queue in RabbitMQ, we need to create a service an
 	| redis | 2.2 | Redis key-value store service |
 	+------------+------------+---------------------------------------+
 
-2) Lets create a service
+2. Lets create a service
 
 	vmc create-service rabbitmq redis-foobar
 	Creating Service: OK
@@ -56,27 +56,25 @@ Since rabbitmq uses the [AMPQ](http://www.rabbitmq.com/amqp-0-9-1-quickref.html)
 		factory.setPort(portNumber);
 		Connection conn = factory.newConnection();
 
-3) Use a URL 
+3. Use a URL 
 
-	ConnectionFactory factory = new ConnectionFactory();
-	factory.setUri("amqp://userName:password@hostName:portNumber/virtualHost");
-	Connection conn = factory.newConnection();
+		ConnectionFactory factory = new ConnectionFactory();
+		factory.setUri("amqp://userName:password@hostName:portNumber/virtualHost");
+		Connection conn = factory.newConnection();
 
-In order to use any of the above listed information you will need to know the particulars of how the service is hosted.  This information is accessible from the System object.  To get a listing of all the environment variables:
+	In order to use any of the above listed information you will need to know the particulars of how the service is hosted.  This information is accessible from the System object.  To get a listing of all the environment variables:
 
-	for (Map.Entry<String, String> envvar : System.getenv().entrySet()) {
-		out.println(envvar.getKey() + ": " + envvar.getValue() );
-	}
+		for (Map.Entry<String, String> envvar : System.getenv().entrySet()) {
+			out.println(envvar.getKey() + ": " + envvar.getValue() );
+		}
 
-Specifically you need the following:
+	Specifically you need the following:
 
+		VMC_RABBITMQ: xxx.xxx.xxx.xxx:yyyy
 
-	VMC_RABBITMQ: xxx.xxx.xxx.xxx:yyyy
+	Once the application is deployed it can be bound either during the deployment "push" process or after the fact with running:
 
-
-Once the application is deployed it can be bound either during the deployment "push" process or after the fact with running:
-
-	vmc bind-service <servicename> <appname>
+		vmc bind-service <servicename> <appname>
 
 **Sample Application**
 

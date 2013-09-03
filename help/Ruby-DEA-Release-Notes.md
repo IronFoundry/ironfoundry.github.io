@@ -15,6 +15,6 @@ File / directory services are not implemented yet. This requires some work to bu
 * Infrequent errors may happen in eventmachine (Errno::EBADF, Errno::ENOTSOCK). The team is investigating these errors and workarounds. Most of the time, a "cf stop" followed by a "cf start" will complete startup of your application. In some rare cases, the DEA service may require a restart.
 * Please report any issues found as a support ticket on this site, or to GitHub issues here: [https://github.com/IronFoundry/dea_ng/issues](https://github.com/IronFoundry/dea_ng/issues)
 
-Available for download from [http://www.ironfoundry.org/download](http://www.ironfoundry.org/download)
+Available for download from [http://app.ironfoundry.me/download](http://app.ironfoundry.me/download)
 
 Source code is available on GitHub: [https://github.com/IronFoundry/dea_ng](https://github.com/IronFoundry/dea_ng)
