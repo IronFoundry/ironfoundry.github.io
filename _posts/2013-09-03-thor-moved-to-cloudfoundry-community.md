@@ -43,6 +43,7 @@ An overview of Thor v2:
 <p><img src="/img/blog/2013-08-29_space_overview.png" /></p>
 
 We are fully commit at Iron Foundry to work on Thor v2 as we have discussed in our blog. Our goal with this is to have a clean separation of the two projects and focus our work on Iron Foundry to just .NET. Here is a list of high level features that Iron Foundry is planning on offering and supporting:
+
 * .NET Extension to Cloud Foundry
 * .NET Library for Cloud Foundry (SDK)
 * .NET Support for BOSH
