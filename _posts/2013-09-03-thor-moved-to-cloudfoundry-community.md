@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thor moved to Cloud Foundry Community
+title: Thor Moved to Cloud Foundry Community
 categories:
 - Thor
 - .NET
