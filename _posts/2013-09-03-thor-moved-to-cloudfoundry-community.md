@@ -14,7 +14,7 @@ author: Jared Wray
 twitter: jaredwray
 meta:
   _yoast_wpseo_linkdex: '0'
-  _edit_last: '6'
+  _edit_last: '8'
   _yoast_wpseo_focuskw: ''
   _yoast_wpseo_title: ''
   _yoast_wpseo_metadesc: ''
