@@ -9,7 +9,7 @@ categories:
 tags: []
 status: publish
 type: post
-published: false
+published: true
 author: Jared Wray
 twitter: jaredwray
 meta:
