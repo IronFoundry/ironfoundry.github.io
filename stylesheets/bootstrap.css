@@ -4253,6 +4253,12 @@ footer .trademark {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.post img,
+.help-docs img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
 /* Home */
 .share-bar {
   background: #201b19;
