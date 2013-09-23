@@ -27,7 +27,7 @@ meta:
   _yoast_wpseo_redirect: ''
 ---
 
-We had a great time attending the Cloud Foundry Platform Conference and being able to meet so many people in the Cloud Foundry community. Our presentation about extending .NET on Cloud Foundry was well received and many people are already making plans on implementing Iron Foundry v2 into their environments. 
+We had a great time attending the Cloud Foundry Platform Conference and meeting so many people in the Cloud Foundry community. Our presentation about extending .NET on Cloud Foundry was well received and many people are already making plans on implementing Iron Foundry v2 into their environments. 
 
 <p>To learn more, check out the slides and video of the presentation.</p>
 
