@@ -11,24 +11,11 @@ type: post
 published: true
 author: Jared Wray
 twitter: jaredwray
-meta:
-  _yoast_wpseo_linkdex: '0'
-  _edit_last: '8'
-  _yoast_wpseo_focuskw: ''
-  _yoast_wpseo_title: ''
-  _yoast_wpseo_metadesc: ''
-  _yoast_wpseo_meta-robots-noindex: '0'
-  _yoast_wpseo_meta-robots-nofollow: '0'
-  _yoast_wpseo_meta-robots-adv: none
-  _yoast_wpseo_sitemap-include: '-'
-  _yoast_wpseo_sitemap-prio: '-'
-  _yoast_wpseo_sitemap-html-include: '-'
-  _yoast_wpseo_canonical: ''
-  _yoast_wpseo_redirect: ''
+
 ---
 
 
-<p>The members of <a href="http://www.ironfoundry.org">Iron Foundry</a> project many of whom are CenturyLink Cloud Development Center engineers, are excited to announce that we are entering the <a href="http://www.cloudfoundry.com">Cloud Foundry</a> incubation process as of today. After two years of great Iron Foundry momentum as a stand-alone open source project – and with CenturyLink as a founding member of the Cloud Foundry Foundation at a gold level - we are excited to contribute this code to make .NET a first class citizen in Cloud Foundry! This step marks the beginning of a journey towards a tighter relationship with the Cloud Foundry project – one that allows everyone, from individual users to full enterprises, to deploy, run, and control .Net applications running on Windows the same way as any other application running on Cloud Foundry.</p>
+The members of <a href="http://www.ironfoundry.org">Iron Foundry</a> project many of whom are CenturyLink Cloud Development Center engineers, are excited to announce that we are entering the <a href="http://www.cloudfoundry.com">Cloud Foundry</a> incubation process as of today. After two years of great Iron Foundry momentum as a stand-alone open source project – and with CenturyLink as a founding member of the Cloud Foundry Foundation at a gold level - we are excited to contribute this code to make .NET a first class citizen in Cloud Foundry! This step marks the beginning of a journey towards a tighter relationship with the Cloud Foundry project – one that allows everyone, from individual users to full enterprises, to deploy, run, and control .Net applications running on Windows the same way as any other application running on Cloud Foundry.
  
 <p>Incubation allows Iron Foundry to join with the other Cloud Foundry projects, giving us a forum to mature integration into the community’s change and build processes. Greater integration means that Iron Foundry users are more quickly able to use features released in Cloud Foundry, and that we are better able to ensure continuing operation as other projects change around us.  For those occasional new features that require Windows-specific coding, the window in updating Iron Foundry should be much shorter. This should let everyone, whether Iron Foundry/.Net developers or Cloud Foundry developers, enjoy feature parity across all deployment platforms and infrastructures moving forward.</p>
  
