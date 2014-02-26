@@ -11,6 +11,21 @@ type: post
 published: true
 author: Jared Wray
 twitter: jaredwray
+meta:
+  _yoast_wpseo_linkdex: '0'
+  _edit_last: '8'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_sitemap-html-include: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+---
 
 
 <p>The members of <a href="http://www.ironfoundry.org">Iron Foundry</a> project many of whom are CenturyLink Cloud Development Center engineers, are excited to announce that we are entering the <a href="http://www.cloudfoundry.com">Cloud Foundry</a> incubation process as of today. After two years of great Iron Foundry momentum as a stand-alone open source project – and with CenturyLink as a founding member of the Cloud Foundry Foundation at a gold level - we are excited to contribute this code to make .NET a first class citizen in Cloud Foundry! This step marks the beginning of a journey towards a tighter relationship with the Cloud Foundry project – one that allows everyone, from individual users to full enterprises, to deploy, run, and control .Net applications running on Windows the same way as any other application running on Cloud Foundry.</p>
