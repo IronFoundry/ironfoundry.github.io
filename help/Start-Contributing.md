@@ -36,6 +36,6 @@ We welcome your contributions!
 
 For significant contributions --  as with most open source projects -- we do require contributors to sign a Contributors License Agreement (CLA). The CLA is modeled after the Apache Foundation and Cloud Foundry CLAs, which have worked out well with both communities. 
 
-Individual: [http://www.ironfoundry.org/cla-legal/ironfoundry-individual-contributors.pdf](http://www.ironfoundry.org/cla-legal/ironfoundry-individual-contributors.pdf)
+[Individual CLA](http://www.ironfoundry.org/cla-legal/ironfoundry-individual-contributors.pdf)
 
-Company: [http://www.ironfoundry.org/cla-legal/ironfoudry-company-contributors.pdf](http://www.ironfoundry.org/cla-legal/ironfoudry-company-contributors.pdf)
+[Corporate CLA](http://www.ironfoundry.org/cla-legal/ironfoundry-company-contributors.pdf)
