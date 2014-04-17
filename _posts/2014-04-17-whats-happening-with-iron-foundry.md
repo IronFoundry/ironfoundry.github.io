@@ -18,7 +18,7 @@ Its an exciting and interesting time for the Iron Foundry project. This blog pos
 
 ## Cloud Foundry Incubation ##
 
-Step one of the changes happened late in February, when IronFoundry V2 entered into the CloudFound Incubation Program. Jared posted about this [earlier](/2014/02/26/Iron-Foundry-Now-in-Cloud-Foundry-Incubation-Program/), and we're still working closely with the developers at CloudFoundry to make this a successful collaboration.
+Step one of the changes happened late in February, when IronFoundry V2 entered into the CloudFoundry Incubation Program. Jared posted about this [earlier](/2014/02/26/Iron-Foundry-Now-in-Cloud-Foundry-Incubation-Program/), and we're still working closely with the developers at CloudFoundry to make this a successful collaboration.
 
 As part of that work, we had created branches off CloudFoundry v1.61 for our own version of the DEA, Warden, and Directory Server. We're maintaining this as our own fork, since that codeline in CF is going to be retired shortly. The Pivotal folks are making a pretty big architectural change to something called [Diego](https://docs.google.com/file/d/0BzowTjPNRrlzeHoyeTFoUWlla2M/edit), which is going to both rearchitect how staging and execution happen and replace a bunch of ruby code with golang.
 
