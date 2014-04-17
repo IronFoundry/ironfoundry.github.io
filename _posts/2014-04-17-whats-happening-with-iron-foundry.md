@@ -28,7 +28,7 @@ Towards that end, one of the main collaborators on Iron Foundry traveled to San 
 
 As a result of the ongoing work on Iron Foundry V2, we have created some new repositories and moved around some of the others. Here is a listing of the current repositories and what they're used for:
 
-* [dea_ng](https://github.com/IronFoundry/dea_ng): This is our fork of the Cloud Foundry dea_ng repository. We branched off V1.61, so all of our code is based on that. This code will go away eventually, once our implementation of Diego is released and we're confident in it enough to retired this repository.
+* [dea_ng](https://github.com/IronFoundry/dea_ng): This is our fork of the Cloud Foundry dea_ng repository. We branched off V1.61, so all of our code is based on that. This code will go away eventually, once our implementation of Diego is released and we're confident in it enough to retire this repository.
 * [if_warden](https://github.com/cloudfoundry-incubator/if_warden): Our .NET implementation of a warden. It provides functionality similar to that of docker on linux.
 * [cloudfoundry-buildpack-clr](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr): The infrastructure used by Cloud Foundry to run .NET applications.
 
