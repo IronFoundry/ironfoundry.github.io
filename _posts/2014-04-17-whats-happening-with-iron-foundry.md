@@ -29,15 +29,15 @@ Towards that end, one of the main collaborators on Iron Foundry traveled to San 
 As a result of the ongoing work on Iron Foundry V2, we have created some new repositories and moved around some of the others. Here is a listing of the current repositories and what they're used for:
 
 * [dea_ng](https://github.com/IronFoundry/dea_ng): This is our fork of the Cloud Foundry dea_ng repository. We branched off V1.61, so all of our code is based on that. This code will go away eventually, once our implementation of Diego is released and we're confident in it enough to retired this repository.
-* [if_warden](https://github.com/cloudfoundry-incubator/if_warden): Our .Net implementation of a warden. It provides functionality similar to that of docker on linux.
-* [cloudfoundry-buildpack-clr](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr): The infrastructure used by Cloud Foundry to run .Net applications. This will also be retired once Diego is released.
+* [if_warden](https://github.com/cloudfoundry-incubator/if_warden): Our .NET implementation of a warden. It provides functionality similar to that of docker on linux.
+* [cloudfoundry-buildpack-clr](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr): The infrastructure used by Cloud Foundry to run .NET applications.
 
 * [warden](https://github.com/ironfoundry/warden): This is our forked version of Cloud Foundry's warden repository. Will be retired with Diego.
-* [eventmachine](https://github.com/IronFoundry/eventmachine): Our fork of the eventmachine repo, fixing some .Net-specific issues. Will also be retired with Diego.
+* [eventmachine](https://github.com/IronFoundry/eventmachine): Our fork of the eventmachine repo, fixing some .NET-specific issues. Will also be retired with Diego.
 
 * [if_release](https://github.com/IronFoundry/if_release): This single repository contains all other needed repositories as submodules. By cloning this and then running 'git submodule update --init', you can pull all of the Iron Foundry code out of github into a single source tree. The README.md for this repository also has the instructions describing how to install Iron Foundry onto a running windows VM.
 
-* [if-service-broker](https://github.com/IronFoundry/if-service-broker): A .Net service broker to support provisioning SQL Server as a service for your application. The README.md file has the installation instructions for how to deploy this. Information about how to manage the service inside Cloud Foundry can be found in their [documentation](http://docs.cloudfoundry.org/services/managing-service-brokers.html).
+* [if-service-broker](https://github.com/IronFoundry/if-service-broker): A .NET service broker to support provisioning SQL Server as a service for your application. The README.md file has the installation instructions for how to deploy this. Information about how to manage the service inside Cloud Foundry can be found in their [documentation](http://docs.cloudfoundry.org/services/managing-service-brokers.html).
 
 We will be retiring all V1 Iron Foundry repos into our [attic](https://github.com/ironfoundry-attic) organization immediately to prevent confusion over what is current. They will still be available from there, but this will allow us to separate repositories with active development from those which are no longer in use.
 
@@ -55,4 +55,4 @@ As before, support will be offered through github issues in either the [if_relea
 
 We are very excited about a number of things revolving around the past, present, and future of Iron Foundry, including the progress we've made on Iron Foundry over the past couple of months, the collaboration we've started with Pivotal on the DEA and warden pieces we've been working on in the new Diego architecture and other projects moving forward, and the future of Iron Foundry and ironfoundry.me down the road.
 
-But even with all those things going on, we still need the help of the Iron Foundry community. In fact, _especially_ with all these things going on, we need the community's help. Download Iron Foundry, use it, tell us what you think, add some new feature to it and send us a pull request, and maybe even tell your friends about it. Its going to take our entire community to make this project successful, so please join in!
+But even with all those things going on, we still need the help of the Iron Foundry community. In fact, _especially_ with all these things going on, we need the community's help. Download Iron Foundry, use it, tell us what you think, add some new feature to it and send us a pull request, and maybe even tell your friends about it. It's going to take our entire community to make this project successful, so please join in!
