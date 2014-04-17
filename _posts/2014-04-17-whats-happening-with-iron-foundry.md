@@ -14,7 +14,7 @@ twitter: brianbuttonxp
 
 ---
 
-Its an exciting and interesting time for the Iron Foundry project. This blog post will detail some of the ongoing activities in Iron Foundry, and talk a bit about the near term roadmap for the project.
+It's an exciting and interesting time for the Iron Foundry project. This blog post will detail some of the ongoing activities in Iron Foundry, and talk a bit about the near term roadmap for the project.
 
 ## Cloud Foundry Incubation ##
 
@@ -22,7 +22,7 @@ Step one of the changes happened late in February, when IronFoundry V2 entered i
 
 As part of that work, we had created branches off CloudFoundry v1.61 for our own version of the DEA, Warden, and Directory Server. We're maintaining this as our own fork, since that codeline in CF is going to be retired shortly. The Pivotal folks are making a pretty big architectural change to something called [Diego](https://docs.google.com/file/d/0BzowTjPNRrlzeHoyeTFoUWlla2M/edit), which is going to both rearchitect how staging and execution happen and replace a bunch of ruby code with golang.
 
-Towards that end, one of the main collaborators on Iron Foundry traveled to San Francisco last week and paired with the Cloud Foundry developers to begin development of .Net extensions to Diego. Developers from the two projects are trying to work together closely to ensure that the extension points into the architecture that the CF devs built will work when implemented in a windows environment. The end goal of this is to allow Iron Foundry to be released as a full member of the Diego architecture at the same time, or closely thereafter, it is released by Cloud Foundry.
+Towards that end, one of the main collaborators on Iron Foundry traveled to San Francisco last week and paired with the Cloud Foundry developers to begin development of .NET extensions to Diego. Developers from the two projects are trying to work together closely to ensure that the extension points into the architecture that the CF devs built will work when implemented in a windows environment. The end goal of this is to allow Iron Foundry to be released as a full member of the Diego architecture at the same time, or closely thereafter, it is released by Cloud Foundry.
 
 ### Main Iron Foundry repositories ###
 
