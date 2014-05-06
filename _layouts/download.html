@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page.title }} - Iron Foundry</title>
+    {% include header_meta.html %}
+</head>
+
+<body>
+
+<div id="wrap">
+    <header class="header-short backsplash downloads">
+        <div class="container menu">
+            {% include menu.html %}
+        </div>
+        <div class="container">
+            <div class="row hero">
+                <h1 class="text-center">DOWNLOADS</h1>
+                {% if page.caption %}
+                    <div class="hero-tagline hidden-sm">{{ page.caption }}</div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="container photo-credit hidden-xs">
+            <div class="photo-author">photo by {{page.photo_credit}}</div>
+        </div>
+    </header>
+        
+    <div class="container content-container">
+        {{ content }}
+    </div>
+    
+    <div id="push"></div>
+</div>
+    
+{% include footer.html %}
+
+</body>
+</html>
