@@ -1,7 +1,7 @@
 ---
 layout: help_doc
 title: Organizations, Spaces, and Roles
-tagline: Iron Foundry V2 Beta \ Getting Started
+tagline: Iron Foundry V2 \ Getting Started
 ---
 # Understanding Organizations, Spaces, and Roles
 Every kind of project that we work on has some sort of organizational structure to it. These structures range from departments and deployment environments in larger organizations, to indivuals and their side-projects for single-person or small-team efforts, or almost any other thing in between. The point is that structure always forms, and a good tool allows for it. The tool should allow its idea of structure to be adapted to emerging needs of its users, rather than impose a structure to follow the assumptions of the tool.
