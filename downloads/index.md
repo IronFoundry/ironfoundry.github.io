@@ -28,7 +28,7 @@ contributers, as Iron Foundry continues to evolve and take shape. The voice of t
 * [Log an issue](https://github.com/ironfoundry/if_release/issues)
 
 #### Iron Foundry Service Broker
-[if-service-broker](https://github.com/IronFoundry/if-service-broker) Service Broker  is a Microsoft .Net based service broker for Cloud Foundry v2. It uses WebAPI to host the services. The service broker ships with one service for Microsoft Sql Server. This service will provision databases and users for applications. It can be extend to include any plans you want to offer.
+[if-service-broker](https://github.com/IronFoundry/if-service-broker) Service Broker  is a Microsoft .NET based service broker for Cloud Foundry v2. It uses WebAPI to host the services. The service broker ships with one service for Microsoft SQL Server. This service will provision databases and users for applications. It can be extended to include any plans you want to offer.
 
 The broker assumes SQL Server 2012. It uses Contained Databases, which is new functionality in SQL Server 2012.
 
