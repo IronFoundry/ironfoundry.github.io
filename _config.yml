@@ -10,7 +10,7 @@ tag_page_dir: tag
 permalink: /:year/:month/:day/:title/
 navigation:
 - text: Downloads
-  url: http://app.ironfoundry.me/download
+  url: /downloads
 - text: Sign Up
   url: http://app.ironfoundry.me/signup
 - text: Blog
