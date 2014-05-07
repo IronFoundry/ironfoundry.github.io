@@ -1,14 +1,14 @@
 ---
 layout: help_doc
 title: Understanding the Cloud Foundry Command Line Interface
-tagline: Iron Foundry V2 Beta \ Getting Started
+tagline: Iron Foundry V2 \ Getting Started
 ---
 
 # Understanding the Cloud Foundry Command Line Interace (CLI)
 
 At its most simple form, Cloud Foundry and Iron Foundry can be controlled from the command line using a [golang program](https://github.com/cloudfoundry/cli) called CF. This command line interface, or CLI, allows users to do almost everything necessary to deploy apps to Cloud Foundry, bind services to them, look at log files, and so on. And the things that you can't do through the CLI, the admin user can. That generally consists of user management, creating organizations and spaces, dealing with services and quotas, and advanced topics like that. 
 
-This brief section will take you through the basics of finding, installing, and using CF to control your life throughout the Iron Foundry beta. If you want the real, complete documentation for CF, you can find it on [Pivotal's](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html) site.
+This brief section will take you through the basics of finding, installing, and using CF to control your life throughout Iron Foundry. If you want the real, complete documentation for CF, you can find it on [Pivotal's](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html) site.
 
 ### Installing the CLI
 #### Finding CF

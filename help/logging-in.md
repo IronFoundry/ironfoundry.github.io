@@ -1,7 +1,7 @@
 ---
 layout: help_doc
 title: How to Log Into Iron Foundry
-tagline: Iron Foundry V2 Beta \ Getting Started
+tagline: Iron Foundry V2 \ Getting Started
 ---
 # The Mechanics of Logging Into Iron Foundry
 There are two separate, but equally important, steps to logging into any Cloud Foundry or Iron Foundry instance. The first involves pointing CF to the correct instance, and the second allows the user to provide their credentials to the system. Both of these are required before someone can successfully access the system.
