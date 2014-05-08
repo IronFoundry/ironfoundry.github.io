@@ -42,7 +42,7 @@ The final goal? Involving devs like you. We'll continue to engage with the commu
 ### How do I get an account?
 It's easy - on our [website](/), just click the link to [Sign Up](http://app.ironfoundry.org/signup) on the top navigation bar. Fill out the form, and you will receive an email from within a few hours describing how to get started. To let us get this out the door more quickly, in the spirit of a Minimal Viable Product, we opted for a manual signup process on our end for now. Be assured, though, automation of this process that is *really* high on our priority list. 
 
-In the email, you'll receive your initial password, along with instructions on how to change it, directions for how to invite collaborators to your new organization so you can do team-based projects, and pointers to where you can [get support and answers to questions](https://groups.google.com/forum/#!forum/ironfoundry) you may have about ironfoundry.me, Iron Foundry, and Cloud Foundry.
+In the email, you'll receive your initial password, along with instructions on how to log in for the first time and how to change your password, and pointers to where you can [get support and answers to questions](https://groups.google.com/forum/#!forum/ironfoundry) you may have about ironfoundry.me, Iron Foundry, and Cloud Foundry.
 
 ### How do I get started?
 Visit our [Help](/help/) pages and learn how to [get started with Iron Foundry V2](/help/#if-v2). This is an ever expanding and increasing set of short articles about specific tasks and concepts that should help you get moving initially, and keep moving as you grow more sophisticated. We're adding more entries to this every week, so keep checking back! 
