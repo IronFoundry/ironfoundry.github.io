@@ -6,9 +6,9 @@ categories:
 - Iron Foundry
 - Cloud Foundry
 tags: []
-status: draft
+status: public
 type: post
-published: false
+published: true
 author: Brian Button
 twitter: brianbuttonxp
 ---
