@@ -7,7 +7,7 @@ tagline: Iron Foundry V2 \ Getting Started
 # Getting an Account
 *(Note that will be automating this process as quickly as we can)*
 
-Users wishing to create an account on ironfoundry.me can submit their request using the [Sign Up](http://app.ironfoundry.me/signup) above. They will need to provide their email address, the desired name for their organization ([more about organizations and spaces here](/help/orgs-and-spaces.html)), and agree to the Terms and Conditions of the site. This will send a request for a new account to the Iron Foundry team, who will process it as quickly as possible. Automating this process is one of our short term goals, but it was not part of the original Minimal Viable Product needed to field ironfoundry.me.
+Users wishing to create an account on ironfoundry.me can submit their request using the [Sign Up](http://app.ironfoundry.org/signup) above. They will need to provide their email address, the desired name for their organization ([more about organizations and spaces here](/help/orgs-and-spaces.html)), and agree to the Terms and Conditions of the site. This will send a request for a new account to the Iron Foundry team, who will process it as quickly as possible. Automating this process is one of our short term goals, but it was not part of the original Minimal Viable Product needed to field ironfoundry.me.
 
 The requestor will receive an email back containing information about their new account, including:
 
