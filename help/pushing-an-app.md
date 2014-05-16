@@ -54,26 +54,19 @@ ___Step 1___
 Build your application as normal. Nothing changes here for a simple, self-contained web site. Just build it.
 
 ___Step 2___
-Publish it to your file system somewhere. You can do this through through the Build menu, choosing Publish from there. You'll see a dialog pop up that looks like this:
+Publish it so that it can be pushed into Cloud Foundry. You can do this through through the Build menu, choosing Publish from there. When you select that, a dialog box will pop up that takes you through a short wizard. You'll want to:
 
-<img src="/img/help/PublishDialog1.png"/>
-
-Choose "New Profile" from the drop-down, and enter a name like ****To File**** and click Next. That leads you to the next dialog, where you can select where the application should be published to. 
-
-<img src="/img/help/PublishDialog2.png"/>
-
-Click Next one more time to choose which build target you want deployed, and you're ready to publish.
-
-<img src="/img/help/PublishDialog3.png"/>
-
-Finally, click Publish, and your application is moved to the selected directory on your file system.
+1. Create a new profile
+2. Choose File System as your target and a file location as the destination
+3. Select the build type to publish (Debug/Release/etc)
+4. Select Publish to publish to the selected file system location.
 
 ___Step 3___
-The final step is to push the application to ironfoundry.me. This uses the CF command line tool, so you'll need that [installed](/help/understanding-cli.md), and you'll need a comand window like powershell. Open that command window and go to the file system directory you chose in the last step.
+The final step is to push the application to ironfoundry.me. This uses the CF command line tool, so you'll need that [installed](/help/understanding-cli.html), and you'll need a comand window like powershell. Open that command window and go to the file system directory you chose in the last step.
 
-Log into your ironfoundry.me account, target your organization and space, as described [here](/help/logging-in.md), and you should be ready to push your application.
+Log into your ironfoundry.me account, target your organization and space, as described [here](/help/logging-in.html), and you should be ready to push your application.
 
-Once logged in, enter this to push the application: `cf push <app_name> -s windows2012`, where app_name is some descriptive name you've given to your application, and `-s windows2012` tells Cloud Foundry to use the Iron Foundry stack to deploy your code. The app name you choose does not have to be the name you chose in Visual Studio.NET - it can be any name. This name becomes part of the URL you'll use to access your application once pushed, as in MyApp.ironfoundry.me.
+Once logged in, enter the following command: `cf push <app_name> -s windows2012`, where app_name is some descriptive name you've given to your application, and `-s windows2012` tells Cloud Foundry to use the Iron Foundry stack to deploy your code. The app name you choose does not have to be the name you chose in Visual Studio.NET - it can be any name. This name becomes part of the URL you'll use to access your application once pushed, as in MyApp.ironfoundry.me.
 
 What you'll see next is Cloud Foundry reporting the successes of the subsequent steps that are part of staging and starting an application.
 
@@ -127,6 +120,63 @@ ___Step 4___ And for proof, here is the running application:
 
 <img src="/img/help/PublishedApp.png"/>
 
+####Using Options to Alter Deployment
+Now that the app is successfully deployed, we can look at how we can use the options shown above to change aspects of its deployment. There are a lot of options, all of them useful for different scenarios, but there are only a few that are useful for this basic scenario.
 
+___Changing the Memory Limit___ Every application that is launched counts against the memory limit for an organization. You can limit the amount of memory that an application is allowed to use, however, through the `-m` option, which specified the maximum memory limit for that app. This value can be specified as any value, suffixed with either M or G (megabyte or gigabyte).
 
+___Specifying a Different Hostname___ By default, the URL created by pushing an app into Cloud Foundry looks like app_name.ironfoundry.me. This can be changed, however, using the `-n hostname` option, which allows you to specify a different hostname for your application. This is useful the application name is too long or too hard to remember for a URL, and you want something shorter.
 
+___Specifying the Number of Instances___ Unless told differently, Cloud Foundry starts a single instance of your application. This can be changed with the `-i instance_count` option, which allows multiple instances to be started at once. This is useful for enhancing the availability of your application by having multiple web servers handling requests to the same URL. The Router component of Cloud Foundry will automatically route users to any one of the servers handling requests for that URL.
+
+___Choosing the Stack___ As seen in the example above, the `-s stack-name` option allows you to give a hint to Cloud Foundry about what it takes to deploy an application. If you do not provide this option the lucid64 stack is used by default, which provides instructions for how to deploy several kinds of applications onto Linux. In order to deploy to windows, you _must_ use `-s windows2012`.
+
+Here is an example of using all of those options as once to relaunch our app:
+
+	PS C:\deploy\SimpleWebSite> cf push SimpleWebSite -i 5 -m 256M -n simple -s windows2012
+	
+and just those pieces of the deployment process that show their effects:
+
+	Using stack windows2012...
+	OK
+	
+	Creating route simple.beta.ironfoundry.me...
+	OK
+	
+	Binding simple.beta.ironfoundry.me to SimpleWebSite...
+	OK
+
+	5 of 5 instances running
+	
+And the final result of our `cf push`:
+	
+	App started
+	
+	Showing health and status for app SimpleWebSite in org bbutton / space development as bbutton@agilestl.com...
+	OK
+	
+	requested state: started
+	instances: 5/5
+	usage: 256M x 5 instances
+	urls: simplewebsite.beta.ironfoundry.me, simple.beta.ironfoundry.me
+	
+	     state     since                    cpu    memory           disk
+	#0   running   2014-05-16 06:19:53 PM   0.0%   203.9M of 256M   0 of 1G
+	#1   running   2014-05-16 06:19:58 PM   0.0%   203.8M of 256M   0 of 1G
+	#2   running   2014-05-16 06:19:58 PM   0.0%   203.7M of 256M   0 of 1G
+	#3   running   2014-05-16 06:19:53 PM   0.0%   204.3M of 256M   0 of 1G
+	#4   running   2014-05-16 06:19:58 PM   0.0%   203.9M of 256M   0 of 1G
+	
+#### Using a Manifest to Simplify Deployment
+
+While having all of those options available is powerful, it can be burdensome to type them in every time you want to push your app. To make this easier, you can define a manifest file that contains all of your options, and Cloud Foundry will read them from there. Here is a manifest file that does the same thing as our command line:
+
+	---
+	applications:
+	- name: SimpleWebSite
+	  instances: 5
+	  memory: 256M
+	  host: simple
+	  stack: windows2012
+	  
+Once the manifest file is created and saved as manifest.yml, the app can then be pushed by simply entering `cf push`.
