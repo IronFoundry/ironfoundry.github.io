@@ -27,6 +27,14 @@ contributers, as Iron Foundry continues to evolve and take shape. The voice of t
 * [Fork](https://github.com/IronFoundry/if_release/fork)
 * [Log an issue](https://github.com/ironfoundry/if_release/issues)
 
+#### Buildpack for .NET
+
+[cloudfoundry-buildpack-clr](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr) is an implementation of the Heroku buildpack API for .NET apps.  The [README](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr/blob/master/README.md#installing-the-buildpack) contains instructions for adding the buildpack to your CloudFoundry environment.  **NOTE**: this buildpack requires the IronFoundry DEA to actually execute .NET apps.
+
+* [Download](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr/archive/v1.zip)
+* [Fork](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr/fork)
+* [Log an issue](https://github.com/cloudfoundry-incubator/cloudfoundry-buildpack-clr/issues)
+
 #### Iron Foundry Service Broker
 [if-service-broker](https://github.com/IronFoundry/if-service-broker) Service Broker  is a Microsoft .NET based service broker for Cloud Foundry v2. It uses WebAPI to host the services. The service broker ships with one service for Microsoft SQL Server. This service will provision databases and users for applications. It can be extended to include any plans you want to offer.
 
