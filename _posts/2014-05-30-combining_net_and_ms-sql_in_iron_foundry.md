@@ -13,7 +13,7 @@ author: Brian Button
 twitter: brianbuttonxp
 
 ---
-# Combining .NET and MS-SQL in Iron Foundry
+
 In this article, I'll show a simple ASP.Net application that uses a SQL-Server database for data access. We'll talk about how to create your database, and about how to bind the database service to the application. These are usually very simple tasks, but certain requirements of Cloud Foundry and Iron Foundry make it a little more complicated. 
 
 If you don't understand what service brokers are in Cloud Foundry, please take a minute and [read up on it](/help/how_services_and_service-brokers_are_used_in_cloud_foundry.html). The concept is important through the rest of this article. 
