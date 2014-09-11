@@ -11,9 +11,9 @@ Installing Iron Foundry behind a proxy server requires a few minor changes in th
 ## Changes for installing behind a proxy
 Three discrete changes are all that is necessary to deploy behind a firewall:
 
-1. Open Internet Explorer, Internet Options, go into the Connections tab, and configure your proxy server in the appropriate way. That might be by allowing for autodiscovery, you may have a configuration script, or may have to set it up manually. Save that change and exit.
+1. Open Internet Explorer, Internet Options, go into the Connections tab and into LAN Settings. Once there, configure your proxy server in the appropriate way. That might be by allowing for autodiscovery or an automatic configuration script, or through setting the proxy address and credentials manually. Save that change and exit.
 2. Open a powershell window and enter `$env:HTTP_PROXY = "proxy information"`, where the double quotes are important, since this is a string.
-3. Create a file in the logged in user's home directory called .gitconfig. In that file, put this content, replacing 127.0.0.1.8118 with the credentials and address of your proxy server.
+3. Create a file in the logged-in user's home directory called .gitconfig. In that file, put this content, replacing 127.0.0.1.8118 with the credentials and address of your proxy server.
 
 ```
 [http]  
