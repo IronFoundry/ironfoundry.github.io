@@ -1,6 +1,6 @@
 lsi: false
 exclude: [less]
-pygments: true
+highlighter: pygments
 markdown_ext:  markdown,mkd,mkdn,md
 markdown:  rdiscount
 paginate: 10
