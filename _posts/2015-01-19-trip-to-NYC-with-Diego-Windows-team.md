@@ -15,11 +15,11 @@ twitter: csterwa
 
 ---
 
-This past week, [Brannon Jones](http://twitter.com/brannon) and [Chris Sterling](http://twitter.com/csterwa) from CenturyLink Cloud's PaaS team traveled to New York City to pair with the Pivotal team adding .NET support to Diego. The main goal for last week was to define the implementation path for the beta .NET support in Diego. Most of our time was spent with the 4 Daves (David Varvel, David Morhovich, David Tengdin, and Dave Goddard) and [Mark Kropf](http://twitter.com/markkropf). It was fun getting embedded in the Pivotal culture and getting to know folks in the New York City office.
+This past week, [Brannon Jones](http://twitter.com/brannon) and [Chris Sterling](http://twitter.com/csterwa) from CenturyLink Cloud's PaaS team traveled to New York City. The goal of our visit was to pair with the Pivotal team adding .NET support to Diego and help define the implementation path going forward. Most of our time was spent with "The Four Daves" (David Varvel, David Morhovich, David Tengdin, and Dave Goddard) and [Mark Kropf](http://twitter.com/markkropf). It was fun getting embedded in the Pivotal culture and getting to know folks in the New York City office.
 
 <img src="/img/blog/2015-01-12-pivotal-nyc-outside-front-door.jpeg"/>
 
-The trip was definitely a success and as an outcome here are a couple of high level decisions on the implementation of .NET support in Diego going forward in the near term:
+The trip was definitely a success and as an outcome here are some high level decisions for the implementation of .NET support in Diego in the near term:
 
 * The implementation will use Hostable Web Core (HWC) for launching pushed .NET applications in Diego. This is the
 current implementation approach in [Iron Foundry](http://www.ironfoundry.org) and allows for more control of running jobs on Windows.
