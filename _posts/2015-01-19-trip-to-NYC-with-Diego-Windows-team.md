@@ -21,7 +21,7 @@ This past week, [Brannon Jones](http://twitter.com/brannon) and [Chris Sterling]
 
 The trip was definitely a success and as an outcome here are some high level decisions for the implementation of .NET support in Diego in the near term:
 
-* The implementation will use Hostable Web Core (HWC) for launching pushed .NET applications in Diego. This is the
+* The implementation will use Hostable Web Core (HWC) for launching pushed ASP.NET applications in Diego. This is the
 current implementation approach in [Iron Foundry](http://www.ironfoundry.org) and allows for more control of running jobs on Windows.
 * Iron Foundry's implementation of [Container Host](https://github.com/IronFoundry/if_warden/tree/master/IronFoundry.Warden.ContainerHost) will be extracted as a NuGet package that can be used in both the current Iron Foundry working with existing releases of Cloud Foundry and also support Diego .NET.
 * Brannon will pair with the Pivotal team adding .NET support in the future to integrate [Container Host](https://github.com/IronFoundry/if_warden/tree/master/IronFoundry.Warden.ContainerHost) into the open source repos for Diego .NET support.
