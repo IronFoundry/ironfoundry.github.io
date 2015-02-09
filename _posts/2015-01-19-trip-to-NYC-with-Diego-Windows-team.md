@@ -6,7 +6,7 @@ categories:
 - Cloud Foundry
 - Diego
 - .NET
-tags: [tutorial]
+tags: []
 status: publish
 type: post
 published: true
