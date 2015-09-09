@@ -11,8 +11,6 @@ permalink: /:year/:month/:day/:title/
 navigation:
 - text: Downloads
   url: /downloads
-- text: Sign Up
-  url: http://app.ironfoundry.org/signup
 - text: Blog
   url: /blog
 - text: Help
