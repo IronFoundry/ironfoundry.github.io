@@ -1,5 +1,6 @@
 lsi: false
 exclude: [less]
+gems: [jekyll-paginate]
 highlighter: pygments
 markdown_ext:  markdown,mkd,mkdn,md
 markdown:  rdiscount
